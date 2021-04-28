@@ -1,0 +1,10 @@
+--- a/budgie-applications-menu/meson.build	2021-04-28 05:18:31.027700567 +0200
++++ b/budgie-applications-menu/meson.build	2021-04-28 05:26:28.609746281 +0200
+@@ -26,7 +26,6 @@
+ appstream_dep = dependency('appstream')
+ gio_unix_dep = dependency('gio-unix-2.0')
+ json_glib_dep = dependency('json-glib-1.0')
+-zeitgeist_dep = dependency('zeitgeist-2.0')
+ libgnome_menu_dep = dependency('libgnome-menu-3.0')
+ posix_dep = meson.get_compiler('vala').find_library('posix')
+ libhandy_dep = dependency('libhandy-1', version: '>= 1.0', required: false)
