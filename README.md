@@ -22,4 +22,5 @@ In addition the idea-community ebuild was added due to the gentoo mainline 2021.
 
 */etc/portage/package.accept_keyword*
 > \# Only installs idea 2021.1 version without making the mainline gentoo idea-community ebuild look like an upgrade
+>
 > =dev-util/idea-community-2021.1.211.6993.111
