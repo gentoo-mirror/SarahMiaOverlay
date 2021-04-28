@@ -30,7 +30,7 @@ If anything comes up feel free to contact me by making an issue. I will handle i
 	=dev-util/idea-community-2021.1.211.6693.111
 	```
 
-If you are unsure of which version you are running please go help/about menu inside the IDE.
+	If you are unsure of which version you are running please go help/about menu inside the IDE.
 
 2) Budgie-extras will not install budgie-applications-menu-applet due to inherit problems. 
     - Zeitgeist for fast learning is disabled by default in the ebuild. (Is part of another overlay with separate settings specific for unity desktop). 
