@@ -7,7 +7,7 @@ VALA_MIN_API_VERSION="0.48"
 
 inherit git-r3 meson vala gnome2-utils xdg
 
-DESCRIPTION="A clipboard manager applet that can help you to store and manage clipboard content. Made for Budgie Desktop."
+DESCRIPTION="System Monitor that can help you track your cpu, ram, swap, network and uptime. Made for Budgie Desktop."
 HOMEPAGE="https://github.com/prateekmedia/${PN}"
 
 EGIT_REPO_URI="https://github.com/prateekmedia/${PN}.git"
@@ -19,7 +19,8 @@ KEYWORDS="~amd64 ~x86"
 
 DEPEND="
 	>=gnome-extra/budgie-desktop-1.0
-	x11-misc/xdotool
+	gnome-base/libgtop
+	dev-libs/libgee
 	dev-lang/vala
 	"
 RDEPEND="${DEPEND}"
