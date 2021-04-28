@@ -7,31 +7,22 @@ VALA_MIN_API_VERSION="0.48"
 
 inherit git-r3 meson vala gnome2-utils xdg
 
-DESCRIPTION="Take a screenshot of your desktop, a window or region; save to disk and upload. Made for Budgie Desktop."
+DESCRIPTION="A budgie-desktop applet to show hours with custom formats and a calendar in a popover. Made for Budgie Desktop."
 HOMEPAGE="https://github.com/cybre/${PN}"
 
-EGIT_REPO_URI="https://github.com/cybre/${PN}.git"
-EGIT_COMMIT="v${PV}"
+EGIT_REPO_URI="https://github.com/danielpinto8zz6/${PN}.git"
 
 LICENSE=""
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS=""
 
 DEPEND="
 	>=gnome-extra/budgie-desktop-1.0
-	>=gnome-base/gnome-desktop-3.0
-	>=dev-libs/json-glib-1.0
 	>=x11-libs/gtk+-3.0
-	>=net-libs/libsoup-2.4
 	dev-lang/vala
 	"
 RDEPEND="${DEPEND}"
 BDEPEND="dev-util/meson $(vala_depend)"
-
-PATCHES=(
-	"${FILESDIR}/fix_weak_uploader.patch"
-	"${FILESDIR}/gtk_render_fix.patch"
-)
 
 src_prepare() {
 	vala_src_prepare

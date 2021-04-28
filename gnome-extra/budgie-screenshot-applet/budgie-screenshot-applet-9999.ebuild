@@ -7,14 +7,14 @@ VALA_MIN_API_VERSION="0.48"
 
 inherit git-r3 meson vala gnome2-utils xdg
 
-DESCRIPTION="Post any text, be it code or prose, to various services directly from your desktop. Made for Budgie Desktop."
+DESCRIPTION="Take a screenshot of your desktop, a window or region; save to disk and upload. Made for Budgie Desktop."
 HOMEPAGE="https://github.com/cybre/${PN}"
 
 EGIT_REPO_URI="https://github.com/cybre/${PN}.git"
 
 LICENSE=""
 SLOT="0"
-KEYWORDS="**"
+KEYWORDS=""
 
 DEPEND="
 	>=gnome-extra/budgie-desktop-1.0
@@ -52,6 +52,6 @@ pkg_postrm() {
 	xdg_pkg_postrm
 	gnome2_schemas_update
 
-	elog "In order for the applet to be removed from the budgie-settings applets without relogging it is recommended to run the following as your current logged in user in budge:"
+	elog "In order for the applet to be removed from the budgie-settings applets without relogging it is recommended to run the following as your current logged in user in budgie:"
 	elog "	budgie-panel --replace &"
 }

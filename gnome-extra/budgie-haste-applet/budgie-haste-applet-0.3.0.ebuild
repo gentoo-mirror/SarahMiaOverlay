@@ -57,6 +57,6 @@ pkg_postrm() {
 	xdg_pkg_postrm
 	gnome2_schemas_update
 
-	elog "In order for the applet to be removed from the budgie-settings applets without relogging it is recommended to run the following as your current logged in user in budge:"
+	elog "In order for the applet to be removed from the budgie-settings applets without relogging it is recommended to run the following as your current logged in user in budgie:"
 	elog "  budgie-panel --replace &"
 }
