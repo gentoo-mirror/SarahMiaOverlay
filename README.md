@@ -26,9 +26,10 @@ If anything comes up feel free to contact me by making an issue. I will handle i
     */etc/portage/package.accept_keyword{/idea-community}*
 
     ```
-# Only installs idea 2021.1 version without making the mainline gentoo idea-community ebuild look like an upgrade
-=dev-util/idea-community-2021.1.211.6693.111
-```
+	# Only installs idea 2021.1 version without making the mainline gentoo idea-community ebuild look like an upgrade
+	=dev-util/idea-community-2021.1.211.6693.111
+	```
+
 If you are unsure of which version you are running please go help/about menu inside the IDE.
 
 2) Budgie-extras will not install budgie-applications-menu-applet due to inherit problems. 
