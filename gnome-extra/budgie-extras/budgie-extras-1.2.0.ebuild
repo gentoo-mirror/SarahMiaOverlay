@@ -47,7 +47,7 @@ src_prepare() {
 src_configure() {
 	local emesonargs=(
 		-Dwith-zeitgeist=false
-		-Dbuild_applications_menu=true
+		-Dbuild-applications-menu=true
 	)
 	meson_src_configure
 }
