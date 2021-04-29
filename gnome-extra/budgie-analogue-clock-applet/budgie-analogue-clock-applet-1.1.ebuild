@@ -14,13 +14,16 @@ HOMEPAGE="https://github.com/samlane-ma/${MY_PN}"
 EGIT_REPO_URI="https://github.com/samlane-ma/${MY_PN}.git"
 EGIT_COMMIT="v${PV}"
 
-LICENSE=""
+LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 
-DEPEND=">=gnome-extra/budgie-desktop-1.0"
+DEPEND=">=gnome-extra/budgie-desktop-10.0"
 RDEPEND="${DEPEND}"
-BDEPEND="dev-util/meson $(vala_depend)"
+BDEPEND="
+	dev-util/meson
+	$(vala_depend)
+"
 
 src_prepare() {
 	vala_src_prepare

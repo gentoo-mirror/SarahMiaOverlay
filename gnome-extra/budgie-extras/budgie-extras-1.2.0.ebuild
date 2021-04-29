@@ -8,7 +8,7 @@ VALA_MIN_API_VERSION="0.48"
 inherit git-r3 meson vala gnome2-utils xdg
 
 DESCRIPTION="Additional enhancements for the user experience. Contains many applets. Made for Budgie Desktop."
-HOMEPAGE="https://github.com/cybre/${PN}"
+HOMEPAGE="https://github.com/UbuntuBudgie/${PN}"
 
 EGIT_REPO_URI="https://github.com/UbuntuBudgie/${PN}.git"
 EGIT_COMMIT="v${PV}"
@@ -17,26 +17,22 @@ EGIT_COMMIT="v${PV}"
 # Its also preventing the vala useflag on libnma
 EGIT_OVERRIDE_COMMIT_UBUNTUBUDGIE_BUDGIE_NETWORK_APPLET="9065f02"
 
-LICENSE=""
+LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 
 DEPEND="
-	>=gnome-extra/budgie-desktop-1.2
-	>=gnome-base/gnome-desktop-3.0
-	gnome-base/gnome-settings-daemon
-	>=gnome-base/gnome-menus-3.0
-	>=dev-libs/glib-2.0
-	>=x11-libs/gtk+-3.0
-	>=dev-libs/libpeas-1.0
+	>=gnome-extra/budgie-desktop-10.2
 	dev-libs/libgee
 	>=net-libs/libsoup-2.4
-	dev-lang/vala
 	dev-libs/granite
 	dev-libs/appstream[vala]
 	"
 RDEPEND="${DEPEND}"
-BDEPEND="dev-util/meson $(vala_depend)"
+BDEPEND="
+	dev-util/meson
+	$(vala_depend)
+"
 
 PATCHES=(
 	"${FILESDIR}/fix_applications_menu_meson_zeitgeist_build.patch"

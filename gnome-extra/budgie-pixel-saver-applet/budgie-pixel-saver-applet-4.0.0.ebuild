@@ -13,22 +13,20 @@ HOMEPAGE="https://github.com/ilgarmehmetali/${PN}"
 EGIT_REPO_URI="https://github.com/ilgarmehmetali/${PN}.git"
 EGIT_COMMIT="v${PV}"
 
-LICENSE=""
+LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 
 DEPEND="
-	>=gnome-extra/budgie-desktop-1.0
-	>=gnome-base/gnome-desktop-3.0
-	>=x11-libs/gtk+-3.0
-	>=dev-libs/glib-2.0
-	>=dev-libs/libpeas-1.0
+	>=gnome-extra/budgie-desktop-10.0
 	>=x11-libs/libwnck-3.0
 	x11-apps/xprop
-	dev-lang/vala
-	"
+"
 RDEPEND="${DEPEND}"
-BDEPEND="dev-util/meson $(vala_depend)"
+BDEPEND="
+	dev-util/meson
+	$(vala_depend)
+"
 
 PATCHES=(
 	"${FILESDIR}/fix_post_install_script.patch"

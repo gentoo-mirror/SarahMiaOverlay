@@ -12,17 +12,19 @@ HOMEPAGE="https://github.com/prateekmedia/${PN}"
 
 EGIT_REPO_URI="https://github.com/prateekmedia/${PN}.git"
 
-LICENSE=""
+LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS=""
 
 DEPEND="
-	>=gnome-extra/budgie-desktop-1.0
+	>=gnome-extra/budgie-desktop-10.0
 	x11-misc/xdotool
-	dev-lang/vala
-	"
+"
 RDEPEND="${DEPEND}"
-BDEPEND="dev-util/meson $(vala_depend)"
+BDEPEND="
+	dev-util/meson
+	$(vala_depend)
+"
 
 src_prepare() {
 	vala_src_prepare

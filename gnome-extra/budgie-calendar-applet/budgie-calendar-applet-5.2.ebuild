@@ -8,22 +8,21 @@ VALA_MIN_API_VERSION="0.48"
 inherit git-r3 meson vala gnome2-utils xdg
 
 DESCRIPTION="A budgie-desktop applet to show hours with custom formats and a calendar in a popover. Made for Budgie Desktop."
-HOMEPAGE="https://github.com/cybre/${PN}"
+HOMEPAGE="https://github.com/danielpinto8zz6/${PN}"
 
 EGIT_REPO_URI="https://github.com/danielpinto8zz6/${PN}.git"
 EGIT_COMMIT="${PV}"
 
-LICENSE=""
+LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 
-DEPEND="
-	>=gnome-extra/budgie-desktop-1.0
-	>=x11-libs/gtk+-3.0
-	dev-lang/vala
-	"
+DEPEND=">=gnome-extra/budgie-desktop-10.0"
 RDEPEND="${DEPEND}"
-BDEPEND="dev-util/meson $(vala_depend)"
+BDEPEND="
+	dev-util/meson
+	$(vala_depend)
+"
 
 #PATCHES=(
 #	"${FILESDIR}/fix_weak_uploader.patch"

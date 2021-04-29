@@ -13,19 +13,20 @@ HOMEPAGE="https://github.com/cybre/${PN}"
 EGIT_REPO_URI="https://github.com/cybre/${PN}.git"
 EGIT_COMMIT="v${PV}"
 
-LICENSE=""
+LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 
 DEPEND="
-	>=gnome-extra/budgie-desktop-1.0
+	>=gnome-extra/budgie-desktop-10.0
 	>=dev-libs/json-glib-1.0
-	>=x11-libs/gtk+-3.0
 	>=net-libs/libsoup-2.4
-	dev-lang/vala
-	"
+"
 RDEPEND="${DEPEND}"
-BDEPEND="dev-util/meson $(vala_depend)"
+BDEPEND="
+	dev-util/meson
+	$(vala_depend)
+"
 
 PATCHES=(
 	"${FILESDIR}/fix_weak_uploader.patch"
