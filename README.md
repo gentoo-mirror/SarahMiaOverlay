@@ -9,7 +9,7 @@ After merging budgie-extras please start the Window Shuffler. This can be done w
 
 **Other**
 
-This overlay contains other packages that either fixes or adds unlisted versions
+This overlay contains other packages that either fixes or adds unlisted versions/features.
 
 ## Installation
 
@@ -32,12 +32,8 @@ If anything comes up feel free to contact me by making an issue. I will handle i
 
 	If you are unsure of which version you are running please go help/about menu inside the IDE.
 
-2) Budgie-extras will not install budgie-applications-menu-applet due to inherit problems. 
-    - Zeitgeist for fast learning is disabled by default in the ebuild. (Is part of another overlay with separate settings specific for unity desktop). 
-    - The biggest problem is that the needed dependency appstreamer needs vala support which is not in the mainline gentoo.
-
 ## Todo:
 
-- Add appstreamer build with vala support
-- Re-enable budgie-applications-menu-applet in budgie-extras with appstream[vala] dependency when above is done
-- Look into the source of budgie-brightness-control-applet to see why it won't work. Till then the ebuild won't be in the overlay
+- Look into the source of budgie-brightness-control-applet to see why it won't work. Sliders are gone. Ebuild isn't in the public overlay atm. Existing issue does exist however..
+- Maybe look into how to lock screen since budgie-screensaver isn't working either somehow.. Ebuild isn't in public overlay atm.
+- When above is working fix the placement of the pam file in the proper place in the ebuild.

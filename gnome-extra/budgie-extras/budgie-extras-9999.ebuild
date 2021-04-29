@@ -28,6 +28,7 @@ DEPEND="
 	>=net-libs/libsoup-2.4
 	dev-lang/vala
 	dev-libs/granite
+	dev-libs/appstream[vala]
 	"
 RDEPEND="${DEPEND}"
 BDEPEND="dev-util/meson $(vala_depend)"
@@ -45,7 +46,6 @@ src_prepare() {
 src_configure() {
 	local emesonargs=(
 		-Dwith-zeitgeist=false
-		-Dbuild_applications_menu=false
 	)
 	meson_src_configure
 }
