@@ -5,17 +5,20 @@ EAPI=7
 
 VALA_MIN_API_VERSION="0.48"
 
-inherit git-r3 meson vala gnome2-utils xdg
+inherit meson vala gnome2-utils xdg
 
 DESCRIPTION="Additional enhancements for the user experience. Contains many applets. Made for Budgie Desktop."
 HOMEPAGE="https://github.com/UbuntuBudgie/${PN}"
 
-EGIT_REPO_URI="https://github.com/UbuntuBudgie/${PN}.git"
-EGIT_COMMIT="v${PV}"
-# Get the right commit for the budgie-network-applet since the one included doesn't exist
-# Its one commit higher then what was around release time but needed to stop compilation failure on network-manager
-# Its also preventing the vala useflag on libnma
-EGIT_OVERRIDE_COMMIT_UBUNTUBUDGIE_BUDGIE_NETWORK_APPLET="9065f02"
+NETWORK_COMMIT="4a965df"
+APPLICATIONS_MENU_COMMIT="ed4d340"
+QUICKCHAR_COMMIT="3dc7fb4"
+
+SRC_URI="https://github.com/UbuntuBudgie/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz
+	https://github.com/UbuntuBudgie/applications-menu/archive/${APPLICATIONS_MENU_COMMIT}.tar.gz -> budgie-applications-menu-applet-${APPLICATIONS_MENU_COMMIT}.tar.gz
+	https://github.com/UbuntuBudgie/budgie-network-applet/archive/${NETWORK_COMMIT}.tar.gz -> budgie-network-applet-${NETWORK_COMMIT}.tar.gz
+	https://github.com/UbuntuBudgie/QuickChar/archive/${QUICKCHAR_COMMIT}.tar.gz -> budgie-quickchar-applet-${QUICKCHAR_COMMIT}.tar.gz
+"
 
 LICENSE="GPL-3"
 SLOT="0"
@@ -38,6 +41,22 @@ PATCHES=(
 	"${FILESDIR}/fix_applications_menu_meson_zeitgeist_build.patch"
 	"${FILESDIR}/exclude_applications_menu_build_all.patch"
 )
+
+src_unpack() {
+	unpack ${P}.tar.gz
+	pushd ${S}/budgie-applications-menu || die
+		unpack budgie-applications-menu-applet-${APPLICATIONS_MENU_COMMIT}.tar.gz
+		mv -fT applications-menu-* applications-menu || die
+	popd || die
+	pushd ${S}/budgie-network-manager || die
+		unpack budgie-network-applet-${NETWORK_COMMIT}.tar.gz
+		mv -fT budgie-network-applet-* budgie-network-applet || die
+	popd || die
+	pushd ${S}/budgie-quickchar || die
+		unpack budgie-quickchar-applet-${QUICKCHAR_COMMIT}.tar.gz
+		mv -fT QuickChar-* quickchar || die
+	popd || die
+}
 
 src_prepare() {
 	vala_src_prepare

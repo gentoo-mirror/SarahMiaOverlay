@@ -5,7 +5,7 @@ EAPI=7
 
 VALA_MIN_API_VERSION="0.48"
 
-inherit git-r3 meson vala gnome2-utils xdg
+inherit meson vala gnome2-utils xdg
 
 DESCRIPTION="This applet hides the title bar from maximized windows and creates a new one inside the panel. Inspired from gnome extension pixel-saver."
 HOMEPAGE="https://github.com/ilgarmehmetali/${PN}"

@@ -5,7 +5,7 @@ EAPI=7
 
 VALA_MIN_API_VERSION="0.48"
 
-inherit git-r3 meson vala gnome2-utils xdg
+inherit meson vala gnome2-utils xdg
 
 DESCRIPTION="Take a screenshot of your desktop, a window or region, save to disk and upload. Made for Budgie Desktop."
 HOMEPAGE="https://github.com/cybre/${PN}"

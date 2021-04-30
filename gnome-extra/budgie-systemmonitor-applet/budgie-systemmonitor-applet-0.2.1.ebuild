@@ -5,7 +5,7 @@ EAPI=7
 
 VALA_MIN_API_VERSION="0.48"
 
-inherit git-r3 meson vala gnome2-utils xdg
+inherit meson vala gnome2-utils xdg
 
 DESCRIPTION="System Monitor that can help you track your cpu, ram, swap, network and uptime. Made for Budgie Desktop."
 HOMEPAGE="https://github.com/prateekmedia/${PN}"

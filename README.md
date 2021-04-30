@@ -4,7 +4,7 @@
 
 Budgie is the default desktop of Solus Operating System, written from scratch. Besides a more modern design, Budgie can emulate the look and feel of the GNOME 2 desktop.
 
-This overlay contains both the budgie-desktop, extras and applets for budgie desktop. Everything that is needed to run budgie-desktop
+This overlay contains both the budgie-desktop, extras and applets for budgie desktop. Everything that is needed to run budgie-desktop.
 budgie-extras add a lot of applets and helper applications.
 
 For more information about budgie you can visit: https://github.com/solus-project/budgie-desktop/blob/master/README.md
@@ -14,9 +14,9 @@ The config for the new window preview from budgie-extras (for alt-tab) is in the
 
 **Other**
 
-This overlay contains other packages that either fixes or adds unlisted versions/features.
+This overlay contains a few other packages that either fixes or adds unlisted versions/features elsewhere.
 
-## Installation
+## Installation:
 
 **Overlay**
 
@@ -74,9 +74,9 @@ If anything comes up feel free to contact me by making an issue. I will handle i
 
 3) If there is an applet/software/theme you want let me know with a link and I will see if I can add it in the overlay for you.
 
-## Todo:
+### Todo:
 
 - Look into the source of budgie-brightness-control-applet to see why it won't work. Sliders are gone. Ebuild isn't in the public overlay atm. Existing issue for this bug does exist.. (not a big fan personally of the brighness control in budgie-extras currently)
 - Make a separate document for further tweaks of budgie-desktop if wanted. (e.g. not showing nm-applet tray icon if using the network applet from budgie-extras)
 - Look into specific budgie themes maybe
-- Change budgie-extras-1.2.0 from git to regular source, but need to alter a bit more due to subprojects with their own repo's
+- Maybe rename the overlay since it is no longer just a personal overlay

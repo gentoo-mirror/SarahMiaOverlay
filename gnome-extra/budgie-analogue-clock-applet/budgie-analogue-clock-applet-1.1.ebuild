@@ -6,7 +6,7 @@ EAPI=7
 VALA_MIN_API_VERSION="0.48"
 MY_PN="analogue-clock-applet"
 
-inherit git-r3 meson vala gnome2-utils xdg
+inherit meson vala gnome2-utils xdg
 
 DESCRIPTION="Add an analogue clock to the Budgie Panel. Made for Budgie Desktop."
 HOMEPAGE="https://github.com/samlane-ma/${MY_PN}"
