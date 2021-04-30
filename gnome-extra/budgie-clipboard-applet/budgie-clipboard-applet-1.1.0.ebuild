@@ -10,8 +10,7 @@ inherit git-r3 meson vala gnome2-utils xdg
 DESCRIPTION="A clipboard manager applet that can help you to store and manage clipboard content. Made for Budgie Desktop."
 HOMEPAGE="https://github.com/prateekmedia/${PN}"
 
-EGIT_REPO_URI="https://github.com/prateekmedia/${PN}.git"
-EGIT_COMMIT="v${PV}"
+SRC_URI="https://github.com/prateekmedia/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
@@ -26,6 +25,10 @@ BDEPEND="
 	dev-util/meson
 	$(vala_depend)
 "
+
+src_unpack() {
+	unpack ${P}.tar.gz
+}
 
 src_prepare() {
 	vala_src_prepare

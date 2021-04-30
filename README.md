@@ -20,16 +20,16 @@ This overlay contains other packages that either fixes or adds unlisted versions
 
 To add the overlay to portage run the following: (assuming you have eselect-repository installed)
 
-	`eselect repository add SarahMiaOverlay git https://gitlab.com/SarahMia/sarahmiaoverlay`
+	eselect repository add SarahMiaOverlay git https://gitlab.com/SarahMia/sarahmiaoverlay
 
 **Budgie**
 
 To install budgie desktop you need to add budgie to your accept_keywords. For 10.5.3 you need to do the same for the screensaver which will get pulled in by default. Then you can emerge budgie-desktop
 
-	```
+	
 	echo 'gnome-extra/budgie-desktop' >> /etc/portage/package.accept_keywords/budgie-desktop
 	emerge --ask --verbose budgie-desktop
-	```
+	
 
 After that is done you can just select the budgie-desktop session from your favorite login manager. Budgie by itself favors lightdm with slick-greeter or gtk-greeter.
 
@@ -77,3 +77,4 @@ If anything comes up feel free to contact me by making an issue. I will handle i
 - Look into the source of budgie-brightness-control-applet to see why it won't work. Sliders are gone. Ebuild isn't in the public overlay atm. Existing issue for this bug does exist.. (not a big fan personally of the brighness control in budgie-extras currently)
 - Make a separate document for further tweaks of budgie-desktop if wanted. (e.g. not showing nm-applet tray icon if using the network applet from budgie-extras)
 - Look into specific budgie themes maybe
+- Change budgie-extras-1.2.0 from git to regular source, but need to alter a bit more due to subprojects with their own repo's

@@ -10,8 +10,7 @@ inherit git-r3 meson vala gnome2-utils xdg
 DESCRIPTION="Post any text, be it code or prose, to various services directly from your desktop. Made for Budgie Desktop."
 HOMEPAGE="https://github.com/cybre/${PN}"
 
-EGIT_REPO_URI="https://github.com/cybre/${PN}.git"
-EGIT_COMMIT="v${PV}"
+SRC_URI="https://github.com/cybre/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -32,6 +31,10 @@ PATCHES=(
 	"${FILESDIR}/fix_weak_uploader.patch"
 	"${FILESDIR}/libsoup_form_encode_fix.patch"
 )
+
+src_unpack() {
+	unpack ${P}.tar.gz
+}
 
 src_prepare() {
 	vala_src_prepare

@@ -10,8 +10,7 @@ inherit git-r3 meson vala gnome2-utils xdg
 DESCRIPTION="This applet hides the title bar from maximized windows and creates a new one inside the panel. Inspired from gnome extension pixel-saver."
 HOMEPAGE="https://github.com/ilgarmehmetali/${PN}"
 
-EGIT_REPO_URI="https://github.com/ilgarmehmetali/${PN}.git"
-EGIT_COMMIT="v${PV}"
+SRC_URI="https://github.com/ilgarmehmetali/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -31,6 +30,10 @@ BDEPEND="
 PATCHES=(
 	"${FILESDIR}/fix_post_install_script.patch"
 )
+
+src_unpack() {
+	unpack ${P}.tar.gz
+}
 
 src_prepare() {
 	cp ${FILESDIR}/meson_post_install.py ${WORKDIR}/${P}/

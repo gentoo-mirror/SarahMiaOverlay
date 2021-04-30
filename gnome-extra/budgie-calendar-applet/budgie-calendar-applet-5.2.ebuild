@@ -10,8 +10,7 @@ inherit git-r3 meson vala gnome2-utils xdg
 DESCRIPTION="A budgie-desktop applet to show hours with custom formats and a calendar in a popover. Made for Budgie Desktop."
 HOMEPAGE="https://github.com/danielpinto8zz6/${PN}"
 
-EGIT_REPO_URI="https://github.com/danielpinto8zz6/${PN}.git"
-EGIT_COMMIT="${PV}"
+SRC_URI="https://github.com/danielpinto8zz6/${PN}/archive/${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -24,10 +23,9 @@ BDEPEND="
 	$(vala_depend)
 "
 
-#PATCHES=(
-#	"${FILESDIR}/fix_weak_uploader.patch"
-#	"${FILESDIR}/gtk_render_fix.patch"
-#)
+src_unpack() {
+	unpack ${P}.tar.gz
+}
 
 src_prepare() {
 	vala_src_prepare

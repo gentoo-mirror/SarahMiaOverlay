@@ -10,8 +10,7 @@ inherit git-r3 meson vala gnome2-utils xdg
 DESCRIPTION="Take a screenshot of your desktop, a window or region, save to disk and upload. Made for Budgie Desktop."
 HOMEPAGE="https://github.com/cybre/${PN}"
 
-EGIT_REPO_URI="https://github.com/cybre/${PN}.git"
-EGIT_COMMIT="v${PV}"
+SRC_URI="https://github.com/cybre/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -27,6 +26,10 @@ BDEPEND="
 	dev-util/meson
 	$(vala_depend)
 "
+
+src_unpack() {
+	unpack ${P}.tar.gz
+}
 
 PATCHES=(
 	"${FILESDIR}/fix_weak_uploader.patch"

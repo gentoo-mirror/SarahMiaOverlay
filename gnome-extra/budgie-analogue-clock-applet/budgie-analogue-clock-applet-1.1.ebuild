@@ -11,8 +11,7 @@ inherit git-r3 meson vala gnome2-utils xdg
 DESCRIPTION="Add an analogue clock to the Budgie Panel. Made for Budgie Desktop."
 HOMEPAGE="https://github.com/samlane-ma/${MY_PN}"
 
-EGIT_REPO_URI="https://github.com/samlane-ma/${MY_PN}.git"
-EGIT_COMMIT="v${PV}"
+SRC_URI="https://github.com/samlane-ma/${MY_PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
@@ -24,6 +23,11 @@ BDEPEND="
 	dev-util/meson
 	$(vala_depend)
 "
+
+src_unpack() {
+	unpack ${P}.tar.gz
+	mv ${WORKDIR}/${MY_PN}-${PV} ${WORKDIR}/${P}
+}
 
 src_prepare() {
 	vala_src_prepare
