@@ -6,6 +6,7 @@ This overlay contains both the budgie-desktop, extras and applets for budgie des
 budgie-extras add a lot of applets and helper applications.
 
 After merging budgie-extras please start the Window Shuffler. This can be done with the provided Window Shuffler application in your applications list/menu. You can set additional options there as well.
+The config for the new window preview when alt tabbing is with budgie-extras in the Previews Control in your applications list/menu. You can set additional options there as well.
 
 **Other**
 
@@ -35,5 +36,3 @@ If anything comes up feel free to contact me by making an issue. I will handle i
 ## Todo:
 
 - Look into the source of budgie-brightness-control-applet to see why it won't work. Sliders are gone. Ebuild isn't in the public overlay atm. Existing issue does exist however..
-- Maybe look into how to lock screen since budgie-screensaver isn't working either somehow.. Ebuild isn't in public overlay atm.
-- When above is working fix the placement of the pam file in the proper place in the ebuild.
