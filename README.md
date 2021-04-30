@@ -2,10 +2,12 @@
 
 **Budgie**
 
+Budgie is the default desktop of Solus Operating System, written from scratch. Besides a more modern design, Budgie can emulate the look and feel of the GNOME 2 desktop.
+
 This overlay contains both the budgie-desktop, extras and applets for budgie desktop. Everything that is needed to run budgie-desktop
 budgie-extras add a lot of applets and helper applications.
 
-For more information about budgie you can visit: https://
+For more information about budgie you can visit: https://github.com/solus-project/budgie-desktop/blob/master/README.md
 
 After merging budgie-extras please start the Window Shuffler, some applets will require this (hotconers mostly). This can be done with the provided Window Shuffler application in your applications list/menu. You can set additional options there as well.
 The config for the new window preview from budgie-extras (for alt-tab) is in the Previews Control in your applications list/menu. You can set additional options there as well.

@@ -30,6 +30,7 @@ BDEPEND="
 PATCHES=(
 	"${FILESDIR}/fix_weak_uploader.patch"
 	"${FILESDIR}/libsoup_form_encode_fix.patch"
+	"${FILESDIR}/fix_appdata_to_metainfo.patch"
 )
 
 src_unpack() {
