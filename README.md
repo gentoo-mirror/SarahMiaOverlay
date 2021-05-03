@@ -37,6 +37,7 @@ After that is done you can just select the budgie-desktop session from your favo
 
 Budgie by itself comes pretty barebones. I recommend you find application for the following parts along with my personal recommendation:
 
+- Basic desktop icons (home/trash/mounted etc) with budgie-desktop-view (or you can let e.g. nemo do this if you want instead)
 - File Manager (nemo, will also add desktop icons if you want that)
 - Image Viewer (eog - eye of gnome)
 - The usual browser, audio and video players and other applications you want to use
@@ -82,3 +83,4 @@ If anything comes up feel free to contact me by making an issue. I will handle i
 - Make a separate document for further tweaks of budgie-desktop if wanted. (e.g. not showing nm-applet tray icon if using the network applet from budgie-extras)
 - Look into specific budgie themes maybe
 - Maybe rename the overlay since it is no longer just a personal overlay
+- Thinking about adding 2 meta ebuilds. One for budgie-desktop-meta and one for budgie-desktop-applets-meta
