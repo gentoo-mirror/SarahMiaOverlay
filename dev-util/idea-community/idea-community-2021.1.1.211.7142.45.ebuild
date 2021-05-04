@@ -41,7 +41,7 @@ RDEPEND="${DEPEND}
 	)"
 BDEPEND="dev-util/patchelf"
 RESTRICT="splitdebug"
-S="${WORKDIR}/${MY_PN}-IC-$(ver_cut 3-6)"
+S="${WORKDIR}/${MY_PN}-IC-$(ver_cut 4-6)"
 
 QA_PREBUILT="opt/${PN}-${MY_PV}/*"
 
