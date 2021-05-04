@@ -60,13 +60,13 @@ To personalise your desktop:
 
 If anything comes up feel free to contact me by making an issue. I will handle it as soon as I can.
 
-1) the idea-community ebuild was added due to the gentoo mainline 2021.3.1 version actually installs 2020.3.1 version. This may cause it to look like a downgrade when installing 2021.1 version. Please note that you can prevent that by having the following line in your package.use file or subfile:
+1) the idea-community ebuild was added due to the gentoo mainline 2021.3.1 version actually installs 2020.3.1 version. This may cause it to look like a downgrade when installing 2021.1.1 version. Please note that you can prevent that by having the following line in your package.use file or subfile:
 
     */etc/portage/package.accept_keyword{/idea-community}*
 
     ```
 	# Only installs idea 2021.1 version without making the mainline gentoo idea-community ebuild look like an upgrade
-	=dev-util/idea-community-2021.1.211.6693.111
+	=dev-util/idea-community-2021.1.1.211.7142.45
 	```
 
 	If you are unsure of which version you are running please go help/about menu inside the IDE.
