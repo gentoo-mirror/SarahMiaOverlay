@@ -1,0 +1,13 @@
+BDEPEND=>=dev-vcs/git-1.8.2.1[curl] sys-devel/gnuconfig >=app-portage/elt-patches-20170815 || ( >=sys-devel/automake-1.16.2-r1:1.16 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4
+DEFINED_PHASES=configure install postinst postrm prepare unpack
+DEPEND=>=dev-libs/glib-2.64.0:= >=gnome-base/gnome-desktop-3.36.0:3 >=gnome-base/gsettings-desktop-schemas-3.36.0 >=x11-libs/gtk+-3.1.91:3[X] x11-libs/libX11:= x11-libs/libXcomposite:= dev-libs/dbus-glib gnome-base/gnome-common sys-libs/pam
+DESCRIPTION=Budgie Screensaver is a fork of gnome-screensaver intended for use with Budgie Desktop and is similar in purpose to other screensavers such as MATE Screensaver.
+EAPI=7
+HOMEPAGE=https://github.com/getsolus/budgie-screensaver
+INHERIT=git-r3 autotools gnome2-utils
+LICENSE=GPL-2
+PROPERTIES=live
+RDEPEND=>=dev-libs/glib-2.64.0:= >=gnome-base/gnome-desktop-3.36.0:3 >=gnome-base/gsettings-desktop-schemas-3.36.0 >=x11-libs/gtk+-3.1.91:3[X] x11-libs/libX11:= x11-libs/libXcomposite:= dev-libs/dbus-glib gnome-base/gnome-common sys-libs/pam
+SLOT=0
+_eclasses_=git-r3	b8e8c92aa5fe8df7187e466138eb4e52	gnuconfig	9f91b4b0c84e734a87492d4293f03de5	toolchain-funcs	24921b57d6561d87cbef4916a296ada4	multilib	ebdbaed22e873a5abe6205f41349b479	libtool	f143db5a74ccd9ca28c1234deffede96	autotools	9e63f92c2a5d867fea55ecb160c7d354	edos2unix	33e347e171066657f91f8b0c72ec8773	l10n	8cdd85e169b835d518bc2fd59f780d8e	wrapper	4251d4c84c25f59094fd557e0063a974	eutils	2d5b3f4b315094768576b6799e4f926e	xdg-utils	ff2ff954e6b17929574eee4efc5152ba	gnome2-utils	c8e3fff820d850c0e003e22208d2eea3
+_md5_=6085e33bad5fb81d848584ba41089654
