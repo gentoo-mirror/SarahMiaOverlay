@@ -9,7 +9,7 @@ budgie-extras add a lot of applets and helper applications.
 
 For more information about budgie you can visit: https://github.com/solus-project/budgie-desktop/blob/master/README.md
 
-After merging budgie-extras please start the Window Shuffler, some applets will require this (hotconers mostly). This can be done with the provided Window Shuffler application in your applications list/menu. You can set additional options there as well.
+After merging budgie-extras please start the Window Shuffler, some applets will require this (hotcorners mostly). This can be done with the provided Window Shuffler application in your applications list/menu. You can set additional options there as well.
 The config for the new window preview from budgie-extras (for alt-tab) is in the Previews Control in your applications list/menu. You can set additional options there as well.
 
 **Other**
@@ -22,7 +22,7 @@ This overlay contains a few other packages that either fixes or adds unlisted ve
 
 To add the overlay to portage run the following: (assuming you have eselect-repository installed)
 
-	eselect repository add SarahMiaOverlay git https://gitlab.com/SarahMia/sarahmiaoverlay
+	eselect repository enable SarahMiaOverlay
 
 **Budgie**
 
@@ -33,7 +33,7 @@ To install budgie desktop you need to add budgie to your accept_keywords. For 10
 	emerge --ask --verbose budgie-desktop
 	
 
-After that is done you can just select the budgie-desktop session from your favorite login manager. Budgie by itself favors lightdm with slick-greeter or gtk-greeter.
+After that is done you can just select the budgie-desktop session from your favorite login manager. Budgie by itself favors lightdm with slick-greeter or gtk-greeter, but is not limited to any.
 
 Budgie by itself comes pretty barebones. I recommend you find application for the following parts along with my personal recommendation:
 
@@ -48,7 +48,7 @@ Budgie by itself comes pretty barebones. I recommend you find application for th
 To personalise your desktop:
 
 - Gnome Tweaks for additional settings
-- Budgie Extras for more applets. Other applet can be found as budgie-\*-applet in the overlay
+- Budgie Extras for more applets. Other applets can be found as budgie-\*-applet in the overlay
 - Change settings in the following applications:
 	- Gnome Control Center
 	- Budgie Desktop Settings
@@ -73,14 +73,11 @@ If anything comes up feel free to contact me by making an issue. I will handle i
 
 2) If you are using budgie-desktop version 10.5.2 then budgie-screensaver may not work. This due to budgie-desktop-5.10.2 relies on gnome-screensaver which isn't in portage anymore since sometime 2020. Therefor using that version will prevent you from locking your desktop. Only logout will work for locking but will cause you to loose your session. Please upgrade to budgie-desktop-5.10.3 which does support budgie-screensaver. At that point you can lock your screen.
 
-3) Budgie-brightness-control-applet is meant for a single backlight devices atm due to personal fixes I had to do to get this working. It uses currently a dirty fix. (I wanted this applet personally so yeah..). The original source is old and meant to work only with pre 3.32 gnome-settings-daemon which is below current budgie-desktop ebuild requirements. If it doesn't work remove the applet from your system or do not use the applet. It will have no further impact on your budgie-desktop.
-
-4) If there is an applet/software/theme you want let me know with a link and I will see if I can add it in the overlay for you.
+3) If there is an applet/software/theme you want let me know with a link and I will see if I can add it in the overlay for you.
 
 ### Todo:
 
-- Fork/contact creator of budgoe-brightness-control-applet with the fixes I made. Uses atm a very dirty way to find the backlight (basically uses the first one it finds lol). Due to gnome-settings-deamon > 3.32 (3.36 is required min for current budgie-desktop ebuilds) changing the behaviour of gsd-backlight-helper massively this app was broken. current ebuild uses my personal source fixes.
 - Make a separate document for further tweaks of budgie-desktop if wanted. (e.g. not showing nm-applet tray icon if using the network applet from budgie-extras)
-- Look into specific budgie themes maybe
-- Maybe rename the overlay since it is no longer just a personal overlay
-- Thinking about adding 2 meta ebuilds. One for budgie-desktop-meta and one for budgie-desktop-applets-meta
+- Look into specific budgie themes maybe.
+- Thinking about adding a meta ebuild for all the applets.
+- Look into idea-community to see if it is still relevant since it looks like it got fixed in the mainline gentoo repo.
