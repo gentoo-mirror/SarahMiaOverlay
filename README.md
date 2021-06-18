@@ -58,18 +58,7 @@ To personalise your desktop:
 
 ## Notes:
 
-If anything comes up feel free to contact me by making an issue. I will handle it as soon as I can.
-
-1) the idea-community ebuild was added due to the gentoo mainline 2021.3.1 version actually installs 2020.3.1 version. This may cause it to look like a downgrade when installing 2021.1.1 version. Please note that you can prevent that by having the following line in your package.use file or subfile:
-
-    */etc/portage/package.accept_keyword{/idea-community}*
-
-    ```
-	# Only installs idea 2021.1 version without making the mainline gentoo idea-community ebuild look like an upgrade
-	=dev-util/idea-community-2021.1.1.211.7142.45
-	```
-
-	If you are unsure of which version you are running please go help/about menu inside the IDE.
+1) If anything comes up feel free to contact me by making an issue. I will handle it as soon as I can.
 
 2) If you are using budgie-desktop version 10.5.2 then budgie-screensaver may not work. This due to budgie-desktop-5.10.2 relies on gnome-screensaver which isn't in portage anymore since sometime 2020. Therefor using that version will prevent you from locking your desktop. Only logout will work for locking but will cause you to loose your session. Please upgrade to budgie-desktop-5.10.3 which does support budgie-screensaver. At that point you can lock your screen.
 
