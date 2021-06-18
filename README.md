@@ -69,4 +69,3 @@ To personalise your desktop:
 - Make a separate document for further tweaks of budgie-desktop if wanted. (e.g. not showing nm-applet tray icon if using the network applet from budgie-extras)
 - Look into specific budgie themes maybe.
 - Thinking about adding a meta ebuild for all the applets.
-- Look into idea-community to see if it is still relevant since it looks like it got fixed in the mainline gentoo repo.
