@@ -8,9 +8,9 @@ VALA_MIN_API_VERSION="0.48"
 inherit meson vala gnome2-utils xdg
 
 DESCRIPTION="This applet allows you to controll screen brightness. Made for Budgie Desktop."
-HOMEPAGE="https://github.com/ilgarmehmetali/${PN}"
+HOMEPAGE="https://github.com/Azania/${PN}"
 
-SRC_URI="https://github.com/ilgarmehmetali/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
+SRC_URI="https://github.com/Azania/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE=""
 SLOT="0"
@@ -19,10 +19,6 @@ KEYWORDS="~amd64 ~x86"
 DEPEND=">=gnome-extra/budgie-desktop-10"
 RDEPEND="${DEPEND}"
 BDEPEND="dev-util/meson $(vala_depend)"
-
-PATCHES=(
-	"${FILESDIR}/fix_applet_massively.patch"
-)
 
 src_unpack() {
 	unpack ${P}.tar.gz
