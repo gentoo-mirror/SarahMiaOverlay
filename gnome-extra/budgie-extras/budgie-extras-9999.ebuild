@@ -30,7 +30,6 @@ BDEPEND="
 "
 
 PATCHES=(
-	"${FILESDIR}/fix_applications_menu_meson_zeitgeist_build.patch"
 	"${FILESDIR}/exclude_applications_menu_build_all.patch"
 )
 

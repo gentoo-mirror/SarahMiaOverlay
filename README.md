@@ -60,9 +60,11 @@ To personalise your desktop:
 
 1) If anything comes up feel free to contact me by making an issue. I will handle it as soon as I can.
 
-2) If you are using budgie-desktop version 10.5.2 then budgie-screensaver may not work. This due to budgie-desktop-5.10.2 relies on gnome-screensaver which isn't in portage anymore since sometime 2020. Therefor using that version will prevent you from locking your desktop. Only logout will work for locking but will cause you to loose your session. Please upgrade to budgie-desktop-5.10.3 which does support budgie-screensaver. At that point you can lock your screen.
+2) If you want a specific applet/software/theme/etc that is budgie-desktop related feel free to make a request, I will see what I can do to get it added to the overlay.
 
-3) If there is an applet/software/theme you want let me know with a link and I will see if I can add it in the overlay for you.
+3) If you are using budgie-desktop version 10.5.2 then budgie-screensaver may not work. This due to budgie-desktop-5.10.2 relies on gnome-screensaver which isn't in portage anymore since sometime 2020. Therefor using that version will prevent you from locking your desktop. Only logout will work for locking but will cause you to loose your session. Please upgrade to budgie-desktop-5.10.3 which does support budgie-screensaver. At that point you can lock your screen.
+
+4) If there is an applet/software/theme you want let me know with a link and I will see if I can add it in the overlay for you.
 
 ### Todo:
 
