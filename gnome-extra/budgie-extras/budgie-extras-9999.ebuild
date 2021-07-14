@@ -22,6 +22,7 @@ DEPEND="
 	>=net-libs/libsoup-2.4
 	dev-libs/granite
 	dev-libs/appstream[vala]
+	dev-libs/keybinder
 	"
 RDEPEND="${DEPEND}"
 BDEPEND="
