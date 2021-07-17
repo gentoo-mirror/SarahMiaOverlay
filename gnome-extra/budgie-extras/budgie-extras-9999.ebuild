@@ -30,9 +30,6 @@ BDEPEND="
 	$(vala_depend)
 "
 
-PATCHES=(
-	"${FILESDIR}/exclude_applications_menu_build_all.patch"
-)
 
 src_prepare() {
 	vala_src_prepare
@@ -42,7 +39,6 @@ src_prepare() {
 src_configure() {
 	local emesonargs=(
 		-Dwith-zeitgeist=false
-		-Dbuild-applications-menu=true
 	)
 	meson_src_configure
 }

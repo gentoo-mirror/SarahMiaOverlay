@@ -40,7 +40,6 @@ BDEPEND="
 
 PATCHES=(
 	"${FILESDIR}/fix_applications_menu_meson_zeitgeist_build.patch"
-	"${FILESDIR}/exclude_applications_menu_build_all.patch"
 )
 
 src_unpack() {
@@ -67,7 +66,6 @@ src_prepare() {
 src_configure() {
 	local emesonargs=(
 		-Dwith-zeitgeist=false
-		-Dbuild-applications-menu=true
 	)
 	meson_src_configure
 }
