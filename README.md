@@ -26,9 +26,9 @@ To add the overlay to portage run the following: (assuming you have eselect-repo
 
 **Budgie**
 
-To install budgie desktop you need to add budgie to your accept_keywords. For 10.5.3 you need to do the same for the screensaver which will get pulled in by default. Then you can emerge budgie-desktop
+To install budgie desktop you need to add budgie to your accept_keywords. For 10.5.2 (if you want to use that version for some reason) you can skip budgie-screensaver. That one won't work for 10.5.2. Then you can emerge budgie-desktop as you would with any other package.
 
-	
+	echo 'gnome-extra/budgie-screensaver' >> /etc/portage/package.accept_keywords/budgie-desktop
 	echo 'gnome-extra/budgie-desktop' >> /etc/portage/package.accept_keywords/budgie-desktop
 	emerge --ask --verbose budgie-desktop
 	
@@ -66,7 +66,7 @@ To personalise your desktop:
 
 4) If there is an applet/software/theme you want let me know with a link and I will see if I can add it in the overlay for you.
 
-### Todo:
+### Possible Todo's:
 
 - Make a separate document for further tweaks of budgie-desktop if wanted. (e.g. not showing nm-applet tray icon if using the network applet from budgie-extras)
 - Look into specific budgie themes maybe.
