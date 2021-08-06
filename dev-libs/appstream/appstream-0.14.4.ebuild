@@ -57,7 +57,9 @@ src_prepare() {
 		sed -e "/^subdir.*tests/s/^/#DONT /" -i {,qt/}meson.build || die # bug 675944
 	fi
 
-	vala_src_prepare
+	if use vala; then
+		vala_src_prepare
+	fi
 }
 
 src_configure() {
