@@ -11,7 +11,7 @@ if [[ ${PV} = *9999* ]]; then
 else
 	SRC_URI="https://www.freedesktop.org/software/appstream/releases/AppStream-${PV}.tar.xz"
 	S="${WORKDIR}/AppStream-${PV}"
-	KEYWORDS="amd64 ~arm ~arm64 ~ppc64 x86"
+	KEYWORDS="amd64 ~arm arm64 ~ppc64 x86"
 fi
 
 DESCRIPTION="Cross-distro effort for providing metadata for software in the Linux ecosystem"
@@ -57,7 +57,9 @@ src_prepare() {
 		sed -e "/^subdir.*tests/s/^/#DONT /" -i {,qt/}meson.build || die # bug 675944
 	fi
 
-	vala_src_prepare
+	if use vala; then
+		vala_src_prepare
+	fi
 }
 
 src_configure() {
