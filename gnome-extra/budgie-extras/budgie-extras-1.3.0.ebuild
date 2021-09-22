@@ -13,11 +13,13 @@ HOMEPAGE="https://github.com/UbuntuBudgie/${PN}"
 NETWORK_COMMIT="0742fd0"
 APPLICATIONS_MENU_COMMIT="5b84f45"
 QUICKCHAR_COMMIT="1fe82ef"
+TRASH_COMMIT="1741104"
 
 SRC_URI="https://github.com/UbuntuBudgie/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz
 	https://github.com/UbuntuBudgie/applications-menu/archive/${APPLICATIONS_MENU_COMMIT}.tar.gz -> budgie-applications-menu-applet-${APPLICATIONS_MENU_COMMIT}.tar.gz
 	https://github.com/UbuntuBudgie/budgie-network-applet/archive/${NETWORK_COMMIT}.tar.gz -> budgie-network-applet-${NETWORK_COMMIT}.tar.gz
 	https://github.com/UbuntuBudgie/QuickChar/archive/${QUICKCHAR_COMMIT}.tar.gz -> budgie-quickchar-applet-${QUICKCHAR_COMMIT}.tar.gz
+	https://github.com/UbuntuBudgie/budgie-trash-applet/archive/${TRASH_COMMIT}.tar.gz -> budgie-trash-applet-${TRASH_COMMIT}.tar.gz
 "
 
 LICENSE="GPL-3"
@@ -51,6 +53,10 @@ src_unpack() {
 	pushd ${S}/budgie-quickchar || die
 		unpack budgie-quickchar-applet-${QUICKCHAR_COMMIT}.tar.gz
 		mv -fT QuickChar-* quickchar || die
+	popd || die
+	pushd ${S}/budgie-trash || die
+		unpack budgie-trash-applet-${TRASH_COMMIT}.tar.gz
+		mv -fT trash-* budgie-trash || die
 	popd || die
 }
 
