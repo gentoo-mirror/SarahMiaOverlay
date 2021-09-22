@@ -66,6 +66,8 @@ To personalise your desktop:
 
 4) If there is an applet/software/theme you want let me know with a link and I will see if I can add it in the overlay for you.
 
+5) In near future budgie-desktop 10.5.2 and budgie-extras-1.2.0 ebuilds will be removed as they are obsolete due to newer versions.
+
 ### Possible Todo's:
 
 - Make a separate document for further tweaks of budgie-desktop if wanted. (e.g. not showing nm-applet tray icon if using the network applet from budgie-extras)
