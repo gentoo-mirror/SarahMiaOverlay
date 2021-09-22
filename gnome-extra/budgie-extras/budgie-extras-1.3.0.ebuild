@@ -56,7 +56,7 @@ src_unpack() {
 	popd || die
 	pushd ${S}/budgie-trash || die
 		unpack budgie-trash-applet-${TRASH_COMMIT}.tar.gz
-		mv -fT trash-* budgie-trash || die
+		mv -fT budgie-trash-applet-* budgie-trash || die
 	popd || die
 }
 
