@@ -1,4 +1,4 @@
-dev-libs/appstream 0.14.4-r1 0.14.5: Cross-distro effort for providing metadata for software in the Linux ecosystem
+dev-libs/appstream 0.14.5 0.14.6: Cross-distro effort for providing metadata for software in the Linux ecosystem
 gnome-extra/budgie-analogue-clock-applet 1.1 9999: Add an analogue clock to the Budgie Panel. Made for Budgie Desktop.
 gnome-extra/budgie-brightness-control-applet 0.2.1 0.3: This applet allows you to controll screen brightness. Made for Budgie Desktop.
 gnome-extra/budgie-calendar-applet 5.2 9999: A budgie-desktop applet to show hours with custom formats and a calendar in a popover. Made for Budgie Desktop.
