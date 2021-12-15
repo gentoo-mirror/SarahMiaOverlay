@@ -27,7 +27,7 @@ else
 		https://gitlab.gnome.org/GNOME/libgnome-volume-control/-/archive/${GVC_COMMIT}/libgnome-volume-control-${GVC_COMMIT}.tar.gz
 		https://github.com/getsolus/budgie-translations/archive/${TRANSLATIONS_COMMIT}.tar.gz
 			-> budgie-translations-${TRANSLATIONS_COMMIT}.tar.gz"
-	KEYWORDS="~amd64 ~x86"
+	KEYWORDS="amd64 x86"
 fi
 
 LICENSE="GPL-2 LGPL-2.1"
