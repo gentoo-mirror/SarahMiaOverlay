@@ -26,14 +26,14 @@ To add the overlay to portage run the following: (assuming you have eselect-repo
 
 **Budgie**
 
-To install budgie desktop you need to add budgie to your accept_keywords. For 10.5.2 (if you want to use that version for some reason) you can skip budgie-screensaver. That one won't work for 10.5.2. Then you can emerge budgie-desktop as you would with any other package.
+To install budgie desktop by itself you don't need to do anything special other than the command below (basic emerge command). For 10.5.2 (if you want to use that version for some reason) you need to add the keyword. But this version will get deleted in the near version as it is obsolete with 10.5.3. Then you can emerge budgie-desktop as you would with any other package.
 
-	echo 'gnome-extra/budgie-screensaver' >> /etc/portage/package.accept_keywords/budgie-desktop
-	echo 'gnome-extra/budgie-desktop' >> /etc/portage/package.accept_keywords/budgie-desktop
 	emerge --ask --verbose budgie-desktop
 	
 
 After that is done you can just select the budgie-desktop session from your favorite login manager. Budgie by itself favors lightdm with slick-greeter or gtk-greeter, but is not limited to any.
+
+**Budgie extra applets and applications**
 
 Budgie by itself comes pretty barebones. I recommend you find application for the following parts along with my personal recommendation:
 
@@ -56,6 +56,10 @@ To personalise your desktop:
 	- (Part of budgie-extras) WallStreet Control (rotating wallpapers)
 	- (Part of budgie-extras) Previews Control (display applications preview while alt-tabbing)
 
+## Updates:
+
+2021/12/15) Budgie-desktop and budgie-screensaver been made stable due to not getting any reports. Budgie-extras will be set to stable later mid january if nothing changes. At the same time budgie-desktop version 10.5.2 will be removed as it has become obsolete.
+
 ## Notes:
 
 1) If anything comes up feel free to contact me by making an issue. I will handle it as soon as I can.
@@ -67,6 +71,8 @@ To personalise your desktop:
 4) If there is an applet/software/theme you want let me know with a link and I will see if I can add it in the overlay for you.
 
 5) In near future budgie-desktop 10.5.2 and budgie-extras-1.2.0 ebuilds will be removed as they are obsolete due to newer versions.
+
+6) I will keep appstream updated in sync with the main line gentoo tree. This usually happens within a few days at most from any mainline update.
 
 ### Possible Todo's:
 
