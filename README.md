@@ -14,7 +14,7 @@ The config for the new window preview from budgie-extras (for alt-tab) is in the
 
 **Other**
 
-This overlay contains a few other packages that either fixes or adds unlisted versions/features elsewhere.
+This overlay contains 1 other package that will be removed in the future, making this repository budgie only. Ebuilds not related to budgie may be added later if needed but is unlikely.
 
 ## Installation:
 
@@ -32,6 +32,8 @@ To install budgie desktop by itself you don't need to do anything special other 
 	
 
 After that is done you can just select the budgie-desktop session from your favorite login manager. Budgie by itself favors lightdm with slick-greeter or gtk-greeter, but is not limited to any.
+
+*Unstable notice:* If you run unstable x11-wm/mutter-41.3 or higher, you will need to merge budgie-desktop-10.5.3-r1 which will apply the mutter9 compatabiloity patch till a new release has been made with this included (it is already upstream). This version however is likewise also unstable, so make to add budgie-desktop to your package.keywords directory!
 
 **Budgie extra applets and applications**
 
@@ -58,6 +60,7 @@ To personalise your desktop:
 
 ## Updates:
 
+2022/01/17) budgie-desktop-10.5.3-r1 added with mutter 9 support for those running unstable gnome41.3+ version. Removed old version of budgie-desktop. Budgie-extras-1.3.0 made stable.
 2021/12/15) Budgie-desktop and budgie-screensaver been made stable due to not getting any reports. Budgie-extras will be set to stable later mid january if nothing changes. At the same time budgie-desktop version 10.5.2 will be removed as it has become obsolete.
 
 ## Notes:
