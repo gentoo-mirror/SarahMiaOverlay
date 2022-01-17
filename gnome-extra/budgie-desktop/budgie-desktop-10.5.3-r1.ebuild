@@ -13,16 +13,16 @@ HOMEPAGE="https://getsol.us/categories/budgie/"
 
 if [[ ${PV} == 9999 ]]; then
 	inherit git-r3
-	EGIT_REPO_URI="https://github.com/solus-project/${PN}.git"
+	EGIT_REPO_URI="https://github.com/BuddiesOfBudgie/${PN}.git"
 	KEYWORDS=""
 else
 	# Set these to the submodule commit hashes used in the the upstream version tag matching v${PV}
 	# to avoid git dependency
-	GVC_COMMIT=ec5cf3e
-	TRANSLATIONS_COMMIT=217b2a3
+	GVC_COMMIT=c5ab6037
+	TRANSLATIONS_COMMIT=8b83aef
 
 	SRC_URI="
-		https://github.com/solus-project/${PN}/archive/v${PV}.tar.gz
+		https://github.com/BuddiesOfBudgie/${PN}/archive/v${PV}.tar.gz
 			-> ${P}.tar.gz
 		https://gitlab.gnome.org/GNOME/libgnome-volume-control/-/archive/${GVC_COMMIT}/libgnome-volume-control-${GVC_COMMIT}.tar.gz
 		https://github.com/getsolus/budgie-translations/archive/${TRANSLATIONS_COMMIT}.tar.gz
@@ -43,6 +43,7 @@ COMMON_DEPEND="
 	>=gnome-base/gnome-settings-daemon-${GNOME_MIN_VERSIOM}
 	>=gnome-base/gsettings-desktop-schemas-${GNOME_MIN_VERSIOM}
 	>=gnome-base/gnome-menus-3.10.3:3[introspection]
+	>=gnome-extra/budgie-screensaver-4.0
 	media-libs/clutter:1.0
 	>=media-libs/graphene-1.10:=[introspection]
 	media-libs/cogl:1.0
@@ -82,6 +83,10 @@ DEPEND="
 
 	>=dev-libs/gobject-introspection-1.44.0
 "
+
+PATCHES=(
+	"${FILESDIR}/mutter9.patch"
+)
 
 src_unpack() {
 	if [[ ${PV} == 9999 ]]; then

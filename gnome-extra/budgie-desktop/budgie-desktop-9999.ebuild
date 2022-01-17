@@ -13,7 +13,7 @@ HOMEPAGE="https://getsol.us/categories/budgie/"
 
 if [[ ${PV} == 9999 ]]; then
 	inherit git-r3
-	EGIT_REPO_URI="https://github.com/solus-project/${PN}.git"
+	EGIT_REPO_URI="https://github.com/BuddiesOfBudgie/${PN}.git"
 	KEYWORDS=""
 else
 	# Set these to the submodule commit hashes used in the the upstream version tag matching v${PV}
@@ -22,7 +22,7 @@ else
 	TRANSLATIONS_COMMIT=
 
 	SRC_URI="
-		https://github.com/solus-project/${PN}/archive/v${PV}.tar.gz
+		https://github.com/BuddiesOfBudgie/${PN}/archive/v${PV}.tar.gz
 			-> ${P}.tar.gz
 		https://gitlab.gnome.org/GNOME/libgnome-volume-control/-/archive/${GVC_COMMIT}/libgnome-volume-control-${GVC_COMMIT}.tar.gz
 		https://github.com/getsolus/budgie-translations/archive/${TRANSLATIONS_COMMIT}.tar.gz
