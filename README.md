@@ -7,7 +7,7 @@ Budgie is the default desktop of Solus Operating System, written from scratch. B
 This overlay contains both the budgie-desktop, extras and applets for budgie desktop. Everything that is needed to run budgie-desktop.
 budgie-extras add a lot of applets and helper applications.
 
-For more information about budgie you can visit: https://github.com/solus-project/budgie-desktop/blob/master/README.md
+For more information about budgie you can visit: https://github.com/BuddiesOfBudgie/budgie-desktop/blob/master/README.md
 
 After merging budgie-extras please start the Window Shuffler, some applets will require this (hotcorners mostly). This can be done with the provided Window Shuffler application in your applications list/menu. You can set additional options there as well.
 The config for the new window preview from budgie-extras (for alt-tab) is in the Previews Control in your applications list/menu. You can set additional options there as well.
@@ -33,7 +33,7 @@ To install budgie desktop by itself you don't need to do anything special other 
 
 After that is done you can just select the budgie-desktop session from your favorite login manager. Budgie by itself favors lightdm with slick-greeter or gtk-greeter, but is not limited to any.
 
-*Unstable notice:* If you run unstable x11-wm/mutter-41.3 or higher, you will need to merge budgie-desktop-10.5.3-r1 which will apply the mutter9 compatabiloity patch till a new release has been made with this included (it is already upstream). This version however is likewise also unstable, so make to add budgie-desktop to your package.keywords directory!
+*Unstable notice:* If you run unstable x11-wm/mutter-41.3 or higher and/or dev-util/meson-61.3 or higher, you will need to merge budgie-desktop-10.5.3-r2 which will apply the mutter9 and meson compatabiloity patch till a new release has been made with this included (it is already upstream). This version however is likewise also unstable, so make to add budgie-desktop to your package.keywords directory!
 
 **Budgie extra applets and applications**
 
