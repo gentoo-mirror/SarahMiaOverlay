@@ -10,14 +10,16 @@ inherit meson vala gnome2-utils xdg
 DESCRIPTION="Additional enhancements for the user experience. Contains many applets. Made for Budgie Desktop."
 HOMEPAGE="https://github.com/UbuntuBudgie/${PN}"
 
-NETWORK_COMMIT="4a965df"
-APPLICATIONS_MENU_COMMIT="ed4d340"
-QUICKCHAR_COMMIT="3dc7fb4"
+NETWORK_COMMIT="8cb25b3"
+APPLICATIONS_MENU_COMMIT="8bbf6c0"
+QUICKCHAR_COMMIT="54fddb9"
+TRASH_COMMIT="8132ec7"
 
 SRC_URI="https://github.com/UbuntuBudgie/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz
 	https://github.com/UbuntuBudgie/applications-menu/archive/${APPLICATIONS_MENU_COMMIT}.tar.gz -> budgie-applications-menu-applet-${APPLICATIONS_MENU_COMMIT}.tar.gz
 	https://github.com/UbuntuBudgie/budgie-network-applet/archive/${NETWORK_COMMIT}.tar.gz -> budgie-network-applet-${NETWORK_COMMIT}.tar.gz
 	https://github.com/UbuntuBudgie/QuickChar/archive/${QUICKCHAR_COMMIT}.tar.gz -> budgie-quickchar-applet-${QUICKCHAR_COMMIT}.tar.gz
+	https://github.com/UbuntuBudgie/budgie-trash-applet/archive/${TRASH_COMMIT}.tar.gz -> budgie-trash-applet-${TRASH_COMMIT}.tar.gz
 "
 
 LICENSE="GPL-3"
@@ -25,7 +27,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 
 DEPEND="
-	>=gnome-extra/budgie-desktop-10.2
+	>=gnome-extra/budgie-desktop-10.6
 	dev-libs/libgee
 	>=net-libs/libsoup-2.4
 	dev-libs/granite
@@ -37,10 +39,6 @@ BDEPEND="
 	dev-util/meson
 	$(vala_depend)
 "
-
-PATCHES=(
-	"${FILESDIR}/fix_applications_menu_meson_zeitgeist_build.patch"
-)
 
 src_unpack() {
 	unpack ${P}.tar.gz
@@ -55,6 +53,10 @@ src_unpack() {
 	pushd ${S}/budgie-quickchar || die
 		unpack budgie-quickchar-applet-${QUICKCHAR_COMMIT}.tar.gz
 		mv -fT QuickChar-* quickchar || die
+	popd || die
+	pushd ${S}/budgie-trash || die
+		unpack budgie-trash-applet-${TRASH_COMMIT}.tar.gz
+		mv -fT budgie-trash-applet-* trash || die
 	popd || die
 }
 

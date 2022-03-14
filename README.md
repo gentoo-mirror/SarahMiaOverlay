@@ -33,7 +33,12 @@ To install budgie desktop by itself you don't need to do anything special other 
 
 After that is done you can just select the budgie-desktop session from your favorite login manager. Budgie by itself favors lightdm with slick-greeter or gtk-greeter, but is not limited to any.
 
-*Unstable notice:* If you run unstable x11-wm/mutter-41.3 or higher and/or dev-util/meson-61.3 or higher, you will need to merge budgie-desktop-10.5.3-r2 which will apply the mutter9 and meson compatabiloity patch till a new release has been made with this included (it is already upstream). This version however is likewise also unstable, so make to add budgie-desktop to your package.keywords directory!
+*Budgie-desktop-10.6 notice:* Since these being fresh release along with other associated software they will be unstable for a while. To install this version please unmask by adding them to the keywords directory of portage config;
+
+	echo 'gnome-extra/budgie-desktop' >> /etc/portage/package.accept_keywords/budgie-desktop
+	echo 'gnome-extra/budgie-screensaver' >> /etc/portage/package.accept_keywords/budgie-desktop
+
+*Unstable 10.5.3+ notice:* If you run unstable x11-wm/mutter-41.3 or higher and/or dev-util/meson-61.3 or higher, you will need to merge budgie-desktop-10.5.3-r2 which will apply the mutter9 and meson compatabiloity patch till a new release has been made with this included (it is already upstream). This version however is likewise also unstable, so make to add budgie-desktop to your package.keywords directory!
 
 **Budgie extra applets and applications**
 
@@ -52,7 +57,7 @@ To personalise your desktop:
 - Gnome Tweaks for additional settings
 - Budgie Extras for more applets. Other applets can be found as budgie-\*-applet in the overlay
 - Change settings in the following applications:
-	- Gnome Control Center
+	- Gnome Control Center (To be replaced with budgie-control-center in the future)
 	- Budgie Desktop Settings
 	- (Part of budgie-extras) Window Shuffler Control (tiling/grid support)
 	- (Part of budgie-extras) WallStreet Control (rotating wallpapers)
@@ -60,7 +65,10 @@ To personalise your desktop:
 
 ## Updates:
 
+2022/03/15) budgoe-desktop-10.6, budgie-screensaver-5.0, budgie-extras-1.4.0 and budgie-desktop-view-1.2 have been added. budgie-extras-1.2.0 has been removed.
+
 2022/01/17) budgie-desktop-10.5.3-r1 added with mutter 9 support for those running unstable gnome41.3+ version. Removed old version of budgie-desktop. Budgie-extras-1.3.0 made stable.
+
 2021/12/15) Budgie-desktop and budgie-screensaver been made stable due to not getting any reports. Budgie-extras will be set to stable later mid january if nothing changes. At the same time budgie-desktop version 10.5.2 will be removed as it has become obsolete.
 
 ## Notes:
@@ -69,16 +77,15 @@ To personalise your desktop:
 
 2) If you want a specific applet/software/theme/etc that is budgie-desktop related feel free to make a request, I will see what I can do to get it added to the overlay.
 
-3) If you are using budgie-desktop version 10.5.2 then budgie-screensaver may not work. This due to budgie-desktop-5.10.2 relies on gnome-screensaver which isn't in portage anymore since sometime 2020. Therefor using that version will prevent you from locking your desktop. Only logout will work for locking but will cause you to loose your session. Please upgrade to budgie-desktop-5.10.3 which does support budgie-screensaver. At that point you can lock your screen.
+3) If there is an applet/software/theme you want let me know with a link and I will see if I can add it in the overlay for you.
 
-4) If there is an applet/software/theme you want let me know with a link and I will see if I can add it in the overlay for you.
-
-5) In near future budgie-desktop 10.5.2 and budgie-extras-1.2.0 ebuilds will be removed as they are obsolete due to newer versions.
-
-6) I will keep appstream updated in sync with the main line gentoo tree. This usually happens within a few days at most from any mainline update.
+4) I will keep appstream updated in sync with the main line gentoo tree. This usually happens within a few days at most from any mainline update.
 
 ### Possible Todo's:
 
+- (HIGH) Check all budgie-desktop dependecies and do full version check.
+- (HIGH) Test budgie-desktop-10.6 for any further issues.
+- (MED-HIGH) Finish up budgie-control-center ebuilds.
 - Make a separate document for further tweaks of budgie-desktop if wanted. (e.g. not showing nm-applet tray icon if using the network applet from budgie-extras)
 - Look into specific budgie themes maybe.
 - Thinking about adding a meta ebuild for all the applets.
