@@ -1,19 +1,21 @@
 # Copyright 2021 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=7
+EAPI=8
 
 GNOME_MIN_VERSIOM="3.36.0"
 
-inherit git-r3 autotools gnome2-utils
+inherit git-r3 meson gnome2-utils xdg
 
 DESCRIPTION="Budgie Screensaver is a fork of gnome-screensaver intended for use with Budgie Desktop and is similar in purpose to other screensavers such as MATE Screensaver."
-HOMEPAGE="https://github.com/getsolus/${PN}"
-EGIT_REPO_URI="https://github.com/getsolus/${PN}.git"
+HOMEPAGE="https://github.com/BuddiesOfBudgie/budgie-screensaver"
+EGIT_REPO_URI="https://github.com/BuddiesOfBudgie/${PN}.git"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS=""
+IUSE="systemd"
+GNOME_MIN_VERSIOM="3.36.0"
 
 DEPEND="
 	>=dev-libs/glib-2.64.0:=
@@ -25,26 +27,20 @@ DEPEND="
 	dev-libs/dbus-glib
 	gnome-base/gnome-common
 	sys-libs/pam
-"
+	systemd? ( >=sys-apps/systemd-209:0= )"
 RDEPEND="${DEPEND}"
-BDEPEND=""
-
-src_prepare() {
-	default
-	eautoreconf
-}
+BDEPEND="dev-util/meson"
 
 src_configure() {
-	local myconf=(
-		--with-pam-prefix=/etc
+	local emesonargs=(
+		$(meson_use systemd with-systemd)
 	)
 
-	econf "${myconf[@]}"
+	meson_src_configure
 }
 
-src_install() {
-	default
-	fperms u+s /usr/libexec/budgie-screensaver-dialog
+src_compile() {
+	meson_src_compile
 }
 
 pkg_postinst() {
