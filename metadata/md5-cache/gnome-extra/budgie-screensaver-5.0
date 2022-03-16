@@ -1,12 +1,15 @@
-BDEPEND=dev-util/meson || ( dev-lang/vala:0.54 dev-lang/vala:0.52 dev-lang/vala:0.50 dev-lang/vala:0.48 ) >=dev-util/meson-0.58.2-r1 >=dev-util/ninja-1.8.2 dev-util/meson-format-array
-DEFINED_PHASES=compile configure install postinst postrm preinst prepare test unpack
-DEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
+BDEPEND=dev-util/meson >=dev-util/meson-0.58.2-r1 >=dev-util/ninja-1.8.2 dev-util/meson-format-array
+DEFINED_PHASES=compile configure install postinst postrm preinst test unpack
+DEPEND=>=dev-libs/glib-2.64.0:= >=gnome-base/gnome-desktop-3.36.0:3 >=gnome-base/gsettings-desktop-schemas-3.36.0 >=x11-libs/gtk+-3.1.91:3[X] x11-libs/libX11:= x11-libs/libXcomposite:= dev-libs/dbus-glib gnome-base/gnome-common sys-libs/pam systemd? ( >=sys-apps/systemd-209:0= )
 DESCRIPTION=Budgie Screensaver is a fork of gnome-screensaver intended for use with Budgie Desktop and is similar in purpose to other screensavers such as MATE Screensaver.
-EAPI=7
+EAPI=8
 HOMEPAGE=https://github.com/BuddiesOfBudgie/budgie-screensaver
-INHERIT=meson vala gnome2-utils xdg
+IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
+INHERIT=meson gnome2-utils xdg
+IUSE=systemd
 KEYWORDS=~amd64 ~x86
+RDEPEND=>=dev-libs/glib-2.64.0:= >=gnome-base/gnome-desktop-3.36.0:3 >=gnome-base/gsettings-desktop-schemas-3.36.0 >=x11-libs/gtk+-3.1.91:3[X] x11-libs/libX11:= x11-libs/libXcomposite:= dev-libs/dbus-glib gnome-base/gnome-common sys-libs/pam systemd? ( >=sys-apps/systemd-209:0= )
 SLOT=0
 SRC_URI=https://github.com/BuddiesOfBudgie/budgie-screensaver/archive/v5.0.tar.gz -> budgie-screensaver-5.0.tar.gz
-_eclasses_=multiprocessing	61c959fc55c15c00bbb1079d6a71370b	ninja-utils	a4dab848a4490e8e48cf0baab3e61bc2	eapi8-dosym	cd7d420bb5be5ee079f27239ce76b8f5	toolchain-funcs	badd6e329e1f3e6bee99b35bf8763ce8	multilib	de4beb52bfa93c4c5d96792a6b5e1784	python-utils-r1	d3d7da5aff94a677154819e0cb95ee36	meson	9f3e84959ae1d60e19bc91f212774dcc	edos2unix	33e347e171066657f91f8b0c72ec8773	strip-linguas	ac3ee41ee2d31d8c41a77c0838320cc7	wrapper	4251d4c84c25f59094fd557e0063a974	eutils	dab5d8ec471d025b79c9e6906bcf3bff	vala	77f49b69eeaec5a1f2aeb4dc688e0e80	xdg-utils	4f29a8b760a594a212abe9c2ba957c31	gnome2-utils	239e7afa214b50012f83b8bb61de7555	xdg	6024fbc93167fad782e2032933654857
-_md5_=7241fc5675d3f1cf39ad668f5c32baf5
+_eclasses_=multiprocessing	61c959fc55c15c00bbb1079d6a71370b	ninja-utils	a4dab848a4490e8e48cf0baab3e61bc2	toolchain-funcs	badd6e329e1f3e6bee99b35bf8763ce8	multilib	de4beb52bfa93c4c5d96792a6b5e1784	python-utils-r1	d3d7da5aff94a677154819e0cb95ee36	meson	9f3e84959ae1d60e19bc91f212774dcc	xdg-utils	4f29a8b760a594a212abe9c2ba957c31	gnome2-utils	239e7afa214b50012f83b8bb61de7555	xdg	6024fbc93167fad782e2032933654857
+_md5_=7567e4f34ef69952e4f36ffd7e3bf310
