@@ -26,19 +26,17 @@ To add the overlay to portage run the following: (assuming you have eselect-repo
 
 **Budgie**
 
-To install budgie desktop by itself you don't need to do anything special other than the command below (basic emerge command). For 10.5.2 (if you want to use that version for some reason) you need to add the keyword. But this version will get deleted in the near version as it is obsolete with 10.5.3. Then you can emerge budgie-desktop as you would with any other package.
+To install budgie desktop by itself you don't need to do anything special other than the command below (basic emerge command). Then you can emerge budgie-desktop as you would with any other package.
 
 	emerge --ask --verbose budgie-desktop
 	
 
 After that is done you can just select the budgie-desktop session from your favorite login manager. Budgie by itself favors lightdm with slick-greeter or gtk-greeter, but is not limited to any.
 
-*Budgie-desktop-10.6 notice:* Since these being fresh release along with other associated software they will be unstable for a while. To install this version please unmask by adding them to the keywords directory of portage config;
+*Budgie-desktop-10.6 notice:* Since these being fresh release along with other associated software they will be in 'testing' to make sure there are no dire issues in regards to stability and compatability in regards to other software. And that the ebuilds also function as intended. With patch releases later coming it will be made with stable keywords in due time. for a while. To install this version please unmask by adding them to the keywords directory of portage config;
 
 	echo 'gnome-extra/budgie-desktop' >> /etc/portage/package.accept_keywords/budgie-desktop
 	echo 'gnome-extra/budgie-screensaver' >> /etc/portage/package.accept_keywords/budgie-desktop
-
-*Unstable 10.5.3+ notice:* If you run unstable x11-wm/mutter-41.3 or higher and/or dev-util/meson-61.3 or higher, you will need to merge budgie-desktop-10.5.3-r2 which will apply the mutter9 and meson compatabiloity patch till a new release has been made with this included (it is already upstream). This version however is likewise also unstable, so make to add budgie-desktop to your package.keywords directory!
 
 **Budgie extra applets and applications**
 
@@ -65,11 +63,15 @@ To personalise your desktop:
 
 ## Updates:
 
+2022/04/06) budgie-desktop-10.5.3-r2 and budgie-desktop-view-1.1.1 are made stable. Readme updated to clarify some stuff regarding keywords.
+
 2022/03/15) budgoe-desktop-10.6, budgie-screensaver-5.0, budgie-extras-1.4.0 and budgie-desktop-view-1.2 have been added. budgie-extras-1.2.0 has been removed.
 
 2022/01/17) budgie-desktop-10.5.3-r1 added with mutter 9 support for those running unstable gnome41.3+ version. Removed old version of budgie-desktop. Budgie-extras-1.3.0 made stable.
 
 2021/12/15) Budgie-desktop and budgie-screensaver been made stable due to not getting any reports. Budgie-extras will be set to stable later mid january if nothing changes. At the same time budgie-desktop version 10.5.2 will be removed as it has become obsolete.
+
+**: Unstable/stable refers to keywords in regards to e.g. x86/amd64 vs ~x86/~amd64 !
 
 ## Notes:
 
@@ -83,6 +85,7 @@ To personalise your desktop:
 
 ### Possible Todo's:
 
+- (HIGH) Update all versions of buddiesofbudgie main budgie software with latest releases. That will come before april 10th. They will be with ~ keywords.
 - (HIGH) Check all budgie-desktop dependecies and do full version check.
 - (HIGH) Test budgie-desktop-10.6 for any further issues.
 - (MED-HIGH) Finish up budgie-control-center ebuilds.
