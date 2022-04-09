@@ -24,7 +24,7 @@ To add the overlay to portage run the following: (assuming you have eselect-repo
 
 	eselect repository enable SarahMiaOverlay
 
-**Budgie**
+**Option 1: Budgie Desktop Base**
 
 To install budgie desktop by itself you don't need to do anything special other than the command below (basic emerge command). Then you can emerge budgie-desktop as you would with any other package.
 
@@ -37,6 +37,21 @@ After that is done you can just select the budgie-desktop session from your favo
 
 	echo 'gnome-extra/budgie-desktop' >> /etc/portage/package.accept_keywords/budgie-desktop
 	echo 'gnome-extra/budgie-screensaver' >> /etc/portage/package.accept_keywords/budgie-desktop
+
+**option 2: Budgie Meta Package**
+
+Another option is installing budgie-meta. This is a meta package that contains budgie-desktop and screensaver as required, but also includes budgie-desktop-view, budgie-control-center and budgie-extras.
+Since all of these packages contains versions that are very new, you need to unmask this. To install this package follow the following steps;
+
+	echo 'gnome-extra/budgie-meta' >> /etc/portage/package.accept_keywords/budgie-desktop
+	echo 'gnome-extra/budgie-desktop' >> /etc/portage/package.accept_keywords/budgie-desktop
+	echo 'gnome-extra/budgie-screensaver' >> /etc/portage/package.accept_keywords/budgie-desktop
+	echo 'gnome-extra/budgie-desktop-view' >> /etc/portage/package.accept_keywords/budgie-desktop
+	echo 'gnome-extra/budgie-control-center' >> /etc/portage/package.accept_keywords/budgie-desktop
+	echo 'gnome-extra/budgie-extras' >> /etc/portage/package.accept_keywords/budgie-desktop
+	emerge --ask --verbose budgie-meta
+
+*Later on this will be made without ~arch keyword after a while to ensure full stability*
 
 **Budgie extra applets and applications**
 
@@ -55,7 +70,7 @@ To personalise your desktop:
 - Gnome Tweaks for additional settings
 - Budgie Extras for more applets. Other applets can be found as budgie-\*-applet in the overlay
 - Change settings in the following applications:
-	- Gnome Control Center (To be replaced with budgie-control-center in the future)
+	- Budgie-Control-Center or Gnome Control Center
 	- Budgie Desktop Settings
 	- (Part of budgie-extras) Window Shuffler Control (tiling/grid support)
 	- (Part of budgie-extras) WallStreet Control (rotating wallpapers)
@@ -63,13 +78,15 @@ To personalise your desktop:
 
 ## Updates:
 
-2022/04/06) budgie-desktop-10.5.3-r2 and budgie-desktop-view-1.1.1 are made stable. Readme updated to clarify some stuff regarding keywords.
+**2022/04/09)** budgie-desktop-10.6.1, budgie-screensaver-5.0.1, budgie-meta-10.6.1, budgie-control-center-1.0.1 are all added. Appstream updated with new ~ppc keyword.
 
-2022/03/15) budgoe-desktop-10.6, budgie-screensaver-5.0, budgie-extras-1.4.0 and budgie-desktop-view-1.2 have been added. budgie-extras-1.2.0 has been removed.
+**2022/04/06)** budgie-desktop-10.5.3-r2 and budgie-desktop-view-1.1.1 are made stable. Readme updated to clarify some stuff regarding keywords.
 
-2022/01/17) budgie-desktop-10.5.3-r1 added with mutter 9 support for those running unstable gnome41.3+ version. Removed old version of budgie-desktop. Budgie-extras-1.3.0 made stable.
+**2022/03/15)** budgoe-desktop-10.6, budgie-screensaver-5.0, budgie-extras-1.4.0 and budgie-desktop-view-1.2 have been added. budgie-extras-1.2.0 has been removed.
 
-2021/12/15) Budgie-desktop and budgie-screensaver been made stable due to not getting any reports. Budgie-extras will be set to stable later mid january if nothing changes. At the same time budgie-desktop version 10.5.2 will be removed as it has become obsolete.
+**2022/01/17)** budgie-desktop-10.5.3-r1 added with mutter 9 support for those running unstable gnome41.3+ version. Removed old version of budgie-desktop. Budgie-extras-1.3.0 made stable.
+
+**2021/12/15)** Budgie-desktop and budgie-screensaver been made stable due to not getting any reports. Budgie-extras will be set to stable later mid january if nothing changes. At the same time budgie-desktop version 10.5.2 will be removed as it has become obsolete.
 
 **: Unstable/stable refers to keywords in regards to e.g. x86/amd64 vs ~x86/~amd64 !
 
@@ -85,10 +102,7 @@ To personalise your desktop:
 
 ### Possible Todo's:
 
-- (HIGH) Update all versions of buddiesofbudgie main budgie software with latest releases. That will come before april 10th. They will be with ~ keywords.
-- (HIGH) Check all budgie-desktop dependecies and do full version check.
-- (HIGH) Test budgie-desktop-10.6 for any further issues.
-- (MED-HIGH) Finish up budgie-control-center ebuilds.
-- Make a separate document for further tweaks of budgie-desktop if wanted. (e.g. not showing nm-applet tray icon if using the network applet from budgie-extras)
-- Look into specific budgie themes maybe.
-- Thinking about adding a meta ebuild for all the applets.
+- (medium) Mid to end may push meta-10.6.1 and all contents to stable if no issues arise.
+- (medium) Assuming above done, 1 month later removing old ebuilds.
+- (unlikely) Make a separate document for further tweaks of budgie-desktop if wanted. (e.g. not showing nm-applet tray icon if using the network applet from budgie-extras)
+- (unlikley) Look into specific budgie themes maybe.
