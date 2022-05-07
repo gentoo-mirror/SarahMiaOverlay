@@ -24,7 +24,10 @@ DEPEND="
 	dev-libs/appstream[vala]
 	dev-libs/keybinder
 	"
-RDEPEND="${DEPEND}"
+RDEPEND="
+	${DEPEND}
+	x11-apps/xinput
+	"
 BDEPEND="
 	dev-util/meson
 	$(vala_depend)
