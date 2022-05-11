@@ -20,10 +20,7 @@ DEPEND="
 	>=gnome-base/gnome-desktop-${GNOME_MIN_VERSIOM}:3
 	>=gnome-base/gsettings-desktop-schemas-${GNOME_MIN_VERSIOM}
 	>=x11-libs/gtk+-3.1.91:3[X]
-	x11-libs/libX11:=
-	x11-libs/libXcomposite:=
 	dev-libs/dbus-glib
-	gnome-base/gnome-common
 	sys-libs/pam
 "
 RDEPEND="${DEPEND}"
