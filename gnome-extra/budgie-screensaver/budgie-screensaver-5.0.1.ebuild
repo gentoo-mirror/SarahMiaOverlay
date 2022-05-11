@@ -17,7 +17,10 @@ IUSE="systemd"
 GNOME_MIN_VERSIOM="3.36.0"
 
 DEPEND="
-	>=gnome-extra/budgie-desktop-10.6.1
+	>=dev-libs/glib-2.64.0:=
+	>=gnome-base/gnome-desktop-${GNOME_MIN_VERSIOM}:3
+	>=gnome-base/gsettings-desktop-schemas-${GNOME_MIN_VERSIOM}
+	>=x11-libs/gtk+-3.1.91:3[X]
 	dev-libs/dbus-glib
 	sys-libs/pam
 	systemd? ( >=sys-apps/systemd-209:0= )"
