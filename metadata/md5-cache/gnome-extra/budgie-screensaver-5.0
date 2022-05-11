@@ -1,6 +1,6 @@
 BDEPEND=dev-util/meson >=dev-util/meson-0.59.4 >=dev-util/ninja-1.8.2 dev-util/meson-format-array
 DEFINED_PHASES=compile configure install postinst postrm preinst test unpack
-DEPEND=>=dev-libs/glib-2.64.0:= >=gnome-base/gnome-desktop-3.36.0:3 >=gnome-base/gsettings-desktop-schemas-3.36.0 >=x11-libs/gtk+-3.1.91:3[X] x11-libs/libX11:= x11-libs/libXcomposite:= dev-libs/dbus-glib gnome-base/gnome-common sys-libs/pam systemd? ( >=sys-apps/systemd-209:0= )
+DEPEND=>=dev-libs/glib-2.64.0:= >=gnome-base/gnome-desktop-3.36.0:3 >=gnome-base/gsettings-desktop-schemas-3.36.0 >=x11-libs/gtk+-3.1.91:3[X] dev-libs/dbus-glib sys-libs/pam systemd? ( >=sys-apps/systemd-209:0= )
 DESCRIPTION=Budgie Screensaver is a fork of gnome-screensaver intended for use with Budgie Desktop and is similar in purpose to other screensavers such as MATE Screensaver.
 EAPI=8
 HOMEPAGE=https://github.com/BuddiesOfBudgie/budgie-screensaver
@@ -8,8 +8,8 @@ IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
 INHERIT=meson gnome2-utils xdg
 IUSE=systemd
 KEYWORDS=~amd64 ~x86
-RDEPEND=>=dev-libs/glib-2.64.0:= >=gnome-base/gnome-desktop-3.36.0:3 >=gnome-base/gsettings-desktop-schemas-3.36.0 >=x11-libs/gtk+-3.1.91:3[X] x11-libs/libX11:= x11-libs/libXcomposite:= dev-libs/dbus-glib gnome-base/gnome-common sys-libs/pam systemd? ( >=sys-apps/systemd-209:0= )
+RDEPEND=>=dev-libs/glib-2.64.0:= >=gnome-base/gnome-desktop-3.36.0:3 >=gnome-base/gsettings-desktop-schemas-3.36.0 >=x11-libs/gtk+-3.1.91:3[X] dev-libs/dbus-glib sys-libs/pam systemd? ( >=sys-apps/systemd-209:0= )
 SLOT=0
 SRC_URI=https://github.com/BuddiesOfBudgie/budgie-screensaver/archive/v5.0.tar.gz -> budgie-screensaver-5.0.tar.gz
 _eclasses_=multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	ninja-utils	58ec4e54962bf45d065fb95030701514	toolchain-funcs	badd6e329e1f3e6bee99b35bf8763ce8	multilib	4a33c9008e5ee30cb8840a3fdc24df2b	python-utils-r1	5dc84801daa87406aafaf535cb947a64	meson	8f48ffde53174aba67239f0da61ac9d3	xdg-utils	fffb53a53cf17c9c0c998a3c0a590c7e	gnome2-utils	2116cec8f46f4d1b0a88c5b1f1575dd3	xdg	6024fbc93167fad782e2032933654857
-_md5_=7567e4f34ef69952e4f36ffd7e3bf310
+_md5_=72d062af6f44dee677de12a0bf8397ea
