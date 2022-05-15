@@ -23,6 +23,7 @@ DEPEND="
 	dev-libs/granite
 	dev-libs/appstream[vala]
 	dev-libs/keybinder
+	gui-libs/libhandy:1[vala]
 	"
 RDEPEND="
 	${DEPEND}
