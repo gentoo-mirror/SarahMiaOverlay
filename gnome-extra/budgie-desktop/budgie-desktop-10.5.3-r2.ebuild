@@ -48,7 +48,7 @@ COMMON_DEPEND="
 	>=media-libs/graphene-1.10:=[introspection]
 	media-libs/cogl:1.0
 	media-sound/pulseaudio
-	>=net-wireless/gnome-bluetooth-3.34.0:=
+	>=net-wireless/gnome-bluetooth-3.34.0:2=
 	>=sys-apps/accountsservice-0.6.55
 	sys-apps/util-linux
 	>=sys-power/upower-0.99.0:0=
