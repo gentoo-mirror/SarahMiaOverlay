@@ -78,6 +78,8 @@ To personalise your desktop:
 
 ## Updates:
 
+**2022/06/13)** budgie-screensaver-5.0.2 and budgie-control-center-1.0.2 are added. Updated readme with latest changes on my todo list.
+
 **2022/04/09)** budgie-desktop-10.6.1, budgie-screensaver-5.0.1, budgie-meta-10.6.1, budgie-control-center-1.0.1 are all added. Appstream updated with new ~ppc keyword.
 
 **2022/04/06)** budgie-desktop-10.5.3-r2 and budgie-desktop-view-1.1.1 are made stable. Readme updated to clarify some stuff regarding keywords.
@@ -102,7 +104,7 @@ To personalise your desktop:
 
 ### Possible Todo's:
 
-- (medium) Mid to end may push meta-10.6.1 and all contents to stable if no issues arise.
-- (medium) Assuming above done, 1 month later removing old ebuilds.
+- (high) Check all dependencies properly of budgie-extras prior to making all of latest versions that fall under the meta ebuild stable.
+- (medium) Assuming above done, 2 weeks later removing old ebuilds.
 - (unlikely) Make a separate document for further tweaks of budgie-desktop if wanted. (e.g. not showing nm-applet tray icon if using the network applet from budgie-extras)
 - (unlikley) Look into specific budgie themes maybe.

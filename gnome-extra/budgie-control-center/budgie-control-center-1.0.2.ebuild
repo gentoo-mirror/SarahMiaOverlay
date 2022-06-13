@@ -14,7 +14,7 @@ GVC_COMMIT=7a62118
 LIBHANDY_COMMIT=7b38a86
 
 SRC_URI="
-	https://github.com/BuddiesOfBudgie/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz
+	https://github.com/BuddiesOfBudgie/${PN}/archive/refs/tags/v${PV}.tar.gz -> ${P}.tar.gz
 	https://gitlab.gnome.org/GNOME/libgnome-volume-control/-/archive/${GVC_COMMIT}/libgnome-volume-control-${GVC_COMMIT}.tar.gz
 	https://gitlab.gnome.org/GNOME/libhandy/-/archive/${LIBHANDY_COMMIT}/libhandy-${LIBHANDY_COMMIT}.tar.gz"
 
@@ -97,7 +97,7 @@ BDEPEND="
 "
 
 PATCHES=(
-	"${FILESDIR}"/101/
+	"${FILESDIR}"/102/
 )
 
 src_unpack() {
