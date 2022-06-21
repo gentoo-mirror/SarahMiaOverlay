@@ -82,7 +82,7 @@ DEPEND="
 
 src_unpack() {
 	if [[ ${PV} == 9999 ]]; then
-		git-r3-src_unpack
+		git-r3_src_unpack
 	else
 		unpack ${P}.tar.gz
 		pushd "${S}"/subprojects || die
