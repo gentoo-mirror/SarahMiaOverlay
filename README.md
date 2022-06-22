@@ -12,6 +12,8 @@ For more information about budgie you can visit: https://github.com/BuddiesOfBud
 After merging budgie-extras please start the Window Shuffler, some applets will require this (hotcorners mostly). This can be done with the provided Window Shuffler application in your applications list/menu. You can set additional options there as well.
 The config for the new window preview from budgie-extras (for alt-tab) is in the Previews Control in your applications list/menu. You can set additional options there as well.
 
+*please note that the ~arm ~arm64 keywords on a number of ebuilds are in testing, budgie itself says either intel or amd cpu's needed but there is an arm tweak tool hence the keywords for testing purposes! If it doesn't work out I will remove these keywords.*
+
 **Other**
 
 This overlay contains 1 other package that will be removed in the future, making this repository budgie only. Ebuilds not related to budgie may be added later if needed but is unlikely.
@@ -94,13 +96,15 @@ To personalise your desktop:
 
 ## Notes:
 
-1) If anything comes up feel free to contact me by making an issue. I will handle it as soon as I can.
+1) ~arm and ~arm64 keywords added to a number of ebuilds (mostly those in meta) for testing purposes. Since budgie does an ARM tweak tool separately. Do let me know if anything comes up with this or if stuff don't work.
 
-2) If you want a specific applet/software/theme/etc that is budgie-desktop related feel free to make a request, I will see what I can do to get it added to the overlay.
+2) If anything comes up feel free to contact me by making an issue. I will handle it as soon as I can.
 
-3) If there is an applet/software/theme you want let me know with a link and I will see if I can add it in the overlay for you.
+3) If you want a specific applet/software/theme/etc that is budgie-desktop related feel free to make a request, I will see what I can do to get it added to the overlay.
 
-4) I will keep appstream updated in sync with the main line gentoo tree. This usually happens within a few days at most from any mainline update.
+4) If there is an applet/software/theme you want let me know with a link and I will see if I can add it in the overlay for you.
+
+5) I will keep appstream updated in sync with the main line gentoo tree. This usually happens within a few days at most from any mainline update.
 
 ### Possible Todo's:
 

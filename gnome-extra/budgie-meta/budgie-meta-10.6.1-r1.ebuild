@@ -8,7 +8,7 @@ HOMEPAGE="https://github.com/BuddiesOfBudgie/budgie-desktop"
 
 LICENSE="metapackage"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~x86 ~arm ~arm64"
 
 RDEPEND="
 	>=gnome-extra/budgie-screensaver-5.0.1

@@ -23,7 +23,7 @@ else
 	SRC_URI="
 		https://github.com/BuddiesOfBudgie/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz
 		https://gitlab.gnome.org/GNOME/libgnome-volume-control/-/archive/${GVC_COMMIT}/libgnome-volume-control-${GVC_COMMIT}.tar.gz"
-	KEYWORDS="~amd64 ~x86"
+	KEYWORDS="~amd64 ~x86 ~arm ~arm64"
 fi
 
 LICENSE="GPL-2 LGPL-2.1"

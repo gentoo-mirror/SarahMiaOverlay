@@ -24,7 +24,7 @@ SRC_URI="https://github.com/UbuntuBudgie/${PN}/archive/v${PV}.tar.gz -> ${P}.tar
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~x86 ~arm ~arm64"
 
 DEPEND="
 	>=gnome-extra/budgie-desktop-10.6
