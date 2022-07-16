@@ -10,5 +10,5 @@ LICENSE=GPL-2
 RDEPEND=>=dev-libs/glib-2.64.0:= >=gnome-base/gnome-desktop-3.36.0:3 >=gnome-base/gsettings-desktop-schemas-3.36.0 >=x11-libs/gtk+-3.1.91:3[X] dev-libs/dbus-glib sys-libs/pam
 SLOT=0
 SRC_URI=https://github.com/getsolus/budgie-screensaver/archive/v4.0.tar.gz -> budgie-screensaver-4.0.tar.gz
-_eclasses_=gnuconfig	b6b3e92f8b8c996400074b5f61a59256	toolchain-funcs	e9da88162e7a3c60376e80c2c2adcdfb	multilib	4fbbbc98f236f1b43acd99476bc3cd85	libtool	241a8f577b9781a42a7421e53448a44e	autotools	2fd69a56a527d12409ba43c733b7ac8f	xdg-utils	fffb53a53cf17c9c0c998a3c0a590c7e	gnome2-utils	2116cec8f46f4d1b0a88c5b1f1575dd3	xdg	6024fbc93167fad782e2032933654857
+_eclasses_=gnuconfig	b6b3e92f8b8c996400074b5f61a59256	toolchain-funcs	3484f775017f532a8d1ae02c65defe13	multilib	4fbbbc98f236f1b43acd99476bc3cd85	libtool	241a8f577b9781a42a7421e53448a44e	autotools	2fd69a56a527d12409ba43c733b7ac8f	xdg-utils	fffb53a53cf17c9c0c998a3c0a590c7e	gnome2-utils	2116cec8f46f4d1b0a88c5b1f1575dd3	xdg	6024fbc93167fad782e2032933654857
 _md5_=a7c324100b1128afb6ca3f3c8ecb25fe
