@@ -12,8 +12,8 @@ KEYWORDS="amd64 x86 ~arm ~arm64"
 
 RDEPEND="
 	=gnome-extra/budgie-screensaver-5.0.2
-	=gnome-extra/budgie-desktop-10.6.1
+	>=gnome-extra/budgie-desktop-10.6.1
 	=gnome-extra/budgie-desktop-view-1.2
-	=gnome-extra/budgie-control-center-1.0.2
+	>=gnome-extra/budgie-control-center-1.0.2
 	=gnome-extra/budgie-extras-1.4.0-r1
 "
