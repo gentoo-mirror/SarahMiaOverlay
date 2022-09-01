@@ -4,6 +4,6 @@ EAPI=8
 HOMEPAGE=https://github.com/BuddiesOfBudgie/budgie-desktop
 KEYWORDS=amd64 x86 ~arm ~arm64
 LICENSE=metapackage
-RDEPEND==gnome-extra/budgie-screensaver-5.0.2 =gnome-extra/budgie-desktop-10.6.1 =gnome-extra/budgie-desktop-view-1.2 =gnome-extra/budgie-control-center-1.0.2 =gnome-extra/budgie-extras-1.4.0-r1
+RDEPEND==gnome-extra/budgie-screensaver-5.0.2 >=gnome-extra/budgie-desktop-10.6.1 =gnome-extra/budgie-desktop-view-1.2 >=gnome-extra/budgie-control-center-1.0.2 =gnome-extra/budgie-extras-1.4.0-r1
 SLOT=0
-_md5_=176ad5553c55cc614b0297eaf6317b55
+_md5_=c0e64db09094db598467d38b73ed6e49
