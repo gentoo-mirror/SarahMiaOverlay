@@ -2,8 +2,8 @@ DEFINED_PHASES=-
 DESCRIPTION=Meta ebuild for Budgie Desktop with all official releases plus budgie-extras
 EAPI=8
 HOMEPAGE=https://github.com/BuddiesOfBudgie/budgie-desktop
-KEYWORDS=~amd64 ~x86 ~arm ~arm64
+KEYWORDS=amd64 x86 ~arm ~arm64
 LICENSE=metapackage
-RDEPEND=>=gnome-extra/budgie-screensaver-5.0.1 >=gnome-extra/budgie-desktop-10.6.1 >=gnome-extra/budgie-desktop-view-1.2 >=gnome-extra/budgie-control-center-1.0.1 >=gnome-extra/budgie-extras-1.4.0-r1
+RDEPEND==gnome-extra/budgie-screensaver-5.0.2 =gnome-extra/budgie-desktop-10.6.1 =gnome-extra/budgie-desktop-view-1.2 =gnome-extra/budgie-control-center-1.0.2 =gnome-extra/budgie-extras-1.4.0-r1
 SLOT=0
-_md5_=39613ba2e7e38247ce141470f00c024e
+_md5_=176ad5553c55cc614b0297eaf6317b55
