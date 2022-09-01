@@ -10,17 +10,17 @@ inherit meson vala gnome2-utils xdg
 DESCRIPTION="Budgie Control Center for Budgie Desktop"
 HOMEPAGE="https://github.com/BuddiesOfBudgie/${PN}"
 
-GVC_COMMIT=7a62118
+GVC_COMMIT=8e7a5a4
 LIBHANDY_COMMIT=7b38a86
 
 SRC_URI="
-	https://github.com/BuddiesOfBudgie/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz
+	https://github.com/BuddiesOfBudgie/${PN}/archive/refs/tags/v${PV}.tar.gz -> ${P}.tar.gz
 	https://gitlab.gnome.org/GNOME/libgnome-volume-control/-/archive/${GVC_COMMIT}/libgnome-volume-control-${GVC_COMMIT}.tar.gz
 	https://gitlab.gnome.org/GNOME/libhandy/-/archive/${LIBHANDY_COMMIT}/libhandy-${LIBHANDY_COMMIT}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~x86 ~arm ~arm64"
 
 IUSE="+bluetooth +cups debug elogind +gnome-online-accounts +ibus input_devices_wacom kerberos networkmanager v4l systemd wayland"
 
@@ -97,7 +97,7 @@ BDEPEND="
 "
 
 PATCHES=(
-	"${FILESDIR}"/101/
+	"${FILESDIR}"/110/
 )
 
 src_unpack() {

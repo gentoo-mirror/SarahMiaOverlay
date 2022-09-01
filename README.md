@@ -20,13 +20,13 @@ This overlay contains 1 other package that will be removed in the future, making
 
 ## Installation:
 
-**Overlay**
+**1) Overlay**
 
 To add the overlay to portage run the following: (assuming you have eselect-repository installed)
 
 	eselect repository enable SarahMiaOverlay
 
-**Option 1: Budgie Desktop Base**
+**2a) Option 1: Budgie Desktop Base**
 
 To install budgie desktop by itself you don't need to do anything special other than the command below (basic emerge command). Then you can emerge budgie-desktop as you would with any other package.
 
@@ -35,30 +35,17 @@ To install budgie desktop by itself you don't need to do anything special other 
 
 After that is done you can just select the budgie-desktop session from your favorite login manager. Budgie by itself favors lightdm with slick-greeter or gtk-greeter, but is not limited to any.
 
-*Budgie-desktop-10.6 notice:* Since these being fresh release along with other associated software they will be in 'testing' to make sure there are no dire issues in regards to stability and compatability in regards to other software. And that the ebuilds also function as intended. With patch releases later coming it will be made with stable keywords in due time. for a while. To install this version please unmask by adding them to the keywords directory of portage config;
-
-	echo 'gnome-extra/budgie-desktop' >> /etc/portage/package.accept_keywords/budgie-desktop
-	echo 'gnome-extra/budgie-screensaver' >> /etc/portage/package.accept_keywords/budgie-desktop
-
-**option 2: Budgie Meta Package**
+**2b) option 2: Budgie Meta Package**
 
 Another option is installing budgie-meta. This is a meta package that contains budgie-desktop and screensaver as required, but also includes budgie-desktop-view, budgie-control-center and budgie-extras.
-Since all of these packages contains versions that are very new, you need to unmask this. To install this package follow the following steps;
 
-	echo 'gnome-extra/budgie-meta' >> /etc/portage/package.accept_keywords/budgie-desktop
-	echo 'gnome-extra/budgie-desktop' >> /etc/portage/package.accept_keywords/budgie-desktop
-	echo 'gnome-extra/budgie-screensaver' >> /etc/portage/package.accept_keywords/budgie-desktop
-	echo 'gnome-extra/budgie-desktop-view' >> /etc/portage/package.accept_keywords/budgie-desktop
-	echo 'gnome-extra/budgie-control-center' >> /etc/portage/package.accept_keywords/budgie-desktop
-	echo 'gnome-extra/budgie-extras' >> /etc/portage/package.accept_keywords/budgie-desktop
 	emerge --ask --verbose budgie-meta
 
-*Later on this will be made without ~arch keyword after a while to ensure full stability*
-
-**Budgie extra applets and applications**
+**3) Personalize Budgie Destop with extra applets and applications**
 
 Budgie by itself comes pretty barebones. I recommend you find application for the following parts along with my personal recommendation:
 
+- Merge Budgie Extras for more applets. Other applets can be found as budgie-\*-applet in the overlay
 - Basic desktop icons (home/trash/mounted etc) with budgie-desktop-view (or you can let e.g. nemo do this if you want instead)
 - File Manager (nemo, will also add desktop icons if you want that)
 - Image Viewer (eog - eye of gnome)
@@ -70,7 +57,6 @@ Budgie by itself comes pretty barebones. I recommend you find application for th
 To personalise your desktop:
 
 - Gnome Tweaks for additional settings
-- Budgie Extras for more applets. Other applets can be found as budgie-\*-applet in the overlay
 - Change settings in the following applications:
 	- Budgie-Control-Center or Gnome Control Center
 	- Budgie Desktop Settings
@@ -79,6 +65,8 @@ To personalise your desktop:
 	- (Part of budgie-extras) Previews Control (display applications preview while alt-tabbing)
 
 ## Updates:
+
+**2022/09/01)** Big update, several version updates and several stabilizations. Also some old or redundants ebuilds removed. Meta had its components versions locked till new meta is out.
 
 **2022/06/13)** budgie-screensaver-5.0.2 and budgie-control-center-1.0.2 are added. Updated readme with latest changes on my todo list.
 
@@ -96,19 +84,24 @@ To personalise your desktop:
 
 ## Notes:
 
-1) ~arm and ~arm64 keywords added to a number of ebuilds (mostly those in meta) for testing purposes. Since budgie does an ARM tweak tool separately. Do let me know if anything comes up with this or if stuff don't work.
+1) Absolute latest versions are being added as unstable outside the current meta build till budgie-backgrounds is done and a budgie-extras-1.5 is released. If you want these versions already you can do so but only through unmasking them with ~xxxxx keywords (what your system uses). 
 
-2) If anything comes up feel free to contact me by making an issue. I will handle it as soon as I can.
+2) ~arm and ~arm64 keywords added to a number of ebuilds (mostly those in meta) for testing purposes. Since budgie does an ARM tweak tool separately. Do let me know if anything comes up with this or if stuff don't work.
 
-3) If you want a specific applet/software/theme/etc that is budgie-desktop related feel free to make a request, I will see what I can do to get it added to the overlay.
+3) If anything comes up feel free to contact me by making an issue. I will handle it as soon as I can.
 
-4) If there is an applet/software/theme you want let me know with a link and I will see if I can add it in the overlay for you.
+4) If you want a specific applet/software/theme/etc that is budgie-desktop related feel free to make a request, I will see what I can do to get it added to the overlay.
 
-5) I will keep appstream updated in sync with the main line gentoo tree. This usually happens within a few days at most from any mainline update.
+5) If there is an applet/software/theme you want let me know with a link and I will see if I can add it in the overlay for you.
+
+6) I will keep appstream updated in sync with the main line gentoo tree. This usually happens within a few days at most from any mainline update.
 
 ### Possible Todo's:
 
-- (high) Check all dependencies properly of budgie-extras prior to making all of latest versions that fall under the meta ebuild stable.
-- (medium) Assuming above done, 2 weeks later removing old ebuilds.
+- (medium) remove updates into a changelog file instead, getting to big, already had to summarize. Split off this section as well.
+- (high) Keep an eye on budgie-extras and below todo's with the upcoming 1.5 release (it's in beta right now, so I rather wait that out for now..)
+- (high) Look into budgie-backgrounds which is new.
+- (high) After above todo is done also make a new meta file including budgie-backgrounds and budgie-extras 1.5.
+- (high) Check all dependencies properly of budgie-extras prior to making all of latest versions that fall under the meta ebuild stable. <-- now for 1.5 stated.
 - (unlikely) Make a separate document for further tweaks of budgie-desktop if wanted. (e.g. not showing nm-applet tray icon if using the network applet from budgie-extras)
 - (unlikley) Look into specific budgie themes maybe.
