@@ -3,31 +3,27 @@
 
 EAPI=7
 
-VALA_MIN_API_VERSION="0.48"
-GNOME_MIN_VERSIOM="3.36.0"
+VALA_MIN_API_VERSION="0.52"
+GNOME_MIN_VERSIOM="40"
 
 inherit gnome2-utils meson vala xdg
 
 DESCRIPTION="Desktop Environment based on GNOME 3"
-HOMEPAGE="https://getsol.us/categories/budgie/"
+HOMEPAGE="https://github.com/BuddiesOfBudgie/"
 
 if [[ ${PV} == 9999 ]]; then
 	inherit git-r3
-	EGIT_REPO_URI="https://github.com/solus-project/${PN}.git"
+	EGIT_REPO_URI="https://github.com/BuddiesOfBudgie/${PN}.git"
 	KEYWORDS=""
 else
 	# Set these to the submodule commit hashes used in the the upstream version tag matching v${PV}
 	# to avoid git dependency
-	GVC_COMMIT=c5ab6037
-	TRANSLATIONS_COMMIT=8b83aef
+	GVC_COMMIT=c5ab603
 
 	SRC_URI="
-		https://github.com/solus-project/${PN}/archive/v${PV}.tar.gz
-			-> ${P}.tar.gz
-		https://gitlab.gnome.org/GNOME/libgnome-volume-control/-/archive/${GVC_COMMIT}/libgnome-volume-control-${GVC_COMMIT}.tar.gz
-		https://github.com/getsolus/budgie-translations/archive/${TRANSLATIONS_COMMIT}.tar.gz
-			-> budgie-translations-${TRANSLATIONS_COMMIT}.tar.gz"
-	KEYWORDS="amd64 x86"
+		https://github.com/BuddiesOfBudgie/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz
+		https://gitlab.gnome.org/GNOME/libgnome-volume-control/-/archive/${GVC_COMMIT}/libgnome-volume-control-${GVC_COMMIT}.tar.gz"
+	KEYWORDS="~amd64 ~x86 ~arm ~arm64"
 fi
 
 LICENSE="GPL-2 LGPL-2.1"
@@ -43,12 +39,12 @@ COMMON_DEPEND="
 	>=gnome-base/gnome-settings-daemon-${GNOME_MIN_VERSIOM}
 	>=gnome-base/gsettings-desktop-schemas-${GNOME_MIN_VERSIOM}
 	>=gnome-base/gnome-menus-3.10.3:3[introspection]
-	>=gnome-extra/budgie-screensaver-4.0
+	>=gnome-extra/budgie-screensaver-5.0
 	media-libs/clutter:1.0
 	>=media-libs/graphene-1.10:=[introspection]
 	media-libs/cogl:1.0
 	media-sound/pulseaudio
-	>=net-wireless/gnome-bluetooth-3.34.0:=
+	>=net-wireless/gnome-bluetooth-3.34.0:2=
 	>=sys-apps/accountsservice-0.6.55
 	sys-apps/util-linux
 	>=sys-power/upower-0.99.0:0=
@@ -90,10 +86,8 @@ src_unpack() {
 	else
 		unpack ${P}.tar.gz
 		pushd "${S}"/subprojects || die
-			unpack libgnome-volume-control-${GVC_COMMIT}.tar.gz \
-				budgie-translations-${TRANSLATIONS_COMMIT}.tar.gz
+			unpack libgnome-volume-control-${GVC_COMMIT}.tar.gz
 			mv -fT libgnome-volume-control-* gvc || die
-			mv -fT budgie-translations-* translations || die
 		popd || die
 	fi
 }
