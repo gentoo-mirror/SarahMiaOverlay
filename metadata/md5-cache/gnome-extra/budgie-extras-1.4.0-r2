@@ -1,0 +1,15 @@
+BDEPEND=dev-util/meson || ( dev-lang/vala:0.56 ) >=dev-util/meson-0.62.2 >=dev-util/ninja-1.8.2 dev-util/meson-format-array
+DEFINED_PHASES=compile configure install postinst postrm preinst prepare test unpack
+DEPEND=>=gnome-extra/budgie-desktop-10.6 dev-libs/libgee >=net-libs/libsoup-2.4 dev-libs/granite dev-libs/appstream[vala] dev-libs/keybinder gui-libs/libhandy:1[vala] networkmanager? ( >=net-libs/libnma-1.8.0 >=net-misc/networkmanager-1.24.0:=[modemmanager] >=net-misc/modemmanager-0.7 ) dev-util/desktop-file-utils x11-misc/shared-mime-info
+DESCRIPTION=Additional enhancements for the user experience. Contains many applets. Made for Budgie Desktop.
+EAPI=7
+HOMEPAGE=https://github.com/UbuntuBudgie/budgie-extras
+INHERIT=meson vala gnome2-utils xdg
+IUSE=networkmanager
+KEYWORDS=amd64 x86 ~arm ~arm64
+LICENSE=GPL-3
+RDEPEND=>=gnome-extra/budgie-desktop-10.6 dev-libs/libgee >=net-libs/libsoup-2.4 dev-libs/granite dev-libs/appstream[vala] dev-libs/keybinder gui-libs/libhandy:1[vala] networkmanager? ( >=net-libs/libnma-1.8.0 >=net-misc/networkmanager-1.24.0:=[modemmanager] >=net-misc/modemmanager-0.7 ) x11-apps/xinput x11-misc/xprintidle media-gfx/cairosvg dev-python/svgwrite dev-python/pillow dev-python/psutil x11-themes/sound-theme-freedesktop media-sound/vorbis-tools dev-python/pyudev x11-misc/wmctrl x11-misc/xdotool x11-misc/xdg-utils dev-python/pyperclip dev-python/python-xlib sys-process/procps
+SLOT=0
+SRC_URI=https://github.com/UbuntuBudgie/budgie-extras/archive/v1.4.0.tar.gz -> budgie-extras-1.4.0.tar.gz https://github.com/UbuntuBudgie/applications-menu/archive/8bbf6c0.tar.gz -> budgie-applications-menu-applet-8bbf6c0.tar.gz https://github.com/UbuntuBudgie/budgie-network-applet/archive/8cb25b3.tar.gz -> budgie-network-applet-8cb25b3.tar.gz https://github.com/UbuntuBudgie/QuickChar/archive/54fddb9.tar.gz -> budgie-quickchar-applet-54fddb9.tar.gz https://github.com/UbuntuBudgie/budgie-trash-applet/archive/8132ec7.tar.gz -> budgie-trash-applet-8132ec7.tar.gz
+_eclasses_=multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	ninja-utils	58ec4e54962bf45d065fb95030701514	eapi8-dosym	cd7d420bb5be5ee079f27239ce76b8f5	toolchain-funcs	1542e649be915f43f6908a9e93909961	multilib	5ca4e49abed8e3a2f7b56920eadee157	python-utils-r1	b9fc5e97e886514e5132f50465185401	meson	1994a5aef5d4f5798b92f64d6f9a6003	edos2unix	33e347e171066657f91f8b0c72ec8773	strip-linguas	ac3ee41ee2d31d8c41a77c0838320cc7	wrapper	4a1902f969e5718126434fc35f3a0d9c	eutils	8f942ebdcf04334697649d4a0bf65a32	vala	160a8a30a6cb9aa601e5441c643a7c61	xdg-utils	fffb53a53cf17c9c0c998a3c0a590c7e	gnome2-utils	2116cec8f46f4d1b0a88c5b1f1575dd3	xdg	6024fbc93167fad782e2032933654857
+_md5_=1cfde0f0f6ed47f175d2db5eb7ec41f1
