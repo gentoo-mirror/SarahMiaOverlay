@@ -40,6 +40,8 @@ After that is done you can just select the budgie-desktop session from your favo
 Another option is installing budgie-meta. This is a meta package that contains budgie-desktop and screensaver as required, but also includes budgie-desktop-view, budgie-control-center and budgie-extras.
 
 	emerge --ask --verbose budgie-meta
+	
+When going for ~ keywords you may need to unmask most packages. But it is the latest version.
 
 **3) Personalize Budgie Destop with extra applets and applications**
 
@@ -64,24 +66,6 @@ To personalise your desktop:
 	- (Part of budgie-extras) WallStreet Control (rotating wallpapers)
 	- (Part of budgie-extras) Previews Control (display applications preview while alt-tabbing)
 
-## Updates:
-
-**2022/09/01)** Big update, several version updates and several stabilizations. Also some old or redundants ebuilds removed. Meta had its components versions locked till new meta is out.
-
-**2022/06/13)** budgie-screensaver-5.0.2 and budgie-control-center-1.0.2 are added. Updated readme with latest changes on my todo list.
-
-**2022/04/09)** budgie-desktop-10.6.1, budgie-screensaver-5.0.1, budgie-meta-10.6.1, budgie-control-center-1.0.1 are all added. Appstream updated with new ~ppc keyword.
-
-**2022/04/06)** budgie-desktop-10.5.3-r2 and budgie-desktop-view-1.1.1 are made stable. Readme updated to clarify some stuff regarding keywords.
-
-**2022/03/15)** budgoe-desktop-10.6, budgie-screensaver-5.0, budgie-extras-1.4.0 and budgie-desktop-view-1.2 have been added. budgie-extras-1.2.0 has been removed.
-
-**2022/01/17)** budgie-desktop-10.5.3-r1 added with mutter 9 support for those running unstable gnome41.3+ version. Removed old version of budgie-desktop. Budgie-extras-1.3.0 made stable.
-
-**2021/12/15)** Budgie-desktop and budgie-screensaver been made stable due to not getting any reports. Budgie-extras will be set to stable later mid january if nothing changes. At the same time budgie-desktop version 10.5.2 will be removed as it has become obsolete.
-
-**: Unstable/stable refers to keywords in regards to e.g. x86/amd64 vs ~x86/~amd64 !
-
 ## Notes:
 
 1) Absolute latest versions are being added as unstable outside the current meta build till budgie-backgrounds is done and a budgie-extras-1.5 is released. If you want these versions already you can do so but only through unmasking them with ~xxxxx keywords (what your system uses). 
@@ -96,12 +80,6 @@ To personalise your desktop:
 
 6) I will keep appstream updated in sync with the main line gentoo tree. This usually happens within a few days at most from any mainline update.
 
-### Possible Todo's:
+7) Changes are now recorded in the CHANGELOG.md file, read that for any changes made.
 
-- (medium) remove updates into a changelog file instead, getting to big, already had to summarize. Split off this section as well.
-- (high) Keep an eye on budgie-extras and below todo's with the upcoming 1.5 release (it's in beta right now, so I rather wait that out for now..)
-- (high) Look into budgie-backgrounds which is new.
-- (high) After above todo is done also make a new meta file including budgie-backgrounds and budgie-extras 1.5.
-- (high) Check all dependencies properly of budgie-extras prior to making all of latest versions that fall under the meta ebuild stable. <-- now for 1.5 stated.
-- (unlikely) Make a separate document for further tweaks of budgie-desktop if wanted. (e.g. not showing nm-applet tray icon if using the network applet from budgie-extras)
-- (unlikley) Look into specific budgie themes maybe.
+8) ToDo's are now recorded in the TODO.md file, read that for any potential future changes/focus.

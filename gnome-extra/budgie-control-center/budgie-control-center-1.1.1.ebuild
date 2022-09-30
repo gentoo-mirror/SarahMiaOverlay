@@ -20,7 +20,7 @@ SRC_URI="
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="amd64 x86 ~arm ~arm64"
+KEYWORDS="~amd64 ~x86 ~arm ~arm64"
 
 IUSE="+bluetooth +cups debug elogind +gnome-online-accounts +ibus input_devices_wacom kerberos networkmanager v4l systemd wayland"
 
@@ -98,7 +98,7 @@ BDEPEND="
 "
 
 PATCHES=(
-	"${FILESDIR}"/110/
+	"${FILESDIR}"/111/
 )
 
 src_unpack() {
