@@ -2,6 +2,11 @@
 
 I will keep all updates here listed and up to date;
 
+## 2022/11/22
+
+### Changed
+- budgie-backgrounds - fixed missing dependency
+
 ## 2022/09/29
 
 ### Added: 
