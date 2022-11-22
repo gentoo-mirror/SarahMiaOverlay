@@ -19,7 +19,7 @@ KEYWORDS="~amd64 ~x86 ~arm ~arm64"
 DEPEND="
 	>=gnome-extra/budgie-desktop-10.6.4
 	media-gfx/jhead
-	media-gfx/imagemagick[jpg]
+	media-gfx/imagemagick[jpeg]
 	"
 RDEPEND="${DEPEND}"
 BDEPEND="
