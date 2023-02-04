@@ -1,5 +1,7 @@
 # SarahMiaOverlay
 
+**Budgie 10.7 is released. I have been working for a bit on the new ebuilds. But as I am also making additional changes, including in the way the meta ebuild works e.g. and there are many version updates along with quite a number of new use flags it will take me a bit longer to get everything sorted. About 70%+ of all the packages in this overlay is having new versions or changes. Some of them massive. So a really big update is coming but it will take a me at least a week or so. Also many packages will have their stable and unstable counterpart properly sorted out (I am e.g. looking at you budgie-extras). These changes will not impact any installed software already. But it will change the way the budgie install is going forward with the meta ebuild going to the new default way. Upstream 10.7 is also a new way going forward with a small modular approach where they expect you have have at least 4 packages installed (meta ebuild will accomadate this minimal approach e.g.). So yeah I have a big giant todo/checklist and it is being worked on.**
+
 **Budgie**
 
 Budgie is the default desktop of Solus Operating System, written from scratch. Besides a more modern design, Budgie can emulate the look and feel of the GNOME 2 desktop.
