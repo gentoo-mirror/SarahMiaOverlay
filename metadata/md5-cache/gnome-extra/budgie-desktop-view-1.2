@@ -1,15 +1,16 @@
 BDEPEND=dev-util/meson || ( dev-lang/vala:0.56 ) >=dev-util/meson-0.62.2 >=dev-util/ninja-1.8.2 dev-util/meson-format-array
 DEFINED_PHASES=compile configure install postinst postrm preinst prepare test unpack
-DEPEND=>=gnome-extra/budgie-desktop-10.6 dev-util/desktop-file-utils x11-misc/shared-mime-info
+DEPEND=>=gnome-extra/budgie-desktop-10.6
 DESCRIPTION=Basic desktop icons/managemlent for Budgie Desktop.
-EAPI=7
+EAPI=8
 HOMEPAGE=https://github.com/BuddiesOfBudgie/budgie-desktop-view
+IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
 INHERIT=meson vala gnome2-utils xdg
 IUSE=stateless
 KEYWORDS=amd64 x86 ~arm ~arm64
 LICENSE=GPL-3
 RDEPEND=>=gnome-extra/budgie-desktop-10.6
 SLOT=0
-SRC_URI=https://github.com/BuddiesOfBudgie/budgie-desktop-view/archive/v1.2.tar.gz -> budgie-desktop-view-1.2.tar.gz
-_eclasses_=multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	ninja-utils	38c85b725d0467e51954ea921b6c104b	eapi8-dosym	cd7d420bb5be5ee079f27239ce76b8f5	toolchain-funcs	9a610728b9bcca1919234cceb35a1027	multilib	5ca4e49abed8e3a2f7b56920eadee157	python-utils-r1	429bfd4e8d8e39db5385ba5744f30788	meson	1994a5aef5d4f5798b92f64d6f9a6003	vala	2633382950a3a9ce912c9258150d5db8	xdg-utils	ac0e315a3688929e34ac75b139e7349a	gnome2-utils	2116cec8f46f4d1b0a88c5b1f1575dd3	xdg	6024fbc93167fad782e2032933654857
-_md5_=75d06bcd32dcb09ac7a71bf0bbe68df6
+SRC_URI=https://github.com/BuddiesOfBudgie/budgie-desktop-view/releases/download/v1.2/budgie-desktop-view-v1.2.tar.xz -> budgie-desktop-view-1.2.tar.xz
+_eclasses_=multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	ninja-utils	38c85b725d0467e51954ea921b6c104b	toolchain-funcs	9a610728b9bcca1919234cceb35a1027	multilib	5ca4e49abed8e3a2f7b56920eadee157	python-utils-r1	429bfd4e8d8e39db5385ba5744f30788	meson	1994a5aef5d4f5798b92f64d6f9a6003	vala	2633382950a3a9ce912c9258150d5db8	xdg-utils	ac0e315a3688929e34ac75b139e7349a	gnome2-utils	2116cec8f46f4d1b0a88c5b1f1575dd3	xdg	6024fbc93167fad782e2032933654857
+_md5_=03c6e1b68ab3e6dc865d292bbdbab3a6

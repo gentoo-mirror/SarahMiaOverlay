@@ -1,13 +1,14 @@
 BDEPEND=dev-util/meson || ( dev-lang/vala:0.56 ) >=dev-vcs/git-1.8.2.1[curl] >=dev-util/meson-0.62.2 >=dev-util/ninja-1.8.2 dev-util/meson-format-array
 DEFINED_PHASES=compile configure install postinst postrm preinst prepare test unpack
-DEPEND=>=gnome-extra/budgie-desktop-10.0 gnome-base/libgtop dev-libs/libgee dev-util/desktop-file-utils x11-misc/shared-mime-info
+DEPEND=>=gnome-extra/budgie-desktop-10.6.4 gnome-base/libgtop dev-libs/libgee
 DESCRIPTION=System Monitor that can help you track your cpu, ram, swap, network and uptime. Made for Budgie Desktop.
-EAPI=7
+EAPI=8
 HOMEPAGE=https://github.com/prateekmedia/budgie-systemmonitor-applet
+IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
 INHERIT=git-r3 meson vala gnome2-utils xdg
 LICENSE=GPL-3
 PROPERTIES=live
-RDEPEND=>=gnome-extra/budgie-desktop-10.0 gnome-base/libgtop dev-libs/libgee
+RDEPEND=>=gnome-extra/budgie-desktop-10.6.4 gnome-base/libgtop dev-libs/libgee
 SLOT=0
-_eclasses_=git-r3	2347f8fe2d392b2a091191f94be37e6f	multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	ninja-utils	38c85b725d0467e51954ea921b6c104b	eapi8-dosym	cd7d420bb5be5ee079f27239ce76b8f5	toolchain-funcs	9a610728b9bcca1919234cceb35a1027	multilib	5ca4e49abed8e3a2f7b56920eadee157	python-utils-r1	429bfd4e8d8e39db5385ba5744f30788	meson	1994a5aef5d4f5798b92f64d6f9a6003	vala	2633382950a3a9ce912c9258150d5db8	xdg-utils	ac0e315a3688929e34ac75b139e7349a	gnome2-utils	2116cec8f46f4d1b0a88c5b1f1575dd3	xdg	6024fbc93167fad782e2032933654857
-_md5_=e4a3094141efefd4333c46fb2eba5ade
+_eclasses_=git-r3	2347f8fe2d392b2a091191f94be37e6f	multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	ninja-utils	38c85b725d0467e51954ea921b6c104b	toolchain-funcs	9a610728b9bcca1919234cceb35a1027	multilib	5ca4e49abed8e3a2f7b56920eadee157	python-utils-r1	429bfd4e8d8e39db5385ba5744f30788	meson	1994a5aef5d4f5798b92f64d6f9a6003	vala	2633382950a3a9ce912c9258150d5db8	xdg-utils	ac0e315a3688929e34ac75b139e7349a	gnome2-utils	2116cec8f46f4d1b0a88c5b1f1575dd3	xdg	6024fbc93167fad782e2032933654857
+_md5_=56beadc660d6c62e6dfdb8c0051aef6f

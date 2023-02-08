@@ -1,19 +1,18 @@
-dev-libs/appstream 0.14.6 0.15.5: Cross-distro effort for providing metadata for software in the Linux ecosystem
+dev-libs/appstream 0.15.6: Cross-distro effort for providing metadata for software in the Linux ecosystem
 dev-python/svgwrite 1.4.3: Python Package to write SVG files
-gnome-extra/budgie-analogue-clock-applet 1.1 9999: Add an analogue clock to the Budgie Panel. Made for Budgie Desktop.
-gnome-extra/budgie-backgrounds 0.1: Budgie Desktop default backgrounds
-gnome-extra/budgie-brightness-control-applet 0.2.1 0.3: This applet allows you to controll screen brightness. Made for Budgie Desktop.
-gnome-extra/budgie-calendar-applet 5.2 9999: A budgie-desktop applet to show hours with custom formats and a calendar in a popover. Made for Budgie Desktop.
+gnome-extra/budgie-analogue-clock-applet 1.3.0: Add an analogue clock to the Budgie Panel. Made for Budgie Desktop.
+gnome-extra/budgie-backgrounds 0.1 1.0: Budgie Desktop default backgrounds
+gnome-extra/budgie-brightness-control-applet 0.3: This applet allows you to controll screen brightness. Made for Budgie Desktop.
+gnome-extra/budgie-calendar-applet 5.3 9999: A budgie-desktop applet to show hours with custom formats and a calendar in a popover. Made for Budgie Desktop.
 gnome-extra/budgie-clipboard-applet 1.1.0 9999: A clipboard manager applet that can help you to store and manage clipboard content. Made for Budgie Desktop.
-gnome-extra/budgie-control-center 1.0.2 1.1.0 1.1.1: Budgie Control Center for Budgie Desktop
-gnome-extra/budgie-desktop 10.5.3-r2 10.6.1 10.6.4 9999: Desktop Environment based on GNOME 3
-gnome-extra/budgie-desktop-view 1.1.1 1.2 9999: Basic desktop icons/managemlent for Budgie Desktop.
-gnome-extra/budgie-extras 1.3.0-r1 1.4.0-r1 1.4.0-r2 1.5.0 9999: Additional enhancements for the user experience. Contains many applets. Made for Budgie Desktop.
+gnome-extra/budgie-control-center 1.1.1 1.2.0: Budgie Control Center for Budgie Desktop
+gnome-extra/budgie-desktop 10.6.4 10.7 9999: Desktop Environment based on GNOME 3
+gnome-extra/budgie-desktop-view 1.2 1.2.1 9999: Basic desktop icons/managemlent for Budgie Desktop.
+gnome-extra/budgie-extras 1.5.0 9999: Additional enhancements for the user experience, contains many applets + helper applications. Made for Budgie Desktop.
 gnome-extra/budgie-haste-applet 0.3.0 9999: Post any text, be it code or prose, to various services directly from your desktop. Made for Budgie Desktop.
-gnome-extra/budgie-meta 10.6.1-r1 10.6.4: Meta ebuild for Budgie Desktop with all official releases plus budgie-extras
+gnome-extra/budgie-meta 10.6.4 10.7: Meta ebuild for Budgie Desktop with all official releases of needed packages
 gnome-extra/budgie-pixel-saver-applet 4.0.0 9999: This applet hides the title bar from maximized windows and creates a new one inside the panel. Inspired from gnome extension pixel-saver.
-gnome-extra/budgie-screensaver 4.0 5.0.2 9999: Budgie Screensaver is a fork of gnome-screensaver intended for use with Budgie Desktop and is similar in purpose to other screensavers such as MATE Screensaver.
+gnome-extra/budgie-screensaver 5.0.2 5.1.0 9999: Budgie Screensaver is a fork of gnome-screensaver intended for use with Budgie Desktop and is similar in purpose to other screensavers such as MATE Screensaver.
 gnome-extra/budgie-screenshot-applet 0.4.3 9999: Take a screenshot of your desktop, a window or region; save to disk and upload. Made for Budgie Desktop.
 gnome-extra/budgie-systemmonitor-applet 0.2.1 9999: System Monitor that can help you track your cpu, ram, swap, network and uptime. Made for Budgie Desktop.
-sys-kernel/hid-asus-rog 1.0.2 9999: 
 x11-misc/xprintidle 2.1: Prints user's X server idle time in milliseconds
