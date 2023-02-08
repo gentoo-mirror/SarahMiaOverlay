@@ -1,7 +1,7 @@
 # Copyright 2021 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=7
+EAPI=8
 
 VALA_MIN_API_VERSION="0.48"
 
@@ -17,7 +17,7 @@ SLOT="0"
 KEYWORDS=""
 
 DEPEND="
-	>=gnome-extra/budgie-desktop-10.0
+	>=gnome-extra/budgie-desktop-10.6.4
 	x11-misc/xdotool
 "
 RDEPEND="${DEPEND}"
@@ -27,7 +27,7 @@ BDEPEND="
 "
 
 src_prepare() {
-	vala_src_prepare
+	vala_setup
 	default
 }
 

@@ -1,24 +1,14 @@
 # SarahMiaOverlay
 
-**Budgie 10.7 is released. I have been working for a bit on the new ebuilds. But as I am also making additional changes, including in the way the meta ebuild works e.g. and there are many version updates along with quite a number of new use flags it will take me a bit longer to get everything sorted. About 70%+ of all the packages in this overlay is having new versions or changes. Some of them massive. So a really big update is coming but it will take a me at least a week or so. Also many packages will have their stable and unstable counterpart properly sorted out (I am e.g. looking at you budgie-extras). These changes will not impact any installed software already. But it will change the way the budgie install is going forward with the meta ebuild going to the new default way. Upstream 10.7 is also a new way going forward with a small modular approach where they expect you have have at least 4 packages installed (meta ebuild will accomadate this minimal approach e.g.). So yeah I have a big giant todo/checklist and it is being worked on.**
+*Despite the name this overlay has, it only supplies ebuilds meant for Budgie Desktop. Due to historic reasons this started out as a personal overlay with adjusted ebuilds with budgie-desktop being among them as well. Over time all those adjusted ebuilds are gone and there is only ebuilds for Budgie Desktop and it's support left now. This overlay will keep on fully supporting Budgie Desktop.*
 
-**Budgie**
+## Budgie Desktop:
 
-Budgie is the default desktop of Solus Operating System, written from scratch. Besides a more modern design, Budgie can emulate the look and feel of the GNOME 2 desktop.
+The Budgie Desktop is a feature-rich, modern desktop designed to keep out the way of the user.
 
-This overlay contains both the budgie-desktop, extras and applets for budgie desktop. Everything that is needed to run budgie-desktop.
-budgie-extras add a lot of applets and helper applications.
+This overlay contains both the budgie-desktop, applications and applets and its dependencies for budgie desktop. Everything that is needed to run Budgie Desktop is present.
 
-For more information about budgie you can visit: https://github.com/BuddiesOfBudgie/budgie-desktop/blob/master/README.md
-
-After merging budgie-extras please start the Window Shuffler, some applets will require this (hotcorners mostly). This can be done with the provided Window Shuffler application in your applications list/menu. You can set additional options there as well.
-The config for the new window preview from budgie-extras (for alt-tab) is in the Previews Control in your applications list/menu. You can set additional options there as well.
-
-*please note that the ~arm ~arm64 keywords on a number of ebuilds are in testing, budgie itself says either intel or amd cpu's needed but there is an arm tweak tool hence the keywords for testing purposes! If it doesn't work out I will remove these keywords.*
-
-**Other**
-
-This overlay contains 1 other package that will be removed in the future, making this repository budgie only. Ebuilds not related to budgie may be added later if needed but is unlikely.
+For more information about budgie you can visit https://blog.buddiesofbudgie.org/ and https://github.com/BuddiesOfBudgie/budgie-desktop/blob/main/README.md
 
 ## Installation:
 
@@ -28,60 +18,63 @@ To add the overlay to portage run the following: (assuming you have eselect-repo
 
 	eselect repository enable SarahMiaOverlay
 
-**2a) Option 1: Budgie Desktop Base**
-
-To install budgie desktop by itself you don't need to do anything special other than the command below (basic emerge command). Then you can emerge budgie-desktop as you would with any other package.
-
-	emerge --ask --verbose budgie-desktop
-	
-
 After that is done you can just select the budgie-desktop session from your favorite login manager. Budgie by itself favors lightdm with slick-greeter or gtk-greeter, but is not limited to any.
 
-**2b) option 2: Budgie Meta Package**
+**2) Budgie Meta Package**
 
-Another option is installing budgie-meta. This is a meta package that contains budgie-desktop and screensaver as required, but also includes budgie-desktop-view, budgie-control-center and budgie-extras.
+The recommended way is installing budgie-meta. This is a meta package that contains the packages that are needed for the basic desktop. If you want only the minimal installation but with support you can set the `minimal` keyword. By default it will install budgie-desktop, budgie-screensaver, budgie-desktop-view, budgie-control-center, budgie-extras (not with minimal set) and budgie-backgrounds (not with minimal set).
 
 	emerge --ask --verbose budgie-meta
 	
-When going for ~ keywords you may need to unmask most packages. But it is the latest version.
+When going for latest versions you need to unmask some packages with ~ keywords. With budgie-meta you can then also set the useflag `all-packages` to have everything installed.
 
-**3) Personalize Budgie Destop with extra applets and applications**
+**2 Alternative) Budgie Desktop Base (not recommended anymore)**
 
-Budgie by itself comes pretty barebones. I recommend you find application for the following parts along with my personal recommendation:
+To install budgie desktop by itself and not use any other software you don't need to do anything special other than the command below (basic emerge command).
 
-- Merge Budgie Extras for more applets. Other applets can be found as budgie-\*-applet in the overlay
-- Basic desktop icons (home/trash/mounted etc) with budgie-desktop-view (or you can let e.g. nemo do this if you want instead)
-- File Manager (nemo, will also add desktop icons if you want that)
-- Image Viewer (eog - eye of gnome)
-- The usual browser, audio and video players and other applications you want to use
-- Any gtk/gnome application you want to use since budgie-desktop is based on gnome and uses gtk
-	- NOTE: gnome shell extensions will not work. Use budgie-applets for that
-	- Anything for gnome-shell only will not work
+For 10.7 and up this is not recommended as any issues you may experience you may not get any support upstream as they expect you to at least run a number of packages. This is reflected in `budgie-meta[minimal]` package with the `minimal` keyword. *(See https://blog.buddiesofbudgie.org/budgie-10-7-released/ for more info)*
 
-To personalise your desktop:
+	emerge --ask --verbose budgie-desktop
+	
+**2.5) Migrate to budgie-meta (if not already using budgie-meta)**
 
-- Gnome Tweaks for additional settings
+If Budgie Desktop was installed through budgie-desktop ebuild then going forward it is recommended to merge budgie-meta. Please follow the following commands. First remove the packages from the world file incase in the future you want to remove budgie-desktop and this will keep the world file clean.
+
+	emerge --deselect budgie-desktop budgie-desktop-view budgie-control-center budgie-screensaver
+
+Ignore any `>>> No matching atoms found in "world" favorites file...` you receive. It means you most likely did not had it installed in the first place and can be safely ignored.
+If you are not going to run with budgie-meta with the minimal useflag then you can also perform the following command.
+
+	emerge --deselect budgie-extras budgie-backgrounds
+	
+Once that is done you can simply emerge budgie-meta. Don't forget to add the minimal useflag if you want to run a minimal installation of budgie-desktop.
+
+	emerge --ask --verbose budgie-meta
+	
+If you want the very latest versions you will need to unmask budgie-meta, budgie-desktop, budgie-desktop-view and budgie-control-center. If not running with minimal you also need to unmask budgie-backgrounds. And everything else above still applies. Simply run the emerge command to install budgie-meta.
+
+**3) Tips to personalize Budgie Destop with extra applets and applications**
+
+- Merge Budgie Extras (if meta with minimal useflag was installed) and/or any other applets that can be found as budgie-\*-applet in the overlay. (These may be auto installed depending on your useflags if your installed budgie-desktop with budgie-meta, which is recommended anyway).
+- After merging budgie-extras (or after installing budgie-meta without the minimal useflag) please start the Window Shuffler, some applets will require this (hotcorners mostly). This can be done with the provided Window Shuffler application in your applications list/menu. You can set additional options there as well.
+- The usual applications, file manager, image viewer, browser, audio, video players etc.
+- Any gtk/gnome application you want to use for a consistant look since budgie-desktop uses gtk
 - Change settings in the following applications:
-	- Budgie-Control-Center or Gnome Control Center
+	- Budgie Control Center
 	- Budgie Desktop Settings
 	- (Part of budgie-extras) Window Shuffler Control (tiling/grid support)
 	- (Part of budgie-extras) WallStreet Control (rotating wallpapers)
 	- (Part of budgie-extras) Previews Control (display applications preview while alt-tabbing)
+	- The config for the new window preview from budgie-extras (for alt-tab) is in the Previews Control in your applications list/menu. You can set additional options there as well.
 
 ## Notes:
 
-1) Absolute latest versions are being added as unstable outside the current meta build till budgie-backgrounds is done and a budgie-extras-1.5 is released. If you want these versions already you can do so but only through unmasking them with ~xxxxx keywords (what your system uses). 
+1) Latest releases are being added with unstable keywords for a while to allow testing from other users in case something crops up. I will maintain 1 stable and 1 unstable budgie-meta in general unless to much time passes. Which is unlikely with their current release timeframes.
 
-2) ~arm and ~arm64 keywords added to a number of ebuilds (mostly those in meta) for testing purposes. Since budgie does an ARM tweak tool separately. Do let me know if anything comes up with this or if stuff don't work.
+2) ~arm and ~arm64 keywords are unlikely to be made stable unless I hear from people that they work good as I am unable to test them myself atm sadly.
 
 3) If anything comes up feel free to contact me by making an issue. I will handle it as soon as I can.
 
-4) If you want a specific applet/software/theme/etc that is budgie-desktop related feel free to make a request, I will see what I can do to get it added to the overlay.
+4) If there is an applet/application/theme you want let me know with a link and I will see if I can add it in the overlay for you. Please do note that for themes any gtk theme should work fine out of the box and can be set through budgie control center.
 
-5) If there is an applet/software/theme you want let me know with a link and I will see if I can add it in the overlay for you.
-
-6) I will keep appstream updated in sync with the main line gentoo tree. This usually happens within a few days at most from any mainline update.
-
-7) Changes are now recorded in the CHANGELOG.md file, read that for any changes made.
-
-8) ToDo's are now recorded in the TODO.md file, read that for any potential future changes/focus.
+5) The overlay changes and todo's are each in their own files, refer to CHANGELOG.md or TODO.md for those.

@@ -1,7 +1,7 @@
 # Copyright 1999-2021 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=7
+EAPI=8
 
 VALA_MIN_API_VERSION="0.52"
 GNOME_MIN_VERSIOM="40"
@@ -10,25 +10,11 @@ inherit gnome2-utils meson vala xdg
 
 DESCRIPTION="Desktop Environment based on GNOME 3"
 HOMEPAGE="https://github.com/BuddiesOfBudgie/"
-
-if [[ ${PV} == 9999 ]]; then
-	inherit git-r3
-	EGIT_REPO_URI="https://github.com/BuddiesOfBudgie/${PN}.git"
-	KEYWORDS=""
-else
-	# Set these to the submodule commit hashes used in the the upstream version tag matching v${PV}
-	# to avoid git dependency
-	GVC_COMMIT=c5ab603
-
-	SRC_URI="
-		https://github.com/BuddiesOfBudgie/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz
-		https://gitlab.gnome.org/GNOME/libgnome-volume-control/-/archive/${GVC_COMMIT}/libgnome-volume-control-${GVC_COMMIT}.tar.gz"
-	KEYWORDS="~amd64 ~x86 ~arm ~arm64"
-fi
+SRC_URI="https://github.com/BuddiesOfBudgie/${PN}/releases/download/v${PV}/${PN}-v${PV}.tar.xz -> ${P}.tar.xz"
 
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
-
+KEYWORDS="amd64 x86 ~arm ~arm64"
 IUSE="gtk-doc +policykit stateless"
 
 COMMON_DEPEND="
@@ -54,23 +40,19 @@ COMMON_DEPEND="
 	x11-libs/libX11:=
 	x11-libs/libXcomposite:=
 	x11-wm/mutter:=
-
 	policykit? ( >=sys-auth/polkit-0.105[introspection] )
 "
 
 RDEPEND="
 	${COMMON_DEPEND}
-
 	>=gnome-base/gnome-control-center-3.26[bluetooth]
 	gnome-base/gnome-session
 "
 
 BDEPEND="
 	$(vala_depend)
-
 	dev-util/intltool
 	dev-lang/sassc
-
 	gtk-doc? ( dev-util/gtk-doc )
 "
 
@@ -81,22 +63,13 @@ DEPEND="
 "
 
 src_unpack() {
-	if [[ ${PV} == 9999 ]]; then
-		git-r3_src_unpack
-	else
-		unpack ${P}.tar.gz
-		pushd "${S}"/subprojects || die
-			unpack libgnome-volume-control-${GVC_COMMIT}.tar.gz
-			mv -fT libgnome-volume-control-* gvc || die
-		popd || die
-	fi
+	unpack ${P}.tar.xz
 }
 
 src_prepare() {
-	sed -i -e "/add_install_script.*meson_post_install\.sh/d" \
-		meson.build || die
+	sed -i -e "/add_install_script.*meson_post_install\.sh/d" meson.build || die
 
-	vala_src_prepare
+	vala_setup
 	default
 }
 

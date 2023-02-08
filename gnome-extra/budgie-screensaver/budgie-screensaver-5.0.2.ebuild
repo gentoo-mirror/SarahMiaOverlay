@@ -8,7 +8,7 @@ inherit meson gnome2-utils xdg
 DESCRIPTION="Budgie Screensaver is a fork of gnome-screensaver intended for use with Budgie Desktop and is similar in purpose to other screensavers such as MATE Screensaver."
 HOMEPAGE="https://github.com/BuddiesOfBudgie/budgie-screensaver"
 
-SRC_URI="https://github.com/BuddiesOfBudgie/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
+SRC_URI="https://github.com/BuddiesOfBudgie/${PN}/releases/download/v${PV}/${PN}-v${PV}.tar.xz -> ${P}.tar.xz"
 
 LICENSE=""
 SLOT="0"
@@ -28,7 +28,7 @@ RDEPEND="${DEPEND}"
 BDEPEND="dev-util/meson"
 
 src_unpack() {
-	unpack ${P}.tar.gz
+	unpack ${P}.tar.xz
 }
 
 src_configure() {

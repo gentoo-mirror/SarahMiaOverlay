@@ -9,22 +9,11 @@ inherit meson vala gnome2-utils xdg
 
 DESCRIPTION="Additional enhancements for the user experience. Contains many applets. Made for Budgie Desktop."
 HOMEPAGE="https://github.com/UbuntuBudgie/${PN}"
-
-NETWORK_COMMIT="8cb25b3"
-APPLICATIONS_MENU_COMMIT="45878bb"
-QUICKCHAR_COMMIT="54fddb9"
-TRASH_COMMIT="fc2f937"
-
-SRC_URI="https://github.com/UbuntuBudgie/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz
-	https://github.com/UbuntuBudgie/applications-menu/archive/${APPLICATIONS_MENU_COMMIT}.tar.gz -> budgie-applications-menu-applet-${APPLICATIONS_MENU_COMMIT}.tar.gz
-	https://github.com/UbuntuBudgie/budgie-network-applet/archive/${NETWORK_COMMIT}.tar.gz -> budgie-network-applet-${NETWORK_COMMIT}.tar.gz
-	https://github.com/UbuntuBudgie/QuickChar/archive/${QUICKCHAR_COMMIT}.tar.gz -> budgie-quickchar-applet-${QUICKCHAR_COMMIT}.tar.gz
-	https://github.com/UbuntuBudgie/budgie-trash-applet/archive/${TRASH_COMMIT}.tar.gz -> budgie-trash-applet-${TRASH_COMMIT}.tar.gz
-"
+SRC_URI="https://github.com/UbuntuBudgie/${PN}/releases/download/v${PV}/${P}.tar.xz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~x86 ~arm ~arm64"
+KEYWORDS="amd64 x86 ~arm ~arm64"
 IUSE="stateless networkmanager"
 
 DEPEND="
@@ -69,23 +58,7 @@ PATCHES=(
 )
 
 src_unpack() {
-	unpack ${P}.tar.gz
-	pushd ${S}/budgie-applications-menu || die
-		unpack budgie-applications-menu-applet-${APPLICATIONS_MENU_COMMIT}.tar.gz
-		mv -fT applications-menu-* applications-menu || die
-	popd || die
-	pushd ${S}/budgie-network-manager || die
-		unpack budgie-network-applet-${NETWORK_COMMIT}.tar.gz
-		mv -fT budgie-network-applet-* budgie-network-applet || die
-	popd || die
-	pushd ${S}/budgie-quickchar || die
-		unpack budgie-quickchar-applet-${QUICKCHAR_COMMIT}.tar.gz
-		mv -fT QuickChar-* quickchar || die
-	popd || die
-	pushd ${S}/budgie-trash || die
-		unpack budgie-trash-applet-${TRASH_COMMIT}.tar.gz
-		mv -fT budgie-trash-applet-* trash || die
-	popd || die
+	unpack ${P}.tar.xz
 }
 
 src_prepare() {
@@ -110,7 +83,7 @@ pkg_postinst() {
 	xdg_pkg_postinst
 	gnome2_schemas_update
 
-	elog "In order for all the applets to appear after installation without relogging it is recommended to run the following  as your current logged in user:"
+	elog "In order for all the applets to appear after installation without relogging it is recommended to run the following as your current logged in user:"
 	elog "  budgie-panel --replace &"
 }
 

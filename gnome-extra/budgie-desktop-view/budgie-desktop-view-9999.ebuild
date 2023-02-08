@@ -1,23 +1,23 @@
 # Copyright 2021 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=7
+EAPI=8
 
 VALA_MIN_API_VERSION="0.48"
 
 inherit git-r3 meson vala gnome2-utils xdg
 
 DESCRIPTION="Basic desktop icons/managemlent for Budgie Desktop."
-HOMEPAGE="https://github.com/getsolus/${PN}"
+HOMEPAGE="https://github.com/BuddiesOfBudgie/${PN}"
 
-EGIT_REPO_URI="https://github.com/getsolus/${PN}.git"
+EGIT_REPO_URI="https://github.com/BuddiesOfBudgie/${PN}.git"
 
 LICENSE="GPL-3"
 SLOT="0"
 
 IUSE="stateless"
 
-DEPEND=">=gnome-extra/budgie-desktop-10.0"
+DEPEND=">=gnome-extra/budgie-desktop-10.7"
 RDEPEND="${DEPEND}"
 BDEPEND="
 	dev-util/meson
@@ -25,7 +25,7 @@ BDEPEND="
 "
 
 src_prepare() {
-	vala_src_prepare
+	vala_setup
 	default
 }
 

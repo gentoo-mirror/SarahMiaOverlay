@@ -2,6 +2,58 @@
 
 I will keep all updates here listed and up to date;
 
+## 2023/2/8 - Budgie 10.7 has flown in!
+
+### Added
+- budgie-meta-10.7 - new meta release
+- budgie-desktop-10.7 - new release
+- budgie-control-center-1.2.0 - new release
+- budgie-desktop-view-1.2.1 - new release
+- budgie-screensaver-5.1.0 - new release
+- budgie-backgrounds-1.0 - new release
+- budgie-analogue-clock-applet-1.3 - new release
+- budgie-calendar-applet-5.3 - new update
+- appstream-0.15.6 - new release in mainline, now updated with vala support like older versions
+- all - packages that had no metadata.xml now have a metadata.xml
+
+### Changed
+
+- All ebuilds that were using using EAPI 7 now use EAPI 8.
+- ~arm and ~arm64 useflags added to all ebuilds that didn't have them.
+- budgie-desktop-10.6.4 - now stable
+- budgie-desktop-view-1.2 - now stable
+- budgie-brightness-control-applet-0.3 - now stable
+- budgie-meta-10.6.4 - now stable and has the minimal useflag in preparation for the modular 10.7 upgrade.
+- budgie-backgrounds-0.1 - now stable
+- budgie-control-center-1.1.1 - now stable
+- budgie-clipboard-applet-1.1.0 - now stable
+- budgie-extras-1.5.0 - now stable
+- budgie-haste-applet-0.3.0 - now stable
+- budgie-pixel-saver-applet-4.0.0 - now stable
+- budgie-screenshot-applet-0.4.3 - now stable
+- budgie-systemmonitor-applet-0.2.1 - now stable
+- all 9990 ebuilds - checked and made up to date where needed.
+- README.md - new contents
+- TODO.md - small update on budgie-extras and budgie-control-center. 9999 removed as it is fixed now..
+
+### Fixed
+
+- budgie-control-center - versions 1.1.1 and 1.2.0 now have proper python reliance as well.
+- all ebuilds had a thorough cleanup and some minor fixes where needed. No more need for separate downloads of subprojects etc.
+
+### Removed
+- hid-asus-rog - no longer needed since it is in the kernel already for a long time.
+- appstream - versions 0.14.6 and 0.15.5 due to no longer present in mainline
+- budgie-analogue-clock-applet - versions 1.1 and 9999 are outdated
+- budgie-brightness-control-applet-0.2.1 - outdated
+- budgie-calendar-applet-5.2 - outdated
+- budgie-control-center - versions 1.0.2 and 1.1.0 are outdated
+- budgie-desktop-view-1.1.1 - outdated
+- budgie-desktop - versions 10.5.3-r2 and 10.6.1 are outdated
+- budgie-extras - versions 1.3.0-r1, 1.4.0-r1 and 1.4.0.r2 are outdated
+- budgie-meta-10.6.1-r1 - outdated
+- budgie-screensaver-4.0 - outdated 
+
 ## 2022/11/22
 
 ### Changed

@@ -1,7 +1,7 @@
 # Copyright 2021 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=7
+EAPI=8
 
 VALA_MIN_API_VERSION="0.48"
 
@@ -9,10 +9,9 @@ inherit meson vala gnome2-utils xdg
 
 DESCRIPTION="This applet allows you to controll screen brightness. Made for Budgie Desktop."
 HOMEPAGE="https://github.com/Azania/${PN}"
+SRC_URI="https://github.com/Azania/${PN}/archive/refs/tags/v${PV}.tar.gz -> ${P}.tar.gz"
 
-SRC_URI="https://github.com/Azania/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
-
-LICENSE=""
+LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 x86 ~arm ~arm64"
 
@@ -25,7 +24,7 @@ src_unpack() {
 }
 
 src_prepare() {
-	vala_src_prepare
+	vala_setup
 	default
 }
 

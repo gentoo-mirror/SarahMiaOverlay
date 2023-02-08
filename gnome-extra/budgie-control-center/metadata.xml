@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<email>Xavalia@gmail.com</email>
+		<name>Sarah Mia Leibbrand</name>
+	</maintainer>
+	<use>
+		<flag name="ibus">Enable support for enhanced input methods through <pkg>app-i18n/ibus</pkg></flag>
+		<flag name="gnome-online-accounts">Enable configuration panel for <pkg>net-libs/gnome-online-accounts</pkg> accounts</flag>
+	</use>
+	<upstream>
+		<remote-id type="github">BuddiesOfBudgie/budgie-control-center</remote-id>
+	</upstream>
+</pkgmetadata>

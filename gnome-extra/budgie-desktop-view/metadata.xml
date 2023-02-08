@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<email>Xavalia@gmail.com</email>
+		<name>Sarah Mia Leibbrand</name>
+	</maintainer>
+	<use>
+		<flag name="stateless">Enable stateless XDG paths</flag>
+	</use>
+	<upstream>
+		<remote-id type="github">BuddiesOfBudgie/budgie-desktop-view</remote-id>
+	</upstream>
+</pkgmetadata>
