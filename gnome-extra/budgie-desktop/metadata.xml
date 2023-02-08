@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<email>Xavalia@gmail.com</email>
+		<name>Sarah Mia Leibbrand</name>
+	</maintainer>
+	<use>
+		<flag name="gtk-doc">Build gtk-doc documentation</flag>
+		<flag name="policykit">Enable PolKit support</flag>
+		<flag name="stateless">Enable stateless XDG paths</flag>
+		<flag name="bluetooth">Enable Bluetooth (Vala option)</flag>
+		<flag name="hibernate">Include support for system hibernation</flag>
+	</use>
+	<upstream>
+		<remote-id type="github">BuddiesOfBudgie/budgie-desktop</remote-id>
+	</upstream>
+</pkgmetadata>

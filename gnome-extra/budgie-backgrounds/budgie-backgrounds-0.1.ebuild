@@ -10,11 +10,11 @@ inherit meson vala gnome2-utils xdg
 DESCRIPTION="Budgie Desktop default backgrounds"
 HOMEPAGE="https://github.com/BuddiesOfBudgie/${PN}"
 
-SRC_URI="https://github.com/BuddiesOfBudgie/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
+SRC_URI="https://github.com/BuddiesOfBudgie/${PN}/releases/download/v${PV}/${PN}-v${PV}.tar.xz -> ${P}.tar.xz"
 
 LICENSE="CC0-1.0"
 SLOT="0"
-KEYWORDS="~amd64 ~x86 ~arm ~arm64"
+KEYWORDS="amd64 x86 ~arm ~arm64"
 
 DEPEND="
 	>=gnome-extra/budgie-desktop-10.6.4
@@ -28,7 +28,7 @@ BDEPEND="
 "
 
 src_unpack() {
-	unpack ${P}.tar.gz
+	unpack ${P}.tar.xz
 }
 
 src_prepare() {

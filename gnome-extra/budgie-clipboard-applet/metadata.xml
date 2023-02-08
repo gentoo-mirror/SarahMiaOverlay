@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<email>Xavalia@gmail.com</email>
+		<name>Sarah Mia Leibbrand</name>
+	</maintainer>
+	<upstream>
+		<remote-id type="github">prateekmedia/budgie-clipboard-applet</remote-id>
+	</upstream>
+</pkgmetadata>

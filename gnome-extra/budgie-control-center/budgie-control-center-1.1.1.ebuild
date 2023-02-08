@@ -1,28 +1,31 @@
-# Copyright 2021 Gentoo Authors
+# Copyright 1999-2023 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=7
+# Copied and Adjusted by Sarah Mia Leibbrand from gnome-control-center to refit purpose of budgie-control-center.
+# Budgie-control-center was forked from gnome-control-center anyway.
 
+EAPI=8
+
+PYTHON_COMPAT=( python3_{9..11} )
 VALA_MIN_API_VERSION="0.48"
 
-inherit meson vala gnome2-utils xdg
+inherit meson vala gnome2-utils xdg python-any-r1
 
 DESCRIPTION="Budgie Control Center for Budgie Desktop"
 HOMEPAGE="https://github.com/BuddiesOfBudgie/${PN}"
-
-GVC_COMMIT=8e7a5a4
-LIBHANDY_COMMIT=7b38a86
-
-SRC_URI="
-	https://github.com/BuddiesOfBudgie/${PN}/archive/refs/tags/v${PV}.tar.gz -> ${P}.tar.gz
-	https://gitlab.gnome.org/GNOME/libgnome-volume-control/-/archive/${GVC_COMMIT}/libgnome-volume-control-${GVC_COMMIT}.tar.gz
-	https://gitlab.gnome.org/GNOME/libhandy/-/archive/${LIBHANDY_COMMIT}/libhandy-${LIBHANDY_COMMIT}.tar.gz"
+SRC_URI="https://github.com/BuddiesOfBudgie/${PN}/releases/download/v${PV}/${P}.tar.xz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~x86 ~arm ~arm64"
+KEYWORDS="amd64 x86 ~arm ~arm64"
 
 IUSE="+bluetooth +cups debug elogind +gnome-online-accounts +ibus input_devices_wacom kerberos networkmanager v4l systemd wayland"
+REQUIRED_USE="
+	^^ ( elogind systemd )
+" # Theoretically "?? ( elogind systemd )" is fine too, lacking some functionality at runtime, but needs testing if handled gracefully enough
+
+# meson.build depends on python unconditionally
+BDEPEND="${PYTHON_DEPS}"
 
 DEPEND="
 	>=gnome-extra/budgie-desktop-10.6
@@ -101,18 +104,21 @@ PATCHES=(
 	"${FILESDIR}"/111/
 )
 
+python_check_deps() {
+	return 0 # need to check if i want to add in test useflag or whether this has any point at all lol and next this section should be removed
+	python_has_version "dev-python/python-dbusmock[${PYTHON_USEDEP}]"
+}
+
+pkg_setup() {
+	python-any-r1_pkg_setup
+}
+
 src_unpack() {
-	unpack ${P}.tar.gz
-	pushd "${S}"/subprojects || die
-		unpack libgnome-volume-control-${GVC_COMMIT}.tar.gz \
-			libhandy-${LIBHANDY_COMMIT}.tar.gz
-		mv -fT libgnome-volume-control-* gvc || die
-		mv -fT libhandy-* libhandy || die
-	popd || die
+	unpack ${P}.tar.xz
 }
 
 src_prepare() {
-	vala_src_prepare
+	vala_setup
 	default
 }
 
