@@ -7,9 +7,9 @@ HOMEPAGE=https://github.com/BuddiesOfBudgie/budgie-screensaver
 IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
 INHERIT=meson gnome2-utils xdg
 IUSE=systemd +locking +xtools
-KEYWORDS=~amd64 ~x86 ~arm ~arm64
+KEYWORDS=amd64 x86 ~arm ~arm64
 RDEPEND=>=dev-libs/glib-2.64.0:= >=gnome-base/gnome-desktop-3.36.0:3 >=gnome-base/gsettings-desktop-schemas-3.36.0 >=x11-libs/gtk+-3.1.91:3[X] dev-libs/dbus-glib sys-libs/pam systemd? ( >=sys-apps/systemd-209:0= ) xtools? ( x11-libs/libXxf86vm )
 SLOT=0
 SRC_URI=https://github.com/BuddiesOfBudgie/budgie-screensaver/releases/download/v5.1.0/budgie-screensaver-v5.1.0.tar.xz -> budgie-screensaver-5.1.0.tar.xz
 _eclasses_=multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	ninja-utils	76050953ad5b70d7e09a6ca55558db92	toolchain-funcs	14a8ae365191b518fad51caad7a08f3e	multilib	d1408425c7c4a7669b9b17735404b693	python-utils-r1	429bfd4e8d8e39db5385ba5744f30788	meson	915ec7c25e08d7886558215e6809ca1e	xdg-utils	baea6080dd821f5562d715887954c9d3	gnome2-utils	b0183db3b2e07b18f3b77bffec72e116	xdg	4a14c5c24f121e7da66e5aab4a168c6e
-_md5_=8b9d70d9e160b48a59c44b4e68a3db40
+_md5_=ce0cc2e790980e87eba514c4b01ce7ac
