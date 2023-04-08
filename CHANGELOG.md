@@ -2,6 +2,33 @@
 
 I will keep all updates here listed and up to date;
 
+## 2023/4/8 - Budgie 10.7.1 and Budgie-Extras 1.6.0 with separate applets feature!
+
+### Added
+- budgie-meta-10.7.1 - new meta release
+- budgie-desktop-10.7.1 - new release
+- budgie-extras-1.6.0 - new release
+- budgie-analogue-clock-applet-2.0 - new release
+- budgie-extras-1.6.0:BUDGIE_EXTRAS_APPLETS - new feature that allows you to pick and choose the applets you want without having install everything. See README.md for more details
+
+### Changed
+- budgie-meta-10.7 - now stable
+- budgie-desktop-10.7 - now stable
+- budgie-control-center-1.2.0 - now stable
+- budgie-desktop-view-1.2.1 - now stable
+- budgie-backgrounds-1.0 - now stable
+- budgie-screensaver-5.1.0 - now stable
+- README.md - changed/added contents
+- TODO.md - changed contents
+
+### Removed
+- budgie-meta-10.6.4 - outdated
+- budgie-desktop-10.6.4 - outdated
+- budgie-control-center - version 1.1.1 outdated and cleaned up the patches in the files/ directory that are no longer relevant
+- budgie-desktop-view-1.2 - outdated
+- budgie-backgrounds-0.1 - outdated
+- budgie-screensaver-5.0.2 - outdated
+
 ## 2023/2/8 - Budgie 10.7 has flown in!
 
 ### Added
@@ -17,7 +44,6 @@ I will keep all updates here listed and up to date;
 - all - packages that had no metadata.xml now have a metadata.xml
 
 ### Changed
-
 - All ebuilds that were using using EAPI 7 now use EAPI 8.
 - ~arm and ~arm64 useflags added to all ebuilds that didn't have them.
 - budgie-desktop-10.6.4 - now stable
@@ -37,7 +63,6 @@ I will keep all updates here listed and up to date;
 - TODO.md - small update on budgie-extras and budgie-control-center. 9999 removed as it is fixed now..
 
 ### Fixed
-
 - budgie-control-center - versions 1.1.1 and 1.2.0 now have proper python reliance as well.
 - all ebuilds had a thorough cleanup and some minor fixes where needed. No more need for separate downloads of subprojects etc.
 

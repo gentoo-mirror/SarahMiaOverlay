@@ -28,6 +28,19 @@ The recommended way is installing budgie-meta. This is a meta package that conta
 	
 When going for latest versions you need to unmask some packages with ~ keywords. With budgie-meta you can then also set the useflag `all-packages` to have everything installed.
 
+**NEW!**: When installing budgie-extras 1.6 or higher you can now specify which applets you want to install from that package. When doing this you can see all applets through the following command:
+
+	emerge --pretend --verbose budgie-extras
+	
+You will see BUDGIE_EXTRAS_APPLETS="..." appearing, this means those applets will be installed. By default it will install all of them. To specify which ones you want you can add the following in your /etc/portage/make.conf file:
+
+	BUDGIE_EXTRAS_APPLETS="whichever-applets-you-want-here separated-by-spaces"
+	
+This will tell the package which applets to install. At least one applet (or the 'all' option) must be selected. To see what each applet is you can run the following command(s).
+
+	emerge --ask --verbose gentoolkit #skip this if already installed
+	equery u budgie-extras
+
 **2 Alternative) Budgie Desktop Base (not recommended anymore)**
 
 To install budgie desktop by itself and not use any other software you don't need to do anything special other than the command below (basic emerge command).
@@ -55,7 +68,7 @@ If you want the very latest versions you will need to unmask budgie-meta, budgie
 
 **3) Tips to personalize Budgie Destop with extra applets and applications**
 
-- Merge Budgie Extras (if meta with minimal useflag was installed) and/or any other applets that can be found as budgie-\*-applet in the overlay. (These may be auto installed depending on your useflags if your installed budgie-desktop with budgie-meta, which is recommended anyway).
+- Merge Budgie Extras (if meta with minimal useflag was installed) and/or any other applets that can be found as budgie-\*-applet in the overlay. (These may be auto installed depending on your useflags if your installed budgie-desktop with budgie-meta, which is recommended anyway, also see above how to customize budgie-extras).
 - After merging budgie-extras (or after installing budgie-meta without the minimal useflag) please start the Window Shuffler, some applets will require this (hotcorners mostly). This can be done with the provided Window Shuffler application in your applications list/menu. You can set additional options there as well.
 - The usual applications, file manager, image viewer, browser, audio, video players etc.
 - Any gtk/gnome application you want to use for a consistant look since budgie-desktop uses gtk

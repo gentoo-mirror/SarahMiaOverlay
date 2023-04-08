@@ -14,19 +14,22 @@ SRC_URI="https://github.com/BuddiesOfBudgie/${PN}/releases/download/v${PV}/${PN}
 
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
-KEYWORDS="amd64 x86 ~arm ~arm64"
-IUSE="gtk-doc +policykit stateless"
+KEYWORDS="~amd64 ~x86 ~arm ~arm64"
+IUSE="gtk-doc +policykit stateless +bluetooth +hibernate"
 
 COMMON_DEPEND="
 	>=app-i18n/ibus-1.5.10[vala]
-	>=dev-libs/glib-2.64.0:=
+	>=dev-libs/glib-2.66.3:=
 	>=dev-libs/libpeas-1.26.0:0=[gtk]
+	>=dev-libs/libgee-0.20.0:0.8=
 	>=gnome-base/gnome-desktop-${GNOME_MIN_VERSIOM}:3
 	>=gnome-base/gnome-settings-daemon-${GNOME_MIN_VERSIOM}
 	>=gnome-base/gsettings-desktop-schemas-${GNOME_MIN_VERSIOM}
 	>=gnome-base/gnome-menus-3.10.3:3[introspection]
 	>=gnome-extra/budgie-screensaver-5.0
 	media-libs/clutter:1.0
+	media-libs/gstreamer:1.0
+	media-libs/libcanberra:=[gtk3]
 	>=media-libs/graphene-1.10:=[introspection]
 	media-libs/cogl:1.0
 	media-sound/pulseaudio
@@ -34,11 +37,12 @@ COMMON_DEPEND="
 	>=sys-apps/accountsservice-0.6.55
 	sys-apps/util-linux
 	>=sys-power/upower-0.99.0:0=
-	>=x11-libs/gtk+-3.24.0:3[X]
+	>=x11-libs/gtk+-3.24.35:3[X,introspection]
 	>=x11-libs/libnotify-0.7
 	>=x11-libs/libwnck-${GNOME_MIN_VERSIOM}:3
 	x11-libs/libX11:=
 	x11-libs/libXcomposite:=
+	>=x11-libs/cairo-1.5.10
 	x11-wm/mutter:=
 	policykit? ( >=sys-auth/polkit-0.105[introspection] )
 "
@@ -58,7 +62,6 @@ BDEPEND="
 
 DEPEND="
 	${COMMON_DEPEND}
-
 	>=dev-libs/gobject-introspection-1.44.0
 "
 
@@ -78,6 +81,8 @@ src_configure() {
 		$(meson_use gtk-doc with-gtk-doc)
 		$(meson_use policykit with-polkit)
 		$(meson_use stateless with-stateless)
+		$(meson_use bluetooth with-bluetooth)
+		$(meson_use hibernate with-hibernate)
 	)
 	meson_src_configure
 }
