@@ -16,7 +16,6 @@ Below are notes I have planned/may consider to do as well with their status. Thi
 
 ### Low
 
-- [ ] Think/Prepare future budgie-extras release with modular BUDGIE_EXTRAS_APPS useflags to accomadate different applets, but this may get in the way of all minus network applet.. so yeah think about it and prepare for it maybe.. and also check on how to do with deps which may be a mess... This since this is what upstream wants.. not sure if this is wise and may create a mess for gentoo..
 - [ ] Think about adding in the test useflag for budgie-control-center to mirror gnome-control-center and see if things are needed or wanted.
 
 

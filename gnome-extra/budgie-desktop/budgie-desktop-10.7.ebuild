@@ -14,7 +14,7 @@ SRC_URI="https://github.com/BuddiesOfBudgie/${PN}/releases/download/v${PV}/${PN}
 
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64 ~x86 ~arm ~arm64"
+KEYWORDS="amd64 x86 ~arm ~arm64"
 IUSE="gtk-doc +policykit stateless +bluetooth +hibernate"
 
 COMMON_DEPEND="

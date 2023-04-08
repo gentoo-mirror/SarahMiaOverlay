@@ -17,7 +17,7 @@ SRC_URI="https://github.com/BuddiesOfBudgie/${PN}/releases/download/v${PV}/${P}.
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~x86 ~arm ~arm64"
+KEYWORDS="amd64 x86 ~arm ~arm64"
 
 IUSE="+bluetooth +cups debug elogind +gnome-online-accounts +ibus input_devices_wacom kerberos networkmanager v4l systemd wayland"
 REQUIRED_USE="
