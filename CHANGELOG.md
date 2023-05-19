@@ -2,6 +2,26 @@
 
 I will keep all updates here listed and up to date;
 
+## 2023/5/19 - Budgie 10.7.2 and Stabilizations
+
+### Added
+- budgie-meta-10.7.2 - new meta release
+- budgie-desktop-10.7.2 - new release
+
+### Changed
+- budgie-meta-10.7.1 - now stable
+- budgie-desktop-10.7.1 - now stable
+- budgie-extras-1.6.0 - now stable
+- budgie-extras-9999 - now makes use of new useflags
+- budgie-analogue-clock-applet-2.0 - now stable
+- README.md - minor content fix
+
+### Removed
+- budgie-meta-10.7 - outdated
+- budgie-desktop-10.7 - outdated
+- budgie-analogue-clock-applet-1.3.0 - outdated
+- budgie-extras-1.5.0 - outdated
+
 ## 2023/4/8 - Budgie 10.7.1 and Budgie-Extras 1.6.0 with separate applets feature!
 
 ### Added

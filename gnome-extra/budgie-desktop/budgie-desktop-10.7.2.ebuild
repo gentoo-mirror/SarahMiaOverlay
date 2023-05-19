@@ -14,7 +14,7 @@ SRC_URI="https://github.com/BuddiesOfBudgie/${PN}/releases/download/v${PV}/${PN}
 
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
-KEYWORDS="amd64 x86 ~arm ~arm64"
+KEYWORDS="~amd64 ~x86 ~arm ~arm64"
 IUSE="gtk-doc +policykit stateless +bluetooth +hibernate"
 
 COMMON_DEPEND="
@@ -37,7 +37,7 @@ COMMON_DEPEND="
 	>=sys-apps/accountsservice-0.6.55
 	sys-apps/util-linux
 	>=sys-power/upower-0.99.0:0=
-	>=x11-libs/gtk+-3.24.35:3[X]
+	>=x11-libs/gtk+-3.24.35:3[X,introspection]
 	>=x11-libs/libnotify-0.7
 	>=x11-libs/libwnck-${GNOME_MIN_VERSIOM}:3
 	x11-libs/libX11:=

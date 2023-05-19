@@ -28,7 +28,7 @@ The recommended way is installing budgie-meta. This is a meta package that conta
 	
 When going for latest versions you need to unmask some packages with ~ keywords. With budgie-meta you can then also set the useflag `all-packages` to have everything installed.
 
-**NEW!**: When installing budgie-extras 1.6 or higher you can now specify which applets you want to install from that package. When doing this you can see all applets through the following command:
+**NEW!**: When installing budgie-extras you can now specify which applets you want to install from that package. When doing this you can see all applets through the following command:
 
 	emerge --pretend --verbose budgie-extras
 	
