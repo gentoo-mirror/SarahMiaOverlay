@@ -15,7 +15,7 @@ SRC_URI="https://github.com/samlane-ma/${MY_PN}/archive/refs/tags/v${PV}.tar.gz 
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~x86 ~arm ~arm64"
+KEYWORDS="amd64 x86 ~arm ~arm64"
 
 DEPEND=">=gnome-extra/budgie-desktop-10.6.4"
 RDEPEND="${DEPEND}"
