@@ -94,7 +94,7 @@ COMMON_DEPEND="
 	gui-libs/libhandy:1[vala]
 	>=dev-libs/json-glib-1.0
 	dev-libs/keybinder
-	>=net-libs/libsoup-2.4
+	net-libs/libsoup:2.4
 "
 
 BDEPEND="${PYTHON_DEPS}"

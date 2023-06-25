@@ -24,8 +24,12 @@ DEPEND="
 	dev-libs/dbus-glib
 	sys-libs/pam
 	systemd? ( >=sys-apps/systemd-209:0= )
-	xtools? ( x11-libs/libXxf86vm )"
-RDEPEND="${DEPEND}"
+	xtools? ( x11-libs/libXxf86vm )
+"
+RDEPEND="
+	${DEPEND}
+	>=gnome-base/libgnomekbd-3
+"
 BDEPEND="dev-util/meson"
 
 src_configure() {
