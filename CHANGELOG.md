@@ -2,6 +2,14 @@
 
 I will keep all updates here listed and up to date;
 
+## 2023/6/25 - Dependency fixes
+
+### Fixed
+- budgie-screensaver - added the missing dependency gnome-base/libgnomekbd-3
+- budgie-extras - fixed the version requirement of net-libs/libsoup to the new 2.4 slot
+- budgie-haste-applet - fixed the version requirement of net-libs/libsoup to the new 2.4 slot
+- budgie-screenshot-applet - fixed the version requirement of net-libs/libsoup to the new 2.4 slot
+
 ## 2023/5/19 - Budgie 10.7.2 and Stabilizations
 
 ### Added
