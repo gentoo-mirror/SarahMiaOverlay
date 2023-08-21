@@ -2,6 +2,18 @@
 
 I will keep all updates here listed and up to date;
 
+## 2023/8/21 - 10.7.2 Stable
+
+In preparation for 1.8 and other updates and releases 10.7.2 is made stable. 10.8 will take a bit of time as some major changes were made (no longer using mutter e.g.)
+
+### Changed
+- budgie-desktop-10.7.2 - now stable
+- budgie-meta-10.7.2 - now stable
+
+### Removed
+- budgie-desktop-10.7.1 - outdated
+- budgie-meta-10.7.1 - oudated
+
 ## 2023/6/25 - Dependency fixes
 
 ### Fixed
