@@ -37,7 +37,7 @@ COMMON_DEPEND="
 	>=sys-apps/accountsservice-0.6.55
 	sys-apps/util-linux
 	>=sys-power/upower-0.99.0:0=
-	>=x11-libs/gtk+-3.24.35:3[X]
+	>=x11-libs/gtk+-3.24.35:3[X,introspection]
 	>=x11-libs/libnotify-0.7
 	>=x11-libs/libwnck-${GNOME_MIN_VERSIOM}:3
 	x11-libs/libX11:=

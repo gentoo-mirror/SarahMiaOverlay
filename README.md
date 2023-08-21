@@ -2,6 +2,8 @@
 
 *Despite the name this overlay has, it only supplies ebuilds meant for Budgie Desktop. Due to historic reasons this started out as a personal overlay with adjusted ebuilds with budgie-desktop being among them as well. Over time all those adjusted ebuilds are gone and there is only ebuilds for Budgie Desktop and it's support left now. This overlay will keep on fully supporting Budgie Desktop.*
 
+**Note: budgie-desktop-10.8 is releaed. Due to changes this new version brings (e.g. no mutter anymore) and some other software along the way this will take a bit of time. In the mean time 10.7.2 was made stable (a bit overdue). I will release 10.8 ebuilds when I am finished with it along with the other updates to other packages.**
+
 ## Budgie Desktop:
 
 The Budgie Desktop is a feature-rich, modern desktop designed to keep out the way of the user.
