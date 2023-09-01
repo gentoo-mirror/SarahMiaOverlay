@@ -4,6 +4,8 @@
 
 **Note: budgie-desktop-10.8 is releaed. Due to changes this new version brings (e.g. no mutter anymore) and some other software along the way this will take a bit of time. In the mean time 10.7.2 was made stable (a bit overdue). I will release 10.8 ebuilds when I am finished with it along with the other updates to other packages.**
 
+**Note 2: mainline gentoo masked gnome-bluetooth:2, if you run into this please unmask 'net-wireless/gnome-bluetooth:2' in your /etc/portage/package.unmask somewhere, see https://gitlab.com/SarahMia/sarahmiaoverlay/-/issues/16 for more information and feel to post there if you need further help, I will keep on trying to find a proper solution in the meantime, when there is it should come with 10.8 as well.**
+
 ## Budgie Desktop:
 
 The Budgie Desktop is a feature-rich, modern desktop designed to keep out the way of the user.
