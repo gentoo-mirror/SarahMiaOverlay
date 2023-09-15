@@ -2,9 +2,35 @@
 
 I will keep all updates here listed and up to date;
 
+## 2023/9/?? - 10.8 Has Arrived! Now excuse me while I try to fix my bluetooth >.>
+
+10.8 Is released and live. All new ebuilds are added as unstable as usual. Keep in mind till Oktober 1st you may need to add net-wireless/gnome-bluetooth:2 to your /etc/portage/package.unmask!
+
+Sorry Budgie-Desktop 10.8 arrived late. An issue (https://gitlab.com/SarahMia/sarahmiaoverlay/-/issues/16) with mainline gentoo caused some delays sadly. Have not been able to solve this on my side. The reason I delayed these 10.8 ebuilds is due to that when upgrading users will run into this for sure, if they haven't already tbh. I have reflected this in both the readme and the issue as well with how to solve this. Please refer to those on to upgrade 10.8 safely. After Oktober 1st it should be automatically solved by itself.
+
+On an interesting note; Budgie-desktop has forked Mutter 43 and named it Magpie. Like the Raven component of Budgie-Desktop and Budgie itself this is another name of a bird. I really like it that they keep going with the bird names :) The meanings of each bird;
+
+- Budgie is a small, long-tailed, seed-eating parrot. As a Spirit Animal it teaches lessons of simple beauty and resources you sometimes overlook. Quite fittig for what they aim budgie desktop to be.
+- Raven is a well, a common raven. But it symbolizes ancient wisdom, intelligence and transformation. And Raven is their notification system.
+- Magpie is an eastern bird that symbolized good luck and fortune. Its a common bird in chinese paintings. The Romans, for example, believed that the magpie was highly intelligent with excellent reasoning abilities. Magpie is the system behind all the windows, everything you see is driven by Magpie.
+
+### Added
+- budgie-meta-10.8 - new release
+- budgie-desktop-10.8 - new release
+- magpie-0.9.3 - new package
+- budgie-control-center-1.3.0 - new release
+- budgie-backgrounds-2.0 - new release
+- budgie-extas-1.7.0 - new release
+- gnome-bluetooth-3-34-5 - copied from mainline prior to removal on October 1st
+
+### Changed
+- svgwrite-1.4.3 - Now in line with mainline gentoo changes
+- README.md - changed/added/removed contents
+- TODO.md - removed some content (unlikely category)
+
 ## 2023/8/21 - 10.7.2 Stable
 
-In preparation for 1.8 and other updates and releases 10.7.2 is made stable. 10.8 will take a bit of time as some major changes were made (no longer using mutter e.g.)
+In preparation for 10.8 and other updates and releases 10.7.2 is made stable. 10.8 will take a bit of time as some major changes were made (no longer using mutter e.g.)
 
 ### Changed
 - budgie-desktop-10.7.2 - now stable
