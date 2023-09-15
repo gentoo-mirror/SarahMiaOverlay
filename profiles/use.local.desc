@@ -19,3 +19,5 @@ gnome-extra/budgie-meta:minimal - Installs only the base desktop with minimal ap
 gnome-extra/budgie-screensaver:locking - Allow the screen to be locked
 gnome-extra/budgie-screensaver:systemd - Enable systemd integration
 gnome-extra/budgie-screensaver:xtools - Enable support for XFree86 gamma fading
+x11-wm/magpie:elogind - Rely on sys-auth/elogind as logind provider for Wayland sessions
+x11-wm/magpie:sysprof - Enable profiling data capture support using dev-util/sysprof-capture
