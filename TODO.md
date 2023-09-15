@@ -17,9 +17,3 @@ Below are notes I have planned/may consider to do as well with their status. Thi
 ### Low
 
 - [ ] Think about adding in the test useflag for budgie-control-center to mirror gnome-control-center and see if things are needed or wanted.
-
-
-### Unlikely
-
-- [ ] Make a separate document for further tweaks of budgie-desktop if wanted. (e.g. not showing nm-applet tray icon if using the network applet from budgie-extras)
-- [ ] Look into specific budgie themes maybe.

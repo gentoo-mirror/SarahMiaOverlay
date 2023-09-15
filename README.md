@@ -2,9 +2,7 @@
 
 *Despite the name this overlay has, it only supplies ebuilds meant for Budgie Desktop. Due to historic reasons this started out as a personal overlay with adjusted ebuilds with budgie-desktop being among them as well. Over time all those adjusted ebuilds are gone and there is only ebuilds for Budgie Desktop and it's support left now. This overlay will keep on fully supporting Budgie Desktop.*
 
-**Note: budgie-desktop-10.8 is releaed. Due to changes this new version brings (e.g. no mutter anymore) and some other software along the way this will take a bit of time. In the mean time 10.7.2 was made stable (a bit overdue). I will release 10.8 ebuilds when I am finished with it along with the other updates to other packages.**
-
-**Note 2: mainline gentoo masked gnome-bluetooth:2, if you run into this please unmask 'net-wireless/gnome-bluetooth:2' in your /etc/portage/package.unmask somewhere, see https://gitlab.com/SarahMia/sarahmiaoverlay/-/issues/16 for more information and feel to post there if you need further help, I will keep on trying to find a proper solution in the meantime, when there is it should come with 10.8 as well.**
+**Note: mainline gentoo masked gnome-bluetooth:2, if you run into this where it says it is masked please unmask 'net-wireless/gnome-bluetooth:2' in your /etc/portage/package.unmask somewhere, see https://gitlab.com/SarahMia/sarahmiaoverlay/-/issues/16 for more information and feel to post there if you need further help. It is very unlikely I will find a solution for this till Oktober 1st. And I think I won't look for it either. This should be solved by itself after Oktober 1st.**
 
 ## Budgie Desktop:
 
@@ -12,27 +10,46 @@ The Budgie Desktop is a feature-rich, modern desktop designed to keep out the wa
 
 This overlay contains both the budgie-desktop, applications and applets and its dependencies for budgie desktop. Everything that is needed to run Budgie Desktop is present.
 
-For more information about budgie you can visit https://blog.buddiesofbudgie.org/ and https://github.com/BuddiesOfBudgie/budgie-desktop/blob/main/README.md
+For more information about budgie you can visit https://buddiesofbudgie.org/ and/or https://blog.buddiesofbudgie.org/ and https://github.com/BuddiesOfBudgie/budgie-desktop/blob/main/README.md
 
 ## Installation:
 
-**1) Overlay**
+### 1) Add the Overlay
 
-To add the overlay to portage run the following: (assuming you have eselect-repository installed)
+To use the overlay you first have to add it to portage. Doing this first requires you to emerge eselect repository and after that you can simply add the overlay with a single command.
 
+	emerge -av eselect-repository # Skip this if you already have eselect-repository installed
 	eselect repository enable SarahMiaOverlay
 
 After that is done you can just select the budgie-desktop session from your favorite login manager. Budgie by itself favors lightdm with slick-greeter or gtk-greeter, but is not limited to any.
 
-**2) Budgie Meta Package**
+### 2) Budgie Meta Package
 
 The recommended way is installing budgie-meta. This is a meta package that contains the packages that are needed for the basic desktop. If you want only the minimal installation but with support you can set the `minimal` keyword. By default it will install budgie-desktop, budgie-screensaver, budgie-desktop-view, budgie-control-center, budgie-extras (not with minimal set) and budgie-backgrounds (not with minimal set).
 
+Run the follow command:
+
 	emerge --ask --verbose budgie-meta
 	
-When going for latest versions you need to unmask some packages with ~ keywords. With budgie-meta you can then also set the useflag `all-packages` to have everything installed.
+**Important Note till Oktober 1st for blue-tooth users:** *You may an error saying that gnome-bluetooth is masked for that please do the follow depending on whether your /etc/portage/package.unmask is directory or a file:*
 
-**NEW!**: When installing budgie-extras you can now specify which applets you want to install from that package. When doing this you can see all applets through the following command:
+*If etc/portage/package.unmask is a file:*
+	
+	printf '\n# Needed for budgie-desktop\nnet-wireless/gnome-bluetooth:2' > /etc/portage/package.unmask
+	
+*If etc/portage/package.unmask is a directory:*
+
+	echo 'net-wireless/gnome-bluetooth:2' > /etc/portage/package.unmask/budgie-desktop-bluetooth
+	
+If you do not use blue-tooth please disable the bluetooth useflag:
+
+	echo 'gnome-extra/budgie-desktop -bluetooth' > /etc/portage/package.use/budgie-desktop-no-bt
+	
+When going for latest versions you need to unmask some packages with ~ keywords. 
+
+With budgie-meta you can also set the useflag `all-packages` to have everything installed.
+
+When installing budgie-extras you can now specify which applets you want to install from that package. When doing this you can see all applets through the following command:
 
 	emerge --pretend --verbose budgie-extras
 	
@@ -40,22 +57,14 @@ You will see BUDGIE_EXTRAS_APPLETS="..." appearing, this means those applets wil
 
 	BUDGIE_EXTRAS_APPLETS="whichever-applets-you-want-here separated-by-spaces"
 	
-This will tell the package which applets to install. At least one applet (or the 'all' option) must be selected. To see what each applet is you can run the following command(s).
+This will tell the package which applets to install. At least one applet (or the 'all' option) must be selected. To see what each applet is you can run the following command(s):
 
-	emerge --ask --verbose gentoolkit #skip this if already installed
+	emerge --ask --verbose gentoolkit # Skip this if already installed
 	equery u budgie-extras
-
-**2 Alternative) Budgie Desktop Base (not recommended anymore)**
-
-To install budgie desktop by itself and not use any other software you don't need to do anything special other than the command below (basic emerge command).
-
-For 10.7 and up this is not recommended as any issues you may experience you may not get any support upstream as they expect you to at least run a number of packages. This is reflected in `budgie-meta[minimal]` package with the `minimal` keyword. *(See https://blog.buddiesofbudgie.org/budgie-10-7-released/ for more info)*
-
-	emerge --ask --verbose budgie-desktop
 	
-**2.5) Migrate to budgie-meta (if not already using budgie-meta)**
+### 2.5) Migrate to budgie-meta (if not already using budgie-meta) from using only base budgie-desktop package
 
-If Budgie Desktop was installed through budgie-desktop ebuild then going forward it is recommended to merge budgie-meta. Please follow the following commands. First remove the packages from the world file incase in the future you want to remove budgie-desktop and this will keep the world file clean.
+If Budgie Desktop was installed through only budgie-desktop ebuild then going forward it is recommended to merge budgie-meta. Please follow the following commands. First remove the packages from the world file incase in the future you want to remove budgie-desktop and this will keep the world file clean.
 
 	emerge --deselect budgie-desktop budgie-desktop-view budgie-control-center budgie-screensaver
 
@@ -68,9 +77,9 @@ Once that is done you can simply emerge budgie-meta. Don't forget to add the min
 
 	emerge --ask --verbose budgie-meta
 	
-If you want the very latest versions you will need to unmask budgie-meta, budgie-desktop, budgie-desktop-view and budgie-control-center. If not running with minimal you also need to unmask budgie-backgrounds. And everything else above still applies. Simply run the emerge command to install budgie-meta.
+If you want the very latest versions you will need to unmask some or all of budgie-meta, budgie-desktop, budgie-desktop-view, budgie-control-center and magpie. If not running with minimal you also may need to unmask budgie-backgrounds and budgie-extras. And everything else above still applies. Simply run the emerge command to install budgie-meta.
 
-**3) Tips to personalize Budgie Destop with extra applets and applications**
+### 3) Tips to personalize Budgie Destop with extra applets and applications
 
 - Merge Budgie Extras (if meta with minimal useflag was installed) and/or any other applets that can be found as budgie-\*-applet in the overlay. (These may be auto installed depending on your useflags if your installed budgie-desktop with budgie-meta, which is recommended anyway, also see above how to customize budgie-extras).
 - After merging budgie-extras (or after installing budgie-meta without the minimal useflag) please start the Window Shuffler, some applets will require this (hotcorners mostly). This can be done with the provided Window Shuffler application in your applications list/menu. You can set additional options there as well.
@@ -95,3 +104,5 @@ If you want the very latest versions you will need to unmask budgie-meta, budgie
 4) If there is an applet/application/theme you want let me know with a link and I will see if I can add it in the overlay for you. Please do note that for themes any gtk theme should work fine out of the box and can be set through budgie control center.
 
 5) The overlay changes and todo's are each in their own files, refer to CHANGELOG.md or TODO.md for those.
+
+6) The migration installation sections will be removed from this document when I make 10.8 stable. By default I will assume everyone is on 1.7+ then and using budgie-meta.
