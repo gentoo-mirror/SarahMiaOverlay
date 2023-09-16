@@ -184,7 +184,7 @@ BDEPEND="
 "
 
 PATCHES=(
-	"${FILESDIR}"/exclude-network-applet-build-all.patch
+	"${FILESDIR}"/160/exclude-network-applet-build-all.patch
 )
 
 python_check_deps() {
