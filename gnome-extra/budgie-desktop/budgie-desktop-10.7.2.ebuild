@@ -27,11 +27,9 @@ COMMON_DEPEND="
 	>=gnome-base/gsettings-desktop-schemas-${GNOME_MIN_VERSIOM}
 	>=gnome-base/gnome-menus-3.10.3:3[introspection]
 	>=gnome-extra/budgie-screensaver-5.0
-	media-libs/clutter:1.0
 	media-libs/gstreamer:1.0
 	media-libs/libcanberra:=[gtk3]
 	>=media-libs/graphene-1.10:=[introspection]
-	media-libs/cogl:1.0
 	media-sound/pulseaudio
 	>=net-wireless/gnome-bluetooth-3.34.0:2=
 	>=sys-apps/accountsservice-0.6.55
@@ -49,7 +47,6 @@ COMMON_DEPEND="
 
 RDEPEND="
 	${COMMON_DEPEND}
-	>=gnome-base/gnome-control-center-3.26[bluetooth]
 	gnome-base/gnome-session
 "
 
