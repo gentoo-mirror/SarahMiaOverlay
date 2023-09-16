@@ -8,7 +8,7 @@ PYTHON_COMPAT=( python3_{9..11} )
 
 inherit git-r3 meson vala gnome2-utils xdg python-any-r1
 
-DESCRIPTION="Additional enhancements for the user experience, contains many applets + helper applications. Made for Budgie Desktop."
+DESCRIPTION="Additional enhancements for the user experience. Contains many applets. Made for Budgie Desktop."
 HOMEPAGE="https://github.com/UbuntuBudgie/${PN}"
 EGIT_REPO_URI="https://github.com/UbuntuBudgie/${PN}.git"
 
@@ -66,7 +66,6 @@ REQUIRED_USE="
 			budgie_extras_applets_dropby
 			budgie_extras_applets_kangaroo
 			budgie_extras_applets_show-weather
-			budgie_extras_applets_trash
 			budgie_extras_applets_app-launcher
 			budgie_extras_applets_recently-used
 			budgie_extras_applets_take-a-break
@@ -206,7 +205,7 @@ src_configure() {
 		-Dwith-zeitgeist=false
 		$(meson_use stateless with-stateless)
 		$(meson_use budgie_extras_applets_all with-default-schema)
-		$(meson_use budgie_extras_applets_all build-all)
+		$(meson_use budgie_extras_applets_all build-recommended)
 		$(meson_use budgie_extras_applets_window-previews build-wpreviews)
 		$(meson_use budgie_extras_applets_workspace-switcher build-wswitcher)
 		$(meson_use budgie_extras_applets_hotcorners build-hotcorners)
@@ -219,7 +218,6 @@ src_configure() {
 		$(meson_use budgie_extras_applets_dropby build-dropby)
 		$(meson_use budgie_extras_applets_kangaroo build-kangaroo)
 		$(meson_use budgie_extras_applets_show-weather build-weathershow)
-		$(meson_use budgie_extras_applets_trash build-trash)
 		$(meson_use budgie_extras_applets_app-launcher build-app-launcher)
 		$(meson_use budgie_extras_applets_recently-used build-recentlyused)
 		$(meson_use budgie_extras_applets_take-a-break build-takeabreak)
@@ -233,6 +231,7 @@ src_configure() {
 		$(meson_use budgie_extras_applets_applications-menu build-applications-menu)
 		$(meson_use budgie_extras_applets_network-manager build-network-manager)
 		$(meson_use budgie_extras_applets_window-shuffler build-window-shuffler)
+		$(meson_use budgie_extras_applets_trash build-trash)
 	)
 	meson_src_configure
 }
