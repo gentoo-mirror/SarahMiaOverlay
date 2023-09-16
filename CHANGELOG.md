@@ -2,11 +2,24 @@
 
 I will keep all updates here listed and up to date;
 
-## 2023/9/?? - 10.8 Has Arrived! Now excuse me while I try to fix my bluetooth >.>
+## 2023/9/23 - Roundup fixes
 
-10.8 Is released and live. All new ebuilds are added as unstable as usual. Keep in mind till Oktober 1st you may need to add net-wireless/gnome-bluetooth:2 to your /etc/portage/package.unmask!
+The fix was actually working. Documentation has been adjusted. As well some other minor things that was found after some testing.
 
-Sorry Budgie-Desktop 10.8 arrived late. An issue (https://gitlab.com/SarahMia/sarahmiaoverlay/-/issues/16) with mainline gentoo caused some delays sadly. Have not been able to solve this on my side. The reason I delayed these 10.8 ebuilds is due to that when upgrading users will run into this for sure, if they haven't already tbh. I have reflected this in both the readme and the issue as well with how to solve this. Please refer to those on to upgrade 10.8 safely. After Oktober 1st it should be automatically solved by itself.
+### Changed
+- README.md - Heavily revides contents, many changes and additions
+- CHANGELOG.md - Edited previous entry
+- budgie-desktop - no longer has clutter and cogl as dependencies
+- appstream - vala made mandatory enabled
+- budgie-extras-9999 - fixed trash and all applet build options and restrictions
+
+### Hotfixes from 2023/9/22
+- gnome-bluetooth - fixed missing patch and wrong manifest file
+- magpie - added missing metadata.xml file
+
+## 2023/9/22 - 10.8 Has Arrived! Now excuse me while I try to fix my bluetooth >.>
+
+10.8 Is released and live. All new ebuilds are added as unstable as usual.
 
 On an interesting note; Budgie-desktop has forked Mutter 43 and named it Magpie. Like the Raven component of Budgie-Desktop and Budgie itself this is another name of a bird. I really like it that they keep going with the bird names :) The meanings of each bird;
 

@@ -2,13 +2,11 @@
 
 *Despite the name this overlay has, it only supplies ebuilds meant for Budgie Desktop. Due to historic reasons this started out as a personal overlay with adjusted ebuilds with budgie-desktop being among them as well. Over time all those adjusted ebuilds are gone and there is only ebuilds for Budgie Desktop and it's support left now. This overlay will keep on fully supporting Budgie Desktop.*
 
-**Note: mainline gentoo masked gnome-bluetooth:2, if you run into this where it says it is masked please unmask 'net-wireless/gnome-bluetooth:2' in your /etc/portage/package.unmask somewhere, see https://gitlab.com/SarahMia/sarahmiaoverlay/-/issues/16 for more information and feel to post there if you need further help. It is very unlikely I will find a solution for this till Oktober 1st. And I think I won't look for it either. This should be solved by itself after Oktober 1st.**
-
 ## Budgie Desktop:
 
 The Budgie Desktop is a feature-rich, modern desktop designed to keep out the way of the user.
 
-This overlay contains both the budgie-desktop, applications and applets and its dependencies for budgie desktop. Everything that is needed to run Budgie Desktop is present.
+This overlay contains both the budgie-desktop, applications and applets and its dependencies for Budgie Desktop. Everything that is needed to run Budgie Desktop is present.
 
 For more information about budgie you can visit https://buddiesofbudgie.org/ and/or https://blog.buddiesofbudgie.org/ and https://github.com/BuddiesOfBudgie/budgie-desktop/blob/main/README.md
 
@@ -20,34 +18,39 @@ To use the overlay you first have to add it to portage. Doing this first require
 
 	emerge -av eselect-repository # Skip this if you already have eselect-repository installed
 	eselect repository enable SarahMiaOverlay
+	emerge --sync SarahMiaOverlay
 
 After that is done you can just select the budgie-desktop session from your favorite login manager. Budgie by itself favors lightdm with slick-greeter or gtk-greeter, but is not limited to any.
 
-### 2) Budgie Meta Package
+### 2) Install Budgie Meta Package
 
 The recommended way is installing budgie-meta. This is a meta package that contains the packages that are needed for the basic desktop. If you want only the minimal installation but with support you can set the `minimal` keyword. By default it will install budgie-desktop, budgie-screensaver, budgie-desktop-view, budgie-control-center, budgie-extras (not with minimal set) and budgie-backgrounds (not with minimal set).
 
-Run the follow command:
+#### Basic Installation
+
+Run the follow command to install the desktop itself:
 
 	emerge --ask --verbose budgie-meta
 	
-**Important Note till Oktober 1st for blue-tooth users:** *You may an error saying that gnome-bluetooth is masked for that please do the follow depending on whether your /etc/portage/package.unmask is directory or a file:*
+When going for latest versions you need to unmask some packages with ~ keywords. please run the following command:
 
-*If etc/portage/package.unmask is a file:*
+	printf '# Budgie-Destop latest versions
+	gnome-extra/budgie-meta
+	gnome-extra/budgie-control-center
+	gnome-extra/budgie-desktop-view
+	gnome-extra/budgie-desktop
+	gnome-extra/budgie-screensaver
+	x11-wm/magpie
+	gnome-extra/budgie-extras
+	gnome-extra/budgie-backgrounds' > /etc/portage/package.accept_keywords/budgie-desktop-latest
 	
-	printf '\n# Needed for budgie-desktop\nnet-wireless/gnome-bluetooth:2' > /etc/portage/package.unmask
-	
-*If etc/portage/package.unmask is a directory:*
-
-	echo 'net-wireless/gnome-bluetooth:2' > /etc/portage/package.unmask/budgie-desktop-bluetooth
-	
-If you do not use blue-tooth please disable the bluetooth useflag:
-
-	echo 'gnome-extra/budgie-desktop -bluetooth' > /etc/portage/package.use/budgie-desktop-no-bt
-	
-When going for latest versions you need to unmask some packages with ~ keywords. 
+Please note that if you run the `minimal` useflag budgie-extras and budgie-backgrounds are not needed. You can adjust the file manually if you want too, but is not needed.
 
 With budgie-meta you can also set the useflag `all-packages` to have everything installed.
+
+#### Adjusting contents of Budgie-Extras package (if not running minimal)
+
+*Skip this section if you are not running the `minimal` useflag of budgie-meta!*
 
 When installing budgie-extras you can now specify which applets you want to install from that package. When doing this you can see all applets through the following command:
 
@@ -57,10 +60,24 @@ You will see BUDGIE_EXTRAS_APPLETS="..." appearing, this means those applets wil
 
 	BUDGIE_EXTRAS_APPLETS="whichever-applets-you-want-here separated-by-spaces"
 	
-This will tell the package which applets to install. At least one applet (or the 'all' option) must be selected. To see what each applet is you can run the following command(s):
+This will tell the package which applets to install. At least one applet (or the `all` optionm, *not to be confused with the `all-packages` option from budgie-meta!*) must be selected. To see what each applet is you can run the following command(s):
 
 	emerge --ask --verbose gentoolkit # Skip this if already installed
 	equery u budgie-extras
+	
+You will need to remerge budgie-extras for this! Please run the following command:
+
+	emerge -1av budgie-extras
+	
+*Note: The Trash applet and networkmanager applets inside budgie-extras are not included in the `all` options. For network manager please enable the `networkmanager` useflag. For the Trash applet please add `trash` inside your BUDGIE_EXTRAS_APPLETS=".." in your make.conf. Trash applet by itself is also included in budgie-desktop since 10.8!
+
+#### Other Applets
+
+While budgie-extras does contain a lot of applets, it is not all. There are some applets made by other people are not part of extras. You can either install these separately or have them all installed with the useflag `all-packages` from budgie-meta. Do not confuse this with the `all` option from budgie-extras please. These are named in the form of 'budgie-xyz-applet'. You can search through by searching for budgie packages. The following command will do that:
+
+	emerge -s budgie #no wildcard possible sadly
+	
+All applets follow the naming of budgie-xyz-applet so you can simply look through the list of packages. It should not be that many. From there on your can install them as you see fit.
 	
 ### 2.5) Migrate to budgie-meta (if not already using budgie-meta) from using only base budgie-desktop package
 
@@ -92,6 +109,34 @@ If you want the very latest versions you will need to unmask some or all of budg
 	- (Part of budgie-extras) WallStreet Control (rotating wallpapers)
 	- (Part of budgie-extras) Previews Control (display applications preview while alt-tabbing)
 	- The config for the new window preview from budgie-extras (for alt-tab) is in the Previews Control in your applications list/menu. You can set additional options there as well.
+	
+## F.A.Q. / Troubleshoot
+
+### 1) Does it have tiling?
+
+Yes it does have tiling. For that you need to install budgie-extras. By default this is included in budgie-meta. Make sure you are not running the `minimal` useflag or you have to merge it separately. Also BUDGIE_EXTRAS_APPLETS must either be `all` or contain `window-shuffler`.
+
+### 2) I receive a message saying that gnome-bluetooth is masked and it won't let me install
+
+You should not get this message but if it does happen, please do the following depending on whether your /etc/portage/package.unmask is directory or a file:
+
+*If etc/portage/package.unmask is a file:*
+	
+	printf '\n# Needed for budgie-desktop\nnet-wireless/gnome-bluetooth:2' > /etc/portage/package.unmask
+	
+*If etc/portage/package.unmask is a directory:*
+
+	echo 'net-wireless/gnome-bluetooth:2' > /etc/portage/package.unmask/budgie-desktop-bluetooth
+	
+If you do not use blue-tooth please disable the `bluetooth` useflag:
+
+	echo 'gnome-extra/budgie-desktop -bluetooth' > /etc/portage/package.use/budgie-desktop-no-bt
+	
+### 3) I receive a message of missing useflag of vala for app-i18n/ibus vala
+
+Please add the `vala` useflag for app-i18n/ibus to your /etc/portage/package.use. You can run the following command:
+
+	echo 'app-i18n/ibus vala' > /etc/portage/package.use/budgie-desktop-ibus-vala
 
 ## Notes:
 
