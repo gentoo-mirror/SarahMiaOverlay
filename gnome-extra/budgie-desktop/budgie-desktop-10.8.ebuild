@@ -50,7 +50,6 @@ COMMON_DEPEND="
 
 RDEPEND="
 	${COMMON_DEPEND}
-	>=gnome-base/gnome-control-center-3.26[bluetooth]
 	gnome-base/gnome-session
 "
 
