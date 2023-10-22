@@ -8,18 +8,18 @@ HOMEPAGE="https://blog.buddiesofbudgie.org/"
 
 LICENSE="metapackage"
 SLOT="0"
-KEYWORDS="amd64 x86 ~arm ~arm64"
+KEYWORDS="~amd64 ~x86 ~arm ~arm64"
 IUSE="minimal all-packages"
 REQUIRED_USE="?? ( minimal all-packages )"
 
 RDEPEND="
 	>=gnome-extra/budgie-screensaver-5.1.0
-	>=gnome-extra/budgie-desktop-10.7.2
-	>=gnome-extra/budgie-desktop-view-1.2.1
-	>=gnome-extra/budgie-control-center-1.2.0
+	>=gnome-extra/budgie-desktop-10.8.2
+	>=gnome-extra/budgie-desktop-view-1.3
+	>=gnome-extra/budgie-control-center-1.3.0
 	!minimal? (
-		>=gnome-extra/budgie-extras-1.6.0
-		>=gnome-extra/budgie-backgrounds-1.0
+		>=gnome-extra/budgie-extras-1.7.0
+		>=gnome-extra/budgie-backgrounds-2.0
 	)
 	all-packages? (
 		>=gnome-extra/budgie-analogue-clock-applet-2.0
