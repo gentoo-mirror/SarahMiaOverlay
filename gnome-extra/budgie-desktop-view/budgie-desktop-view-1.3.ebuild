@@ -25,10 +25,6 @@ BDEPEND="
 	$(vala_depend)
 "
 
-PATCHES=(
-	"${FILESDIR}"/
-)
-
 src_unpack() {
 	unpack ${P}.tar.xz
 }
