@@ -2,14 +2,39 @@
 
 I will keep all updates here listed and up to date;
 
+## 2023/10/22 - 10.8.2 minor update
+
+A new day, a new release, nothing much just minor updates really.
+
+### Added
+- budgie-meta-10.8.2 - new release
+- budgie-desktop-10.8.2 - new release
+- budgie-desktop-view-1.3 - new release
+
+### Changed
+- budgie-control-center-1.3.0 - now stable
+- budgie-backgrounds-2.0 - now stable
+- budgie-extras-1.7.0 - now stable
+- magpie-0.9.3 - now stable
+- budgie-meta-1.8 - now stable
+- budgie-desktop-10.8 - now stable
+- README.md - imigrating to budgie-meta is now removed, everyone should be using budgie-meta by now.
+
+### Removed
+- budgie-desktop-10.7.2 - outdated
+- budgie-control-center-1.2.0 - outdated
+- budgie-backgrounds-1.0 - outdated
+- budgie-extras-1.6.0 - oudated
+- budgie-meta-1.7.2 - outdated
+
 ## 2023/9/23 - Roundup fixes
 
 The fix was actually working. Documentation has been adjusted. As well some other minor things that was found after some testing.
 
 ### Changed
-- README.md - Heavily revides contents, many changes and additions
+- README.md - Heavily revised contents, many changes and additions
 - CHANGELOG.md - Edited previous entry
-- budgie-desktop - no longer has clutter and cogl as dependencies
+- budgie-desktop - no longer has clutter and cogl as dependencies, bluetooth dep no longer included if bluetooth useflag is disabled
 - appstream - vala made mandatory enabled
 - budgie-extras-9999 - fixed trash and all applet build options and restrictions
 

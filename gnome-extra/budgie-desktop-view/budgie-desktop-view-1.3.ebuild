@@ -3,29 +3,31 @@
 
 EAPI=8
 
-VALA_MIN_API_VERSION="0.48"
+VALA_MIN_API_VERSION="0.53"
 
 inherit meson vala gnome2-utils xdg
 
-DESCRIPTION="Budgie Desktop default backgrounds"
+DESCRIPTION="Basic desktop icons/managemlent for Budgie Desktop."
 HOMEPAGE="https://github.com/BuddiesOfBudgie/${PN}"
 
 SRC_URI="https://github.com/BuddiesOfBudgie/${PN}/releases/download/v${PV}/${PN}-v${PV}.tar.xz -> ${P}.tar.xz"
 
-LICENSE="CC0-1.0"
+LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="amd64 x86 ~arm ~arm64"
+KEYWORDS="~amd64 ~x86 ~arm ~arm64"
 
-DEPEND="
-	>=gnome-extra/budgie-desktop-10.7
-	media-gfx/jhead
-	media-gfx/imagemagick[jpeg]
-	"
+IUSE="stateless"
+
+DEPEND=">=gnome-extra/budgie-desktop-10.8.2"
 RDEPEND="${DEPEND}"
 BDEPEND="
 	dev-util/meson
 	$(vala_depend)
 "
+
+PATCHES=(
+	"${FILESDIR}"/
+)
 
 src_unpack() {
 	unpack ${P}.tar.xz
@@ -37,6 +39,10 @@ src_prepare() {
 }
 
 src_configure() {
+	local emesonargs=(
+		$(meson_use stateless with-stateless)
+	)
+
 	meson_src_configure
 }
 

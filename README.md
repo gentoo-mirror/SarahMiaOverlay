@@ -78,23 +78,6 @@ While budgie-extras does contain a lot of applets, it is not all. There are some
 	emerge -s budgie #no wildcard possible sadly
 	
 All applets follow the naming of budgie-xyz-applet so you can simply look through the list of packages. It should not be that many. From there on your can install them as you see fit.
-	
-### 2.5) Migrate to budgie-meta (if not already using budgie-meta) from using only base budgie-desktop package
-
-If Budgie Desktop was installed through only budgie-desktop ebuild then going forward it is recommended to merge budgie-meta. Please follow the following commands. First remove the packages from the world file incase in the future you want to remove budgie-desktop and this will keep the world file clean.
-
-	emerge --deselect budgie-desktop budgie-desktop-view budgie-control-center budgie-screensaver
-
-Ignore any `>>> No matching atoms found in "world" favorites file...` you receive. It means you most likely did not had it installed in the first place and can be safely ignored.
-If you are not going to run with budgie-meta with the minimal useflag then you can also perform the following command.
-
-	emerge --deselect budgie-extras budgie-backgrounds
-	
-Once that is done you can simply emerge budgie-meta. Don't forget to add the minimal useflag if you want to run a minimal installation of budgie-desktop.
-
-	emerge --ask --verbose budgie-meta
-	
-If you want the very latest versions you will need to unmask some or all of budgie-meta, budgie-desktop, budgie-desktop-view, budgie-control-center and magpie. If not running with minimal you also may need to unmask budgie-backgrounds and budgie-extras. And everything else above still applies. Simply run the emerge command to install budgie-meta.
 
 ### 3) Tips to personalize Budgie Destop with extra applets and applications
 

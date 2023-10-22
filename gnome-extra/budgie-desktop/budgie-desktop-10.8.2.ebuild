@@ -14,7 +14,7 @@ SRC_URI="https://github.com/BuddiesOfBudgie/${PN}/releases/download/v${PV}/${PN}
 
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
-KEYWORDS="amd64 x86 ~arm ~arm64"
+KEYWORDS="~amd64 ~x86 ~arm ~arm64"
 IUSE="gtk-doc +policykit stateless +bluetooth +hibernate"
 
 COMMON_DEPEND="
@@ -41,9 +41,12 @@ COMMON_DEPEND="
 	x11-libs/libX11:=
 	x11-libs/libXcomposite:=
 	>=x11-libs/cairo-1.5.10
-	x11-wm/mutter:=
+	>=x11-wm/magpie-0.9
 	policykit? ( >=sys-auth/polkit-0.105[introspection] )
+	>=gnome-extra/zenity-3.44.2
 "
+# Mutter is taking out in favor of Magpie
+# x11-wm/mutter:=
 
 RDEPEND="
 	${COMMON_DEPEND}
