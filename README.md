@@ -31,22 +31,8 @@ The recommended way is installing budgie-meta. This is a meta package that conta
 Run the follow command to install the desktop itself:
 
 	emerge --ask --verbose budgie-meta
-	
-When going for latest versions you need to unmask some packages with ~ keywords. please run the following command:
 
-	printf '# Budgie-Destop latest versions
-	gnome-extra/budgie-meta
-	gnome-extra/budgie-control-center
-	gnome-extra/budgie-desktop-view
-	gnome-extra/budgie-desktop
-	gnome-extra/budgie-screensaver
-	x11-wm/magpie
-	gnome-extra/budgie-extras
-	gnome-extra/budgie-backgrounds' > /etc/portage/package.accept_keywords/budgie-desktop-latest
-	
-Please note that if you run the `minimal` useflag budgie-extras and budgie-backgrounds are not needed. You can adjust the file manually if you want too, but is not needed.
-
-With budgie-meta you can also set the useflag `all-packages` to have everything installed.
+The latest release can be installed directly. When the next update comes around those new versions will be added with ~amd/~x86 keywords. To automatically install those versions you could already unmask those packages. Check below in the F.A.Q section where the command is listed.
 
 #### Adjusting contents of Budgie-Extras package (if not running minimal)
 
@@ -120,10 +106,28 @@ If you do not use blue-tooth please disable the `bluetooth` useflag:
 Please add the `vala` useflag for app-i18n/ibus to your /etc/portage/package.use. You can run the following command:
 
 	echo 'app-i18n/ibus vala' > /etc/portage/package.use/budgie-desktop-ibus-vala
+	
+### 4) Unmask packages ahead of time for new versions when they are added with ~amd/~x86 keywards
+
+You can run the following command to automatically install new versions upon their release;
+
+	printf '# Budgie-Destop latest versions
+	gnome-extra/budgie-meta
+	gnome-extra/budgie-control-center
+	gnome-extra/budgie-desktop-view
+	gnome-extra/budgie-desktop
+	gnome-extra/budgie-screensaver
+	x11-wm/magpie
+	gnome-extra/budgie-extras
+	gnome-extra/budgie-backgrounds' > /etc/portage/package.accept_keywords/budgie-desktop-latest
+	
+Please note that if you run the `minimal` useflag budgie-extras and budgie-backgrounds are not needed. You can adjust the file manually if you want too, but is not needed.
+
+With budgie-meta you can also set the useflag `all-packages` to have everything installed.
 
 ## Notes:
 
-1) Latest releases are being added with unstable keywords for a while to allow testing from other users in case something crops up. I will maintain 1 stable and 1 unstable budgie-meta in general unless to much time passes. Which is unlikely with their current release timeframes.
+1) Latest releases are being added with unstable keywords for a while to allow testing from other users in case something crops up. I will maintain 1 stable and 1 unstable budgie-meta in general unless to much time passes. Which is unlikely with their current release timeframes. Security updates are an exception to this and will be added directly as stable.
 
 2) ~arm and ~arm64 keywords are unlikely to be made stable unless I hear from people that they work good as I am unable to test them myself atm sadly.
 

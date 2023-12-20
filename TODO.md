@@ -5,12 +5,11 @@ Below are notes I have planned/may consider to do as well with their status. Thi
 
 ### High
 
-- None
+- [ ] Update gentoo wiki Budgie section with instructions and introductions. Someone else did the groundwork, high time I finished it up and change/fix what is needed (some false info on it)
 
 
 ### Medium
 
-- [ ] Update gentoo wiki Budgie section with instructions and introductions.
 - [ ] Take a look at the logo's inside budgie-control-center and see if I need to add a gentoo mark on it. To make it consistant with other similar applications (gnome-control-center e.g.)
 
 
