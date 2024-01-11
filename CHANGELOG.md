@@ -2,6 +2,13 @@
 
 I will keep all updates here listed and up to date;
 
+## 2024/1/11 - Appstream streamlined
+
+Appstream updated to match mainline gentoo with added vala support
+
+### Added
+- appstream - New versions of 0.16.4 and 1.0.1 added with vala support to mirror gentoo mainline
+
 ## 2023/12/20 - HAPPY HOLIDAYS!
 
 A small update. basically 10.8.2 is now stable. Which means there are no unstable release at this point in time. My gift to you all. All the latest updates stable. There hasn't been a new release for a while yet anyway so it is perfect timing if you ask me. 
@@ -9,7 +16,7 @@ A small update. basically 10.8.2 is now stable. Which means there are no unstabl
 There is however a small update for budgie-extras due to security reasons. Hence why this latest version was made stable from the get-go.
 
 ### Added
-- budgie-extras-1.7.1 - new release, security update only, also added as stable.
+- budgie-extras-1.7.1 - new release, security update only, also added as stable
 
 ### Changed
 - budgie-meta-10.8.2 - now stable
@@ -17,7 +24,6 @@ There is however a small update for budgie-extras due to security reasons. Hence
 - budgie-desktop-view-1.3 - now stable
 
 ### Removed
-
 - budgie-meta-10.8 - outdated
 - budgie-desktop-10.8 - outdated
 - budgie-desktop-view-1.2.1 - outdated
