@@ -1,4 +1,4 @@
-dev-libs/appstream 0.15.6: Cross-distro effort for providing metadata for software in the Linux ecosystem
+dev-libs/appstream 0.15.6 0.16.4 1.0.1: Cross-distro effort for providing metadata for software in the Linux ecosystem
 dev-python/svgwrite 1.4.3: Python Package to write SVG files
 gnome-extra/budgie-analogue-clock-applet 2.0: Add an analogue clock to the Budgie Panel. Made for Budgie Desktop.
 gnome-extra/budgie-backgrounds 2.0: Budgie Desktop default backgrounds
