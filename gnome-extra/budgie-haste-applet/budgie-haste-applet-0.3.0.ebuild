@@ -22,10 +22,7 @@ DEPEND="
 	net-libs/libsoup:2.4
 "
 RDEPEND="${DEPEND}"
-BDEPEND="
-	dev-util/meson
-	$(vala_depend)
-"
+BDEPEND="$(vala_depend)"
 
 PATCHES=(
 	"${FILESDIR}/fix_weak_uploader.patch"

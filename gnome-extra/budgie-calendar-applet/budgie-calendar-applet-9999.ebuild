@@ -18,10 +18,7 @@ KEYWORDS=""
 
 DEPEND=">=gnome-extra/budgie-desktop-10.6.4"
 RDEPEND="${DEPEND}"
-BDEPEND="
-	dev-util/meson
-	$(vala_depend)
-"
+BDEPEND="$(vala_depend)"
 
 src_prepare() {
 	vala_setup

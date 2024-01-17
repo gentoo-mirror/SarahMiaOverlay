@@ -22,10 +22,7 @@ DEPEND="
 	x11-apps/xprop
 "
 RDEPEND="${DEPEND}"
-BDEPEND="
-	dev-util/meson
-	$(vala_depend)
-"
+BDEPEND="$(vala_depend)"
 
 PATCHES=(
 	"${FILESDIR}/fix_post_install_script.patch"

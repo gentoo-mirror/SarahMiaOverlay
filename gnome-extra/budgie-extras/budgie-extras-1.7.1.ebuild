@@ -173,10 +173,7 @@ RDEPEND="
 	)
 "
 
-BDEPEND="
-	dev-util/meson
-	$(vala_depend)
-"
+BDEPEND="$(vala_depend)"
 
 PATCHES=(
 	"${FILESDIR}"/170/exclude-network-applet-build-all.patch

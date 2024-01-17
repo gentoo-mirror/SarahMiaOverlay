@@ -22,10 +22,7 @@ DEPEND="
 	media-gfx/imagemagick[jpeg]
 	"
 RDEPEND="${DEPEND}"
-BDEPEND="
-	dev-util/meson
-	$(vala_depend)
-"
+BDEPEND="$(vala_depend)"
 
 src_unpack() {
 	unpack ${P}.tar.xz

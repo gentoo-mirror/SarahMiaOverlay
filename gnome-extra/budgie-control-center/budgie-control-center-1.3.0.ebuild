@@ -96,7 +96,6 @@ BDEPEND="
 	dev-util/glib-utils
 	>=sys-devel/gettext-0.19.8
 	virtual/pkgconfig
-	dev-util/meson
 	$(vala_depend)
 "
 

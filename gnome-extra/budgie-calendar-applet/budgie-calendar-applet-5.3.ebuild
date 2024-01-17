@@ -18,10 +18,7 @@ KEYWORDS="amd64 x86 ~arm ~arm64"
 
 DEPEND=">=gnome-extra/budgie-desktop-10.6.4"
 RDEPEND="${DEPEND}"
-BDEPEND="
-	dev-util/meson
-	$(vala_depend)
-"
+BDEPEND="$(vala_depend)"
 
 src_unpack() {
 	unpack ${P}.tar.gz

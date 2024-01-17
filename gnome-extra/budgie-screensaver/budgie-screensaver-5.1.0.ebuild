@@ -10,7 +10,7 @@ HOMEPAGE="https://github.com/BuddiesOfBudgie/budgie-screensaver"
 
 SRC_URI="https://github.com/BuddiesOfBudgie/${PN}/releases/download/v${PV}/${PN}-v${PV}.tar.xz -> ${P}.tar.xz"
 
-LICENSE=""
+LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 x86 ~arm ~arm64"
 IUSE="systemd +locking +xtools"
@@ -30,8 +30,6 @@ RDEPEND="
 	${DEPEND}
 	>=gnome-base/libgnomekbd-3
 "
-BDEPEND="dev-util/meson"
-
 src_unpack() {
 	unpack ${P}.tar.xz
 }

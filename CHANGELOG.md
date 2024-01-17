@@ -2,6 +2,18 @@
 
 I will keep all updates here listed and up to date;
 
+## 2024/1/17 - Meson adjustments + minor fixes
+
+Basically since meson was moved in mainline gentoo and me founding out it is not even needed to list it all entries are removed. This will also fix issue #18.
+
+### Added
+- md5-cache metadata added
+
+### Fixed
+- budgie-* - all budgie ebuilds have all their build dependency of dev-util/meson removed (which is also now dev-build/meson in mainline gentoo).
+- budgie-extras-applets useflag descriptions - fixed a wrong entry.
+- budgie-screensaver-5.1.0 - no longer has an missing license entry.
+
 ## 2024/1/11 - Appstream streamlined
 
 Appstream updated to match mainline gentoo with added vala support
