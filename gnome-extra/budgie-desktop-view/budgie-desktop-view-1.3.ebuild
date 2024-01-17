@@ -20,10 +20,7 @@ IUSE="stateless"
 
 DEPEND=">=gnome-extra/budgie-desktop-10.8.2"
 RDEPEND="${DEPEND}"
-BDEPEND="
-	dev-util/meson
-	$(vala_depend)
-"
+BDEPEND="$(vala_depend)"
 
 src_unpack() {
 	unpack ${P}.tar.xz

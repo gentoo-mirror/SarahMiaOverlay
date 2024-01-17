@@ -29,4 +29,4 @@ wallstreet - Change wallpaper from a folder on a schedule
 show-weather - Applet to display the weather and forecast
 window-shuffler - Keyboard and GUI friendly window-tiling capability
 workspace-stopwatch - Workspace usage tracker
-workspace-wallpaper - Applet providing per workspace wallpaper
+workspace-switcher - Applet providing per workspace wallpaper

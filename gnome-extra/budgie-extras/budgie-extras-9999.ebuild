@@ -100,17 +100,13 @@ BDEPEND="${PYTHON_DEPS}"
 
 DEPEND="
 	${COMMON_DEPEND}
-	
 	budgie_extras_applets_all? ( ${COMMON_DEPEND} )
-	
-	
-	
 	networkmanager? (
 		>=net-libs/libnma-1.8.0
 		>=net-misc/networkmanager-1.24.0:=[modemmanager]
 		>=net-misc/modemmanager-0.7 )
 "
-	
+
 RDEPEND="
 	!budgie_extras_applets_all? (
 		budgie_extras_applets_clockworks? (
@@ -118,29 +114,29 @@ RDEPEND="
 			dev-python/svgwrite
 			dev-python/pillow
 		)
-		
+
 		budgie_extras_applets_countdown? (
 			dev-python/psutil
 			x11-themes/sound-theme-freedesktop
 			media-sound/vorbis-tools
 		)
-		
+
 		budgie_extras_applets_dropby? (
 			dev-python/psutil
 			dev-python/pyudev
 			x11-misc/wmctrl
 		)
-		
+
 		budgie_extras_applets_kangaroo? (
 			x11-misc/xdg-utils
 			dev-python/psutil
 		)
-		
+
 		budgie_extras_applets_keyboard-autoswitch? (
 			dev-python/psutil
 			x11-misc/wmctrl
 		)
-		
+
 		budgie_extras_applets_window-previews? (
 			x11-apps/xinput
 			x11-misc/xprintidle
@@ -151,13 +147,13 @@ RDEPEND="
 			dev-python/pyperclip
 			dev-python/python-xlib
 		)
-		
+
 		budgie_extras_applets_hotcorners? ( x11-misc/xdotool )
 		budgie_extras_applets_recently-used? ( x11-misc/xdg-utils )
 		budgie_extras_applets_take-a-break? ( x11-misc/xprintidle )
 		budgie_extras_applets_show-weather? ( sys-process/procps )
 	)
-	
+
 	budgie_extras_applets_all? (
 		dev-python/psutil
 		dev-python/pyudev
@@ -177,10 +173,7 @@ RDEPEND="
 	)
 "
 
-BDEPEND="
-	dev-util/meson
-	$(vala_depend)
-"
+BDEPEND="$(vala_depend)"
 
 PATCHES=(
 	"${FILESDIR}"/exclude-network-applet-build-all.patch

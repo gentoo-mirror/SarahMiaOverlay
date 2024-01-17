@@ -19,10 +19,7 @@ IUSE="stateless"
 
 DEPEND=">=gnome-extra/budgie-desktop-10.7"
 RDEPEND="${DEPEND}"
-BDEPEND="
-	dev-util/meson
-	$(vala_depend)
-"
+BDEPEND="$(vala_depend)"
 
 src_prepare() {
 	vala_setup

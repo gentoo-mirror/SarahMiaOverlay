@@ -21,10 +21,7 @@ DEPEND="
 	x11-misc/xdotool
 "
 RDEPEND="${DEPEND}"
-BDEPEND="
-	dev-util/meson
-	$(vala_depend)
-"
+BDEPEND="$(vala_depend)"
 
 src_prepare() {
 	vala_setup

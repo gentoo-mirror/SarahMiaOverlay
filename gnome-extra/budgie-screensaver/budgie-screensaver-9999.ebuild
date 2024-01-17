@@ -30,8 +30,6 @@ RDEPEND="
 	${DEPEND}
 	>=gnome-base/libgnomekbd-3
 "
-BDEPEND="dev-util/meson"
-
 src_configure() {
 	local emesonargs=(
 		$(meson_use systemd with-systemd)
