@@ -21,7 +21,7 @@ HOMEPAGE="https://www.freedesktop.org/wiki/Distributions/AppStream/"
 LICENSE="LGPL-2.1+ GPL-2+"
 # check as_api_level
 SLOT="0/5"
-IUSE="apt doc +introspection qt6 systemd test vala"
+IUSE="apt doc +introspection qt6 systemd test +vala"
 RESTRICT="test" # bug 691962
 
 RDEPEND="
