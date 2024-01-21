@@ -13,6 +13,7 @@ Basically since meson was moved in mainline gentoo and me founding out it is not
 - budgie-* - all budgie ebuilds have all their build dependency of dev-util/meson removed (which is also now dev-build/meson in mainline gentoo).
 - budgie-extras-applets useflag descriptions - fixed a wrong entry.
 - budgie-screensaver-5.1.0 - no longer has an missing license entry.
+- (late fix 2024/1/20) appstream - fix vala enabled by default for the new appstream versions
 
 ## 2024/1/11 - Appstream streamlined
 
