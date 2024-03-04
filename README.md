@@ -1,3 +1,5 @@
+**NOTE: I know that budgie-desktop 10.9.1 is out. I have been working on it but due to either the new budgie-session or something new in 10.9+ something it isn't working for me. Due to this atm I am not able to release the new ebuilds. Unfortunately this is taking me longer than intended as I need to figure this out. Currently the ETA is befone april but due to RL this not 100% certain.**
+
 # SarahMiaOverlay
 
 *Despite the name this overlay has, it only supplies ebuilds meant for Budgie Desktop. Due to historic reasons this started out as a personal overlay with adjusted ebuilds with budgie-desktop being among them as well. Over time all those adjusted ebuilds are gone and there is only ebuilds for Budgie Desktop and it's support left now. This overlay will keep on fully supporting Budgie Desktop.*
