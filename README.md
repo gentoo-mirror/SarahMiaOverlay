@@ -1,4 +1,6 @@
-**NOTE: I know that budgie-desktop 10.9.1 is out. I have been working on it but due to either the new budgie-session or something new in 10.9+ something it isn't working for me. Due to this atm I am not able to release the new ebuilds. Unfortunately this is taking me longer than intended as I need to figure this out. Currently the ETA is befone april but due to RL this not 100% certain.**
+**UPDATE Oktober '24: Oki rl has not been that great for me past few months. At the same time due to issues with my laptop I have a very broken gentoo installation that doesn't work at all. This has severly delayed me from updating this repository. Soonish I should be able to reinstall gentoo and as well focus on this repository again and fix the outdated ebuilds and get the new versions out. I hope to have this finished before november but work could go into that month and thus become before december. This repository is not dead but it is maintained by a single person so I am sorry for the delays and the current state of this repository. Please give me some time to get things back on track. ~ Sarah**
+
+~~**NOTE: I know that budgie-desktop 10.9.1 is out. I have been working on it but due to either the new budgie-session or something new in 10.9+ something it isn't working for me. Due to this atm I am not able to release the new ebuilds. Unfortunately this is taking me longer than intended as I need to figure this out. Currently the ETA is befone april but due to RL this not 100% certain.**~~
 
 # SarahMiaOverlay
 
