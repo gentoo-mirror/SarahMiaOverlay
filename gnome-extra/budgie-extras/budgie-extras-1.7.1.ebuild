@@ -4,7 +4,7 @@
 EAPI=8
 
 VALA_MIN_API_VERSION="0.48"
-PYTHON_COMPAT=( python3_{9..11} )
+PYTHON_COMPAT=( python3_{10..13} )
 
 inherit meson vala gnome2-utils xdg python-any-r1
 

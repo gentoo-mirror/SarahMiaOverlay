@@ -2,6 +2,26 @@
 
 I will keep all updates here listed and up to date;
 
+## 2024/12/7 - A stalking Python eyeing a muttering Magpie!
+
+So it took a long while and ebuilds were broken in the mean time. This update is focused on fixing what needs fixing and improving where needed. During this mess I also found out while magpie is required it still uses some files from Mutter. To make sure these 2 packages can coexist at the same time mutter is now a dependency of Magpie. Otherwise you will have a broken window manager. Beyond that a patch was needed for Budgie-Desktop to make sure it can build fine with GCC14+. Due to this both Budgie-Desktop and Magpie received a revision update. Older versions still present (per gentoo ebuild revision guidelines) but remain broken. This will force the required update. Last big thing is basically Python version updates and streamlining Appstream. Owh and a useflag was removed.
+
+### Added
+- budgie-desktop-10.8.2-r1 - To force proper build with the patch
+- magpie-0.9.3-r1 - Mutter added as dependency
+- appstream-1.0.3 - New version taken from mainline gentoo with vala support added
+
+### Changed
+- README.md - Previous updates removed and notice about 10.9.2 added
+- md5-cache metadata updated
+
+### Fixed
+- svgwrite - Python versions corrected
+- budgie-control-center - Python versions corrected
+- gnome-bluetooth - Python versions corrected
+- budgie-extras - Python versions corrected
+- magpie - gles2 useflag removed from mesa dependency as it is not present anymore.
+
 ## 2024/1/17 - Meson adjustments + minor fixes
 
 Basically since meson was moved in mainline gentoo and me founding out it is not even needed to list it all entries are removed. This will also fix issue #18.
