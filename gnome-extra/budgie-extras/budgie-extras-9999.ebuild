@@ -4,7 +4,7 @@
 EAPI=8
 
 VALA_MIN_API_VERSION="0.48"
-PYTHON_COMPAT=( python3_{9..11} )
+PYTHON_COMPAT=( python3_{10..13} )
 
 inherit git-r3 meson vala gnome2-utils xdg python-any-r1
 
@@ -51,7 +51,8 @@ IUSE="stateless networkmanager ${IUSE_BUDGIE_EXTRAS_APPLETS}"
 # By default the 'all' is on, so most users are not affected by this.
 # Kept it in list for to keep it readable.
 #
-# Also special case for networkmanager
+# Also special case for networkmanager and trash applets as they are optional by 
+# either default options or systemwide useflags. 
 REQUIRED_USE="
 	|| ( budgie_extras_applets_all
 			budgie_extras_applets_window-previews
