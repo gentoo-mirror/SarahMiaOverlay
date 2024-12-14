@@ -2,9 +2,54 @@
 
 I will keep all updates here listed and up to date;
 
-## 2024/12/7 - A stalking Python eyeing a muttering Magpie!
+## 2024/12/14 - Updated budgie-panel command
 
-So it took a long while and ebuilds were broken in the mean time. This update is focused on fixing what needs fixing and improving where needed. During this mess I also found out while magpie is required it still uses some files from Mutter. To make sure these 2 packages can coexist at the same time mutter is now a dependency of Magpie. Otherwise you will have a broken window manager. Beyond that a patch was needed for Budgie-Desktop to make sure it can build fine with GCC14+. Due to this both Budgie-Desktop and Magpie received a revision update. Older versions still present (per gentoo ebuild revision guidelines) but remain broken. This will force the required update. Last big thing is basically Python version updates and streamlining Appstream. Owh and a useflag was removed.
+The commmand listedin the various elog would still close all panels upon closting the terminal. I could only prevent budgie-panel being killed from closing terminal with this following command:
+	nohup budgie-panel --replace > /dev/null 2>&1 &
+
+### Changed
+- budgie-\*-applet/extras - Now has a new command in the log to reload all panels
+- README.md - new command listed in F.A.Q. section
+- TODO.md - updated with small thought about potential splitting off the F.A.Q from the readme
+- md5-cache - meta updated
+
+## 2024/12/9 - Updated copyright statements
+
+Pretty much corrected copyright years on all ebuilds to be to 2024, will see what I do next year when I do another pass on the ebuilds. All copyright remained as Gentoo Authors rather than my name as per gentoo copyright policy.
+
+## 2024/12/8 - Budgie session script fixes
+
+Small fixes at budgie-session with now having their scripts fully checked and corrected for as much as possible so all the paths are fully set as they should be.
+
+### Changed
+- README.md - small correction and questions regarding theming adjusted/added
+- md5-cache - meta updated
+
+### Fixed
+- budgie-session - Will now have the correct script variables set and run, naming adjusted as to avoid confusion (no revision because of time of writing ebuild is not in master and thus not public. If already installed from branch then please remerge)
+
+## 2024/12/7 - I am sorry but 10.9.2 is currently in session
+
+Budgie Desktop update 10.9.2 is here. All new ebuilds added as unstable/testing (~). Meaning you to unmask them (add to package.accept_keywords) if you wan to use them.
+Also new package budgie-session is here to replace somewhat gnome-session (indirectly still a def through gnome-settings-daemon)
+
+### Added
+- budgie-meta-10.9.2 - new release
+- budgie-desktop-10.9.2 - new release
+- budgie-session-0.9.1 - new package
+- budgie-backgrounds-3.0 - new release
+- budgie-extras-1.8.0 - new release
+- budgie-control-center-1.4.0 - new release
+- magpie-0.9.4 - new release
+
+### Changed
+- README.md - Updated to reflect the new ~ releases of 10.9.2 with other sections also updated
+- TODO.md - new todo about gtk theme added
+- md5-cache - metadata updated
+
+## 2024/12/6 - A stalking Python eyeing a muttering Magpie!
+
+So it took a long while and ebuilds were broken in the mean time. This update is focused on fixing what needs fixing and improving where needed. During this mess I also found out while magpie is required it still uses some files from Mutter. To make sure these 2 packages can coexist at the same time mutter is now a dependency of Magpie. Otherwise you will have a broken window manager. Beyond that a patch was needed for Budgie-Desktop to make sure it can build fine with GCC14+. Due to this both Budgie-Desktop and Magpie received a revision update. Older versions still present (per gentoo ebuild revision guidelines) but remain broken. This will force the required update. Last big thing is basically Python version updates and streamlining Appstream. Owh and a useflag from a dependency was removed.
 
 ### Added
 - budgie-desktop-10.8.2-r1 - To force proper build with the patch
@@ -13,7 +58,7 @@ So it took a long while and ebuilds were broken in the mean time. This update is
 
 ### Changed
 - README.md - Previous updates removed and notice about 10.9.2 added
-- md5-cache metadata updated
+- md5-cache - metadata updated
 
 ### Fixed
 - svgwrite - Python versions corrected
@@ -249,7 +294,7 @@ In preparation for 10.8 and other updates and releases 10.7.2 is made stable. 10
 
 ## 2022/09/29
 
-### Added: 
+### Added
 - budgie-backgrounds-0.1 - a new project proving basic backgrounds for the budgie-desktop
 - budgie-control-center-1.1.1 - minor update from 1.1.0, libhandy now added as dependency
 - appstream-0.15.5 - reflect mainline appstream update with vala added

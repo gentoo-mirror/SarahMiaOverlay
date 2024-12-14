@@ -1,4 +1,4 @@
-# Copyright 2021 Gentoo Authors
+# Copyright 2021-2024 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -52,7 +52,7 @@ pkg_postinst() {
 	gnome2_schemas_update
 
 	elog "In order for the applet to appear after installation without relogging it is recommended to run the following as your current logged in user:"
-	elog "  budgie-panel --replace &"
+	elog "  nohup budgie-panel --replace > /dev/null 2>&1 &"
 }
 
 pkg_postrm() {
@@ -60,5 +60,5 @@ pkg_postrm() {
 	gnome2_schemas_update
 
 	elog "In order for the applet to be removed from the budgie-settings applets without relogging it is recommended to run the following as your current logged in user in budgie:"
-	elog "  budgie-panel --replace &"
+	elog "  nohup budgie-panel --replace > /dev/null 2>&1 &"
 }
