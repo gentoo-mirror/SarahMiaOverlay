@@ -1,8 +1,6 @@
 **UPDATE December 6th '24: 10.8.2 is back and working fully stable (yay!!). My apolagies for the very long delay/wait.**
 
-**UPDATE December 7th '24: 10.9.2 has been added as unstable as well! (double yay!!!!) ~ Sarah**
-
-**UPDATE December 8th '24: Budgie-session had some script updates, please remerge if running from this 10.9.2 branch! (run `emerge -1q budgie-session`'**
+**UPDATE Secember 14th '24: Budgie-Desktop 10.9.2 ebuilds are now live out of private testing for portage and trackers after final adjustments, enjoy!**
 
 # SarahMiaOverlay
 
@@ -47,20 +45,20 @@ The latest release can be installed with ~amd64/~x86 keywords. To automatically 
 When installing budgie-extras you can now specify which applets you want to install from that package. When doing this you can see all applets through the following command:
 
 	emerge --pretend --verbose budgie-extras
-	
+
 You will see BUDGIE_EXTRAS_APPLETS="..." appearing, this means those applets will be installed. By default it will install all of them. To specify which ones you want you can add the following in your /etc/portage/make.conf file:
 
 	BUDGIE_EXTRAS_APPLETS="whichever-applets-you-want-here separated-by-spaces"
-	
+
 This will tell the package which applets to install. At least one applet (or the `all` option, *not to be confused with the `all-packages` option from budgie-meta!*) must be selected. To see what each applet is you can run the following command(s):
 
 	emerge --ask --verbose gentoolkit # Skip this if already installed
 	equery u budgie-extras
-	
+
 You will need to remerge budgie-extras for this! Please run the following command:
 
 	emerge -1av budgie-extras
-	
+
 *Note: The Trash applet and networkmanager applets inside budgie-extras are not included in the `all` option. For network manager please enable the `networkmanager` useflag. For the Trash applet please add `trash` inside your BUDGIE_EXTRAS_APPLETS=".." in your make.conf. Trash applet by itself is also included in budgie-desktop since 10.8 and therefor not needed here.*
 
 #### Other Applets
@@ -68,7 +66,7 @@ You will need to remerge budgie-extras for this! Please run the following comman
 While budgie-extras does contain a lot of applets, it is not all. There are some applets made by other people are not part of extras. You can either install these separately or have them all installed with the useflag `all-packages` from budgie-meta. Do not confuse this with the `all` option from budgie-extras please. These are named in the form of 'budgie-xyz-applet'. You can search through by searching for budgie packages. The following command will do that:
 
 	emerge -s budgie
-	
+
 All applets follow the naming of budgie-xyz-applet so you can simply look through the list of packages. It should not be that many. From there on your can install them as you see fit.
 
 ### 3) Tips to personalize Budgie Destop with extra applets and applications
@@ -106,7 +104,7 @@ Once above is done you can select your theme in Budgie Desktop Settings under th
 Please add the `vala` useflag for app-i18n/ibus to your /etc/portage/package.use. You can run the following command:
 
 	echo 'app-i18n/ibus vala' > /etc/portage/package.use/budgie-desktop-ibus-vala
-	
+
 ### 3) How to unmask packages for the very latest released versions
 
 You can run the following command to automatically install new versions upon their release;
@@ -121,7 +119,7 @@ You can run the following command to automatically install new versions upon the
 	gnome-extra/budgie-session
 	gnome-extra/budgie-extras
 	gnome-extra/budgie-backgrounds' > /etc/portage/package.accept_keywords/budgie-desktop-latest
-	
+
 Please note that if you run the `minimal` useflag budgie-extras and budgie-backgrounds are not needed. You can adjust the file manually if you want too, but is not needed.
 
 With budgie-meta you can also set the useflag `all-packages` to have everything installed.
@@ -143,20 +141,21 @@ Yes it does have tiling. For that you need to install budgie-extras. By default 
 You should not get this message but if it does happen, please do the following depending on whether your /etc/portage/package.unmask is directory or a file:
 
 *If etc/portage/package.unmask is a file:*
-	
+
 	printf '\n# Needed for budgie-desktop\nnet-wireless/gnome-bluetooth:2' > /etc/portage/package.unmask
-	
+
+
 *If etc/portage/package.unmask is a directory:*
 
-	echo 'net-wireless/gnome-bluetooth:2' > /etc/portage/package.unmask/budgie-desktop-bluetooth
-	
+	echo 'net-wireless/gnome-bluetooth:2' > /etc/portage/package.unmask/budgie-desktop-bluetooth	
+
 If you do not use blue-tooth please disable the `bluetooth` useflag:
 
 	echo 'gnome-extra/budgie-desktop -bluetooth' > /etc/portage/package.use/budgie-desktop-no-bt
-	
-### 7) Works funny after upgrading from 1.8.2 to 1.9.2
 
-Due to budgie-session being new a simple relog may not properly do session tracking. A system reboot should clear any and all issues that may be present (not sure if just restarting X/wayland server will work..)
+### 7) Budgie-Desktop acts weird after upgrading from 1.8.2 to 1.9.2
+
+Due to budgie-session being new and replaces gnome-session, a simple relog may not properly do session tracking. A system reboot should clear any and all issues that may be present (not sure if just restarting X/wayland server will work..)
 
 ## Notes:
 

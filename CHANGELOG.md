@@ -4,12 +4,12 @@ I will keep all updates here listed and up to date;
 
 ## 2024/12/14 - Updated budgie-panel command
 
-The commmand listedin the various elog would still close all panels upon closting the terminal. I could only prevent budgie-panel being killed from closing terminal with this following command:
+The commmand listed in the various elog would still close all panels upon closing the terminal. Only with the following command could i prevent budgie-panel being killed from closing the terminal in which the command was run:
 	nohup budgie-panel --replace > /dev/null 2>&1 &
 
 ### Changed
 - budgie-\*-applet/extras - Now has a new command in the log to reload all panels
-- README.md - new command listed in F.A.Q. section
+- README.md - new command listed in F.A.Q. section and small cleanup/minor changes
 - TODO.md - updated with small thought about potential splitting off the F.A.Q from the readme
 - md5-cache - meta updated
 
@@ -31,7 +31,7 @@ Small fixes at budgie-session with now having their scripts fully checked and co
 ## 2024/12/7 - I am sorry but 10.9.2 is currently in session
 
 Budgie Desktop update 10.9.2 is here. All new ebuilds added as unstable/testing (~). Meaning you to unmask them (add to package.accept_keywords) if you wan to use them.
-Also new package budgie-session is here to replace somewhat gnome-session (indirectly still a def through gnome-settings-daemon)
+Also new package budgie-session is here to replace somewhat gnome-session (indirectly still a dependency through gnome-settings-daemon)
 
 ### Added
 - budgie-meta-10.9.2 - new release
