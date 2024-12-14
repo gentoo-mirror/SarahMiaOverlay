@@ -1,0 +1,138 @@
+#!/bin/sh
+#
+# This file has bitrotted badly. Someone needs to clean this up.
+#
+# =================================================================================
+# This was taken from the gnome-session-44 place since it was forked from there.
+# I changed what I think is needed for budgie-session but there is to much weird
+# magic going on here. Lets just say I am praying this will always work properly..
+# *scared_face*
+# =================================================================================
+#
+
+if [ -f /etc/xdg/menus/gnome-applications.menu ] ; then
+	export XDG_MENU_PREFIX=gnome-
+fi
+
+#
+# ================================================================
+# I do not think the following will work for budgie.. was unable
+# to find where any budgierc could be.. or any budgie errors file
+#
+# I did change names accordingly but I doubt they are used tbh..
+# ================================================================
+#
+for errfile in "$HOME/.budgierc-errors" "${TMPDIR-/tmp}/budgierc-$USER" "/tmp/budgierc-$USER"
+do
+	if ( cp /dev/null "$errfile" 2> /dev/null )
+	then
+		chmod 600 "$errfile"
+		exec > "$errfile" 2>&1
+		break
+	fi
+done
+
+#
+#  Distributors:
+#  You should modify the paths here to fit your distro
+#  If you need to do so, send me (jirka@5z.com) a patch
+#  and I'll try to make the script detect the distro stuff
+#
+
+userresources=$HOME/.Xresources
+usermodmap=$HOME/.Xmodmap
+userxkbmap=$HOME/.Xkbmap
+
+sysresources=/etc/X11/Xresources
+sysmodmap=/etc/X11/Xmodmap
+sysxkbmap=/etc/X11/Xkbmap
+
+rh6sysresources=/etc/X11/xinit/Xresources
+rh6sysmodmap=/etc/X11/xinit/Xmodmap
+
+#
+# ================================================================
+# For budgie I do not think anything but the fallback will work
+# hence i outcommented the rest... but keeping it for reference..
+# ================================================================
+#
+#if [ -x "$HOME/.budgierc" ]; then
+#	command="$HOME/.budgierc"
+#elif [ -x /etc/X11/gdm/budgierc ]; then
+#	command="/etc/X11/gdm/budgierc"
+#else
+	# as fallback in case the config is screwed
+	command=`which budgie-session`
+#fi
+
+#
+# ================================================================
+# The rest should be fine and there should be no need to fix or
+# change anything else, leaving it fully intact...
+# ================================================================
+#
+
+# merge in defaults
+if [ -f "$rh6sysresources" ]; then
+    xrdb -merge "$rh6sysresources"
+fi
+
+if [ -f "$sysresources" ]; then
+    xrdb -merge "$sysresources"
+fi
+
+if [ -f "$userresources" ]; then
+    xrdb -merge "$userresources"
+fi
+
+# merge in keymaps
+if [ -f "$sysxkbmap" ]; then
+    setxkbmap `cat "$sysxkbmap"`
+    XKB_IN_USE=yes
+fi
+
+if [ -f "$userxkbmap" ]; then
+    setxkbmap `cat "$userxkbmap"`
+    XKB_IN_USE=yes
+fi
+
+#
+# Eeek, this seems like too much magic here
+#
+if [ -z "$XKB_IN_USE" ] && [ ! -L /etc/X11/X ]; then
+    if grep '^exec.*/Xsun' /etc/X11/X > /dev/null 2>&1 && [ -f /etc/X11/XF86Config ]; then
+       xkbsymbols=`sed -n -e 's/^[     ]*XkbSymbols[   ]*"\(.*\)".*$/\1/p' /etc/X11/XF86Config`
+       if [ -n "$xkbsymbols" ]; then
+           setxkbmap -symbols "$xkbsymbols"
+           XKB_IN_USE=yes
+       fi
+    fi
+fi
+
+# xkb and xmodmap don't play nice together
+if [ -z "$XKB_IN_USE" ]; then
+    if [ -f "$rh6sysmodmap" ]; then
+       xmodmap "$rh6sysmodmap"
+    fi
+
+    if [ -f "$sysmodmap" ]; then
+       xmodmap "$sysmodmap"
+    fi
+
+    if [ -f "$usermodmap" ]; then
+       xmodmap "$usermodmap"
+    fi
+fi
+
+unset XKB_IN_USE
+
+# run all system xinitrc shell scripts.
+if [ -d /etc/X11/xinit/xinitrc.d ]; then
+    for i in /etc/X11/xinit/xinitrc.d/* ; do
+        if [ -x "$i" ]; then
+	    . "$i"
+        fi
+    done
+fi
+
+exec $command

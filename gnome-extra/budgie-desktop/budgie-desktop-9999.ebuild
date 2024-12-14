@@ -1,10 +1,10 @@
-# Copyright 1999-2021 Gentoo Authors
+# Copyright 1999-2024 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
 
 VALA_MIN_API_VERSION="0.52"
-GNOME_MIN_VERSIOM="40"
+GNOME_MIN_VERSIOM="43"
 
 inherit gnome2-utils meson vala xdg git-r3
 
@@ -34,20 +34,24 @@ COMMON_DEPEND="
 	bluetooth? ( >=net-wireless/gnome-bluetooth-3.34.0:2= )
 	>=sys-apps/accountsservice-0.6.55
 	sys-apps/util-linux
-	>=sys-power/upower-0.99.0:0=
+	>=sys-power/upower-1.0:0=
 	>=x11-libs/gtk+-3.24.35:3[X,introspection]
 	>=x11-libs/libnotify-0.7
 	>=x11-libs/libwnck-${GNOME_MIN_VERSIOM}:3
 	x11-libs/libX11:=
 	x11-libs/libXcomposite:=
 	>=x11-libs/cairo-1.5.10
-	x11-wm/mutter:=
+	>=x11-wm/magpie-0.9
 	policykit? ( >=sys-auth/polkit-0.105[introspection] )
+	>=gnome-extra/zenity-3.44.2
+	<xfce-base/libxfce4windowing-4.19.7
 "
+
+# use older version of libxfce4windowing or the build will crash
 
 RDEPEND="
 	${COMMON_DEPEND}
-	gnome-base/gnome-session
+	gnome-extra/budgie-session
 "
 
 BDEPEND="
