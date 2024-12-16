@@ -28,7 +28,7 @@ COMMON_DEPEND="
 	>=gnome-base/gnome-menus-3.10.3:3[introspection]
 	>=gnome-extra/budgie-screensaver-5.0
 	media-libs/gstreamer:1.0
-	media-libs/libcanberra:=[gtk3]
+	media-libs/libcanberra-gtk3:=
 	>=media-libs/graphene-1.10:=[introspection]
 	media-sound/pulseaudio
 	bluetooth? ( >=net-wireless/gnome-bluetooth-3.34.0:2= )

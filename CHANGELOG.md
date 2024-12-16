@@ -2,6 +2,14 @@
 
 I will keep all updates here listed and up to date;
 
+## 2024/12/16
+
+Small dependency fixes for libcanberra which now has their gtk3 counterpart split due to gentoo mainline changes and release of new version of libcanberra-0.30-R8 and libcanberra-gtk3.
+
+### Fixed
+- budgie-desktop - now depends on libcanberra-gtk3 instead of libcanberra
+- gnome-bluetooth - now depends on libcanberra-gtk3 instead of libcanberra
+
 ## 2024/12/14 - Updated budgie-panel command
 
 The commmand listed in the various elog would still close all panels upon closing the terminal. Only with the following command could i prevent budgie-panel being killed from closing the terminal in which the command was run:

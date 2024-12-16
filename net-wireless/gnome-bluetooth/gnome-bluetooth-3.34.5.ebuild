@@ -18,7 +18,7 @@ KEYWORDS="amd64 ~arm arm64 ~ppc ~ppc64 ~riscv x86"
 DEPEND="
 	>=dev-libs/glib-2.44:2
 	>=x11-libs/gtk+-3.12:3[introspection?]
-	media-libs/libcanberra[gtk3]
+	media-libs/libcanberra-gtk3:=
 	>=x11-libs/libnotify-0.7.0
 	virtual/libudev
 	introspection? ( >=dev-libs/gobject-introspection-1.54:= )
