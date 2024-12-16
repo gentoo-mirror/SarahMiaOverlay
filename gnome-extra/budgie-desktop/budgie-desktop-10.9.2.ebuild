@@ -28,7 +28,7 @@ COMMON_DEPEND="
 	>=gnome-base/gnome-menus-3.10.3:3[introspection]
 	>=gnome-extra/budgie-screensaver-5.0
 	media-libs/gstreamer:1.0
-	media-libs/libcanberra:=[gtk3]
+	media-libs/libcanberra-gtk3:=
 	>=media-libs/graphene-1.10:=[introspection]
 	media-sound/pulseaudio
 	bluetooth? ( >=net-wireless/gnome-bluetooth-3.34.0:2= )
@@ -96,7 +96,7 @@ pkg_postinst() {
 	xdg_pkg_postinst
 	gnome2_schemas_update
 
-	elog "If upgrading from 10.8.2 to 10.9.2 you may want to restart your system or at the very least your X/wayland server to make sure session tracking works and hickups happen after relog."
+	elog "If upgrading from 10.8.2 to 10.9.2 you may want to restart your system or at the very least your X/wayland server to make sure session tracking works and no hickups happen after relog."
 }
 
 pkg_postrm() {
