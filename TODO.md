@@ -5,7 +5,7 @@ Below are notes I have planned/may consider to do as well with their status. Thi
 
 ### High
 
-- [ ] Update gentoo wiki Budgie section with instructions and introductions. Someone else did the groundwork, high time I finished it up and change/fix what is needed (some false info on it)
+- [X] Update gentoo wiki Budgie section with instructions and introductions. Someone else did the groundwork, high time I finished it up and change/fix what is needed (some false info on it)
 - [ ] Take a look at a default gtk theme to install with this when it is not installed with budgie-meta minimal useflag
 
 ### Medium
