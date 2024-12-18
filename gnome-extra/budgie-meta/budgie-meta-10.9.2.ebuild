@@ -22,7 +22,7 @@ RDEPEND="
 		>=gnome-extra/budgie-backgrounds-3.0
 	)
 	all-packages? (
-		>=gnome-extra/budgie-analogue-clock-applet-2.0
+		>=gnome-extra/budgie-analogue-clock-applet-2.1
 		>=gnome-extra/budgie-brightness-control-applet-0.3
 		>=gnome-extra/budgie-calendar-applet-5.3
 		>=gnome-extra/budgie-clipboard-applet-1.1.0

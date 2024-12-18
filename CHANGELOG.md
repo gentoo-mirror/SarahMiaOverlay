@@ -2,6 +2,18 @@
 
 I will keep all updates here listed and up to date;
 
+## 2024/12/18 - The clock is ticking!
+
+New version of budgie-analogue-clock-applet aimed at the future release of wayland budgie-desktop, for now the useflag wayland is disabled. Didn't realize earlier there was a new version, oopsie.
+
+### Added
+- budgie-analogue-clock-applet-2.1 - new release
+
+### Changed
+- budgie-meta-10.9.2 - now installs budgie-analogue-clock-applet
+- README.md - now has budgie-analogue-clock-applet added to ~release printf command, as well F.A.Q expanded regarding icons and cursors.
+- TODO.md - one done, wiki has been updated.
+
 ## 2024/12/16
 
 Small dependency fixes for libcanberra which now has their gtk3 counterpart split due to gentoo mainline changes and release of new version of libcanberra-0.30-R8 and libcanberra-gtk3.

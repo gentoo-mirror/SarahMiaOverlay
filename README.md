@@ -99,13 +99,19 @@ For Gnome applications, download (or use the same one) and inside their contents
 
 Once above is done you can select your theme in Budgie Desktop Settings under the Style category. For Gnome based apps they should pickup the theme automacally assuming ~/.config/gtk-4.0 is properly setup.
 
-### 2) I receive a message of missing useflag of vala for app-i18n/ibus vala
+### 3) How do I add icons and/or cursor themes?
+
+Like with the other themes mentioned in the point (#2) above, the icons/cursors theme directory can be placed inside ~/.icons (yes cursors as well). If the directory does not exist please create it.
+
+Once that is done you can select your icons and cursor themes in Budgie Desktop Settings under the Style category.
+
+### 4) I receive a message of missing useflag of vala for app-i18n/ibus vala
 
 Please add the `vala` useflag for app-i18n/ibus to your /etc/portage/package.use. You can run the following command:
 
 	echo 'app-i18n/ibus vala' > /etc/portage/package.use/budgie-desktop-ibus-vala
 
-### 3) How to unmask packages for the very latest released versions
+### 5) How to unmask packages for the latest released versions
 
 You can run the following command to automatically install new versions upon their release;
 
@@ -118,7 +124,8 @@ You can run the following command to automatically install new versions upon the
 	x11-wm/magpie
 	gnome-extra/budgie-session
 	gnome-extra/budgie-extras
-	gnome-extra/budgie-backgrounds' > /etc/portage/package.accept_keywords/budgie-desktop-latest
+	gnome-extra/budgie-backgrounds
+	gnome-extra/budgie-analogue-clock-applet' > /etc/portage/package.accept_keywords/budgie-desktop-latest
 
 Please note that if you run the `minimal` useflag budgie-extras and budgie-backgrounds are not needed. You can adjust the file manually if you want too, but is not needed.
 
@@ -126,17 +133,17 @@ With budgie-meta you can also set the useflag `all-packages` to have everything 
 
 In addition to this also note that I can't guarantee that everything will work properly. After passage of time has passed where I heard nothing or issues made have been resolved I will push these versions to stable. This will also happen automatically roughly every month after release of these versions to keep the versions rolling.
 
-### 4) How to low new/updated or remove uninstalled applets?
+### 6) How to low new/updated or remove uninstalled applets?
 
 You can run the following command from any terminal and then close it;
 
 	nohup budgie-panel --replace > /dev/null 2>&1 &
 
-### 5) Does it have tiling?
+### 7) Does it have tiling?
 
 Yes it does have tiling. For that you need to install budgie-extras. By default this is included in budgie-meta. Make sure you are not running the `minimal` useflag or you have to merge it separately. Also BUDGIE_EXTRAS_APPLETS must either be `all` or contain `window-shuffler`.
 
-### 6) I receive a message saying that gnome-bluetooth is masked and it won't let me install
+### 8) I receive a message saying that gnome-bluetooth is masked and it won't let me install
 
 You should not get this message but if it does happen, please do the following depending on whether your /etc/portage/package.unmask is directory or a file:
 
@@ -153,7 +160,7 @@ If you do not use blue-tooth please disable the `bluetooth` useflag:
 
 	echo 'gnome-extra/budgie-desktop -bluetooth' > /etc/portage/package.use/budgie-desktop-no-bt
 
-### 7) Budgie-Desktop acts weird after upgrading from 1.8.2 to 1.9.2
+### 9) Budgie-Desktop acts weird after upgrading from 1.8.2 to 1.9.2
 
 Due to budgie-session being new and replaces gnome-session, a simple relog may not properly do session tracking. A system reboot should clear any and all issues that may be present (not sure if just restarting X/wayland server will work..)
 
