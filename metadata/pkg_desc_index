@@ -1,6 +1,6 @@
 dev-libs/appstream 1.0.3: Cross-distro effort for providing metadata for software in the Linux ecosystem
 dev-python/svgwrite 1.4.3: Python Package to write SVG files
-gnome-extra/budgie-analogue-clock-applet 2.0: Add an analogue clock to the Budgie Panel. Made for Budgie Desktop.
+gnome-extra/budgie-analogue-clock-applet 2.0 2.1: Add an analogue clock to the Budgie Panel. Made for Budgie Desktop.
 gnome-extra/budgie-backgrounds 2.0 3.0: Budgie Desktop default backgrounds
 gnome-extra/budgie-brightness-control-applet 0.3: This applet allows you to controll screen brightness. Made for Budgie Desktop.
 gnome-extra/budgie-calendar-applet 5.3 9999: A budgie-desktop applet to show hours with custom formats and a calendar in a popover. Made for Budgie Desktop.
