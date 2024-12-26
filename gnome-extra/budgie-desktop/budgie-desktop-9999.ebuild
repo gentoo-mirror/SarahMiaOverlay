@@ -31,7 +31,7 @@ COMMON_DEPEND="
 	media-libs/libcanberra-gtk3:=
 	>=media-libs/graphene-1.10:=[introspection]
 	media-sound/pulseaudio
-	bluetooth? ( >=net-wireless/gnome-bluetooth-3.34.0:2= )
+	bluetooth? ( net-wireless/bluez )
 	>=sys-apps/accountsservice-0.6.55
 	sys-apps/util-linux
 	>=sys-power/upower-1.0:0=

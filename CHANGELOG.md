@@ -2,6 +2,14 @@
 
 I will keep all updates here listed and up to date;
 
+## 2024/12/26 - I am feeling a bit blue..
+
+In short, fixing bluetooth dependencies that in the end do not matter.. budgie-desktop now properly has bluez as dependency instead of gnome-bluetooth. Ironically while going over and removing it lo-and-behold, budgie-control-center requires it still.. Ok so I cannot remove that package yet.. But still needed its slotting fixed so prevent pulling in the unneeded gnome-bluetooth-46.x+ from mainline gentoo.. so in the end no revisions needed nor any major changes, at most people will see an extra package removed during `emerge --depclean`.
+
+### Fixed
+- budgie-desktop-10.9.2 - now has net-wireless/bluez as dependency instead of net-wireless/bluetooth
+- budgie-control-center - now has the proper slot of net-wireless/gnome-bluetooth listed as dependency
+
 ## 2024/12/18 - The clock is ticking!
 
 New version of budgie-analogue-clock-applet aimed at the future release of wayland budgie-desktop, for now the useflag wayland is disabled. Didn't realize earlier there was a new version, oopsie.
