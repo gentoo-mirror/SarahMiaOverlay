@@ -52,7 +52,7 @@ DEPEND="
 		>=net-libs/libnma-1.8.0
 		>=net-misc/networkmanager-1.24.0:=[modemmanager]
 		>=net-misc/modemmanager-0.7 )
-	bluetooth? ( >=net-wireless/gnome-bluetooth-3.18.2 )
+	bluetooth? ( >=net-wireless/gnome-bluetooth-3.34.0:2= )
 	input_devices_wacom? ( >=dev-libs/libwacom-0.7 )
 	kerberos? ( app-crypt/mit-krb5 )
 	v4l? (
