@@ -46,11 +46,11 @@ When installing budgie-extras you can now specify which applets you want to inst
 
 	emerge --pretend --verbose budgie-extras
 
-You will see BUDGIE_EXTRAS_APPLETS="..." appearing, this means those applets will be installed. By default it will install all of them. To specify which ones you want you can add the following in your /etc/portage/make.conf file:
+You will see BUDGIE_EXTRAS_APPLETS="..." appearing, this means those applets will be installed. By default it will install all of them (with the 'all' being set). If you set specific  applets, `-all` must be added to prevent all of them from being installed. (From 1.8.0-r1 this is even required or you will get an error when trying to merge.) To specify which ones you want you can add the following in your e.g. /etc/portage/package.useflag/budgie-extras file:
 
-	BUDGIE_EXTRAS_APPLETS="whichever-applets-you-want-here separated-by-spaces"
+	gnome-extra/budgie-extras BUDGIE_EXTRAS_APPLETS: -all app-launcher wallstreet show-weather
 
-This will tell the package which applets to install. At least one applet (or the `all` option, *not to be confused with the `all-packages` option from budgie-meta!*) must be selected. To see what each applet is you can run the following command(s):
+This will tell the package which applets to install. At least one applet (or the `all` option, *not to be confused with the `all-packages` option from budgie-meta!*) must be selected. To see what each applet is you can run the following command(s) (or use any other tool if wanted):
 
 	emerge --ask --verbose gentoolkit # Skip this if already installed
 	equery u budgie-extras
@@ -59,7 +59,7 @@ You will need to remerge budgie-extras for this! Please run the following comman
 
 	emerge -1av budgie-extras
 
-*Note: The Trash applet and networkmanager applets inside budgie-extras are not included in the `all` option. For network manager please enable the `networkmanager` useflag. For the Trash applet please add `trash` inside your BUDGIE_EXTRAS_APPLETS=".." in your make.conf. Trash applet by itself is also included in budgie-desktop since 10.8 and therefor not needed here.*
+*Note: The Trash applet and networkmanager applets inside budgie-extras are not included in the `all` option. For network manager please enable the `networkmanager` useflag. For the Trash applet please enable the `trash` useflag. Trash applet by itself is also included in budgie-desktop since 10.8 and therefor not needed here.*
 
 #### Other Applets
 
@@ -115,17 +115,7 @@ Please add the `vala` useflag for app-i18n/ibus to your /etc/portage/package.use
 
 You can run the following command to automatically install new versions upon their release;
 
-	printf '# Budgie-Destop latest versions
-	gnome-extra/budgie-meta
-	gnome-extra/budgie-control-center
-	gnome-extra/budgie-desktop-view
-	gnome-extra/budgie-desktop
-	gnome-extra/budgie-screensaver
-	x11-wm/magpie
-	gnome-extra/budgie-session
-	gnome-extra/budgie-extras
-	gnome-extra/budgie-backgrounds
-	gnome-extra/budgie-analogue-clock-applet' > /etc/portage/package.accept_keywords/budgie-desktop-latest
+	echo '*/*::SarahMiaOverlay' > /etc/portage/package.accept_keywords/budgie-desktop-latest
 
 Please note that if you run the `minimal` useflag budgie-extras and budgie-backgrounds are not needed. You can adjust the file manually if you want too, but is not needed.
 
