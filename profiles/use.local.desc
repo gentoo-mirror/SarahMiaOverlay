@@ -14,6 +14,7 @@ gnome-extra/budgie-desktop:stateless - Enable stateless XDG paths
 gnome-extra/budgie-desktop-view:stateless - Enable stateless XDG paths
 gnome-extra/budgie-extras:networkmanager - Build network-manager applet
 gnome-extra/budgie-extras:stateless - Enable stateless XDG paths
+gnome-extra/budgie-extras:trash - Build separate trash applet from the one in budgie-desktop
 gnome-extra/budgie-meta:all-packages - Installs all Budgie applets and applications.
 gnome-extra/budgie-meta:minimal - Installs only the base desktop with minimal applications and base applets.
 gnome-extra/budgie-screensaver:locking - Allow the screen to be locked
