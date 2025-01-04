@@ -176,7 +176,7 @@ RDEPEND="
 BDEPEND="$(vala_depend)"
 
 PATCHES=(
-	"${FILESDIR}"/170/exclude-network-applet-build-all.patch
+	"${FILESDIR}"/exclude-network-applet-build-all.patch
 )
 
 python_check_deps() {

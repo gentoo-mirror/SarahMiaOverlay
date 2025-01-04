@@ -6,15 +6,15 @@ EAPI=8
 VALA_MIN_API_VERSION="0.48"
 PYTHON_COMPAT=( python3_{10..13} )
 
-inherit git-r3 meson vala gnome2-utils xdg python-any-r1
+inherit meson vala gnome2-utils xdg python-any-r1
 
 DESCRIPTION="Additional enhancements for the user experience. Contains many applets. Made for Budgie Desktop."
 HOMEPAGE="https://github.com/UbuntuBudgie/${PN}"
-EGIT_REPO_URI="https://github.com/UbuntuBudgie/${PN}.git"
+SRC_URI="https://github.com/UbuntuBudgie/${PN}/releases/download/v${PV}/${P}.tar.xz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="~amd64 ~x86 ~arm ~arm64"
 
 IUSE_BUDGIE_EXTRAS_APPLETS="
 	+budgie_extras_applets_all
@@ -183,6 +183,10 @@ python_check_deps() {
 
 pkg_setup() {
 	python-any-r1_pkg_setup
+}
+
+src_unpack() {
+	unpack ${P}.tar.xz
 }
 
 src_prepare() {

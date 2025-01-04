@@ -8,6 +8,7 @@
 	<use>
 		<flag name="stateless">Enable stateless XDG paths</flag>
 		<flag name="networkmanager">Build network-manager applet</flag>
+		<flag name="trash">Build separate trash applet from the one in budgie-desktop</flag>
 	</use>
 	<upstream>
 		<remote-id type="github">UbuntuBudgie/budgie-extras</remote-id>

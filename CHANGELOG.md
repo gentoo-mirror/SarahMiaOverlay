@@ -2,6 +2,22 @@
 
 I will keep all updates here listed and up to date;
 
+## 2025/1/4
+
+Nothing major. Revision upate for budgie-extras due to tightning of the use flags. All must be disabled if installing specific applets to still prevent all from being installed. Exceptions being network-manager applet which is now fully a separate useflag, trash has also been taken out for clarity and is disabled by default. As well patch file has now proper location.
+
+TBH I am not entirely happy how the useflags go for this particular package go but I will leave it for now, when budgie-meta-11.X comes around in future I may change all of this..
+
+### Added
+- budgie-extras-1.8.0-r1 - new revision ebuild, will now install network applet if networkmanager useflag is set, rather than having 2 useless useflags that don't work well together. Trash is a new useflag for the applet. budgie_extras_applets_network_manager and budgie_extras_applets_trash are removed.
+
+### Changed
+- budgie-extras - patch no longer in a version directory
+- README.md - unstable instructions made future proof, extended/changed budgie-extras instructions
+
+### Fixed
+- budgie-extras-9999 - now uses the proper patch file and mimics 1.8.0-r1 in useflags
+
 ## 2024/12/26 - I am feeling a bit blue..
 
 In short, fixing bluetooth dependencies that in the end do not matter.. budgie-desktop now properly has bluez as dependency instead of gnome-bluetooth. Ironically while going over and removing it lo-and-behold, budgie-control-center requires it still.. Ok so I cannot remove that package yet.. But still needed its slotting fixed so prevent pulling in the unneeded gnome-bluetooth-46.x+ from mainline gentoo.. so in the end no revisions needed nor any major changes, at most people will see an extra package removed during `emerge --depclean`.
