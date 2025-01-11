@@ -18,6 +18,9 @@ TBH I am not entirely happy how the useflags go for this particular package go b
 ### Fixed
 - budgie-extras-9999 - now uses the proper patch file and mimics 1.8.0-r1 in useflags
 
+### Hotfixes from 2025/1/11
+- md5-cache updated (I forgot, oopsie..)
+
 ## 2024/12/26 - I am feeling a bit blue..
 
 In short, fixing bluetooth dependencies that in the end do not matter.. budgie-desktop now properly has bluez as dependency instead of gnome-bluetooth. Ironically while going over and removing it lo-and-behold, budgie-control-center requires it still.. Ok so I cannot remove that package yet.. But still needed its slotting fixed so prevent pulling in the unneeded gnome-bluetooth-46.x+ from mainline gentoo.. so in the end no revisions needed nor any major changes, at most people will see an extra package removed during `emerge --depclean`.
