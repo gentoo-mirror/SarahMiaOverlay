@@ -2,6 +2,33 @@
 
 I will keep all updates here listed and up to date;
 
+## 2025/1/19 - In with the new, out with the old! 10.9.2 Stabilization
+
+10.9.2 is now stable, all older version are removed.
+
+### Added
+- appstream-1.0.4 - new unstable version, inline with mainstream gentoo repo
+
+### Changed
+- budgie-analogue-clock-applet-2.1 - now stable
+- budgie-backgrounds-3.0 - now stable
+- budgie-contro-center-1.4.0 - now stable
+- budgie-desktop-10.9.2 - now stable
+- budgie-extras-1.8.0-r1 - now stable
+- budgie-meta-10.9.2 - now stable
+- md5-cache - meta updated
+- README.md - minor updates
+- TODO.md - wiki mention removed, lowered prio on adding gtk theme default, new notion on renaming base package directory.
+
+### Removed
+- budgie-analogue-clock-applet-2.0 - outdated
+- budgie-backgrounds-2.0 - oudated
+- budgie-control-center-1.3.0 - oudated
+- budgie-desktop-10.8.2 - oudated
+- budgie-extras-1.7.0 - oudated
+- budgie-desktop-view - old patch files removed
+- budgie-meta-1.8.2 - oudated
+
 ## 2025/1/4
 
 Nothing major. Revision upate for budgie-extras due to tightning of the use flags. All must be disabled if installing specific applets to still prevent all from being installed. Exceptions being network-manager applet which is now fully a separate useflag, trash has also been taken out for clarity and is disabled by default. As well patch file has now proper location.

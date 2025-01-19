@@ -15,7 +15,7 @@ SRC_URI="https://github.com/samlane-ma/${MY_PN}/archive/refs/tags/v${PV}.tar.gz 
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~x86 ~arm ~arm64"
+KEYWORDS="amd64 x86 ~arm ~arm64"
 # disabling this for now since 1.9.2 does not purely run on wayland.. this is a future settings
 #IUSE="wayland"
 
