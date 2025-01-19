@@ -16,6 +16,8 @@ I will keep all updates here listed and up to date;
 - budgie-desktop-10.9.2 - now stable
 - budgie-extras-1.8.0-r1 - now stable
 - budgie-meta-10.9.2 - now stable
+- budgie-session-0.9.1 - now stable
+- magpie-0.9.4 - now stable
 - md5-cache - meta updated
 - README.md - minor updates
 - TODO.md - wiki mention removed, lowered prio on adding gtk theme default, new notion on renaming base package directory.
@@ -28,6 +30,7 @@ I will keep all updates here listed and up to date;
 - budgie-extras-1.7.0 - oudated
 - budgie-desktop-view - old patch files removed
 - budgie-meta-1.8.2 - oudated
+- magpie-0.9.3 - outdated
 
 ## 2025/1/4
 
