@@ -18,4 +18,4 @@ gnome-extra/budgie-session 0.9.1: Budgie session manager
 gnome-extra/budgie-systemmonitor-applet 0.2.1 9999: System Monitor that can help you track your cpu, ram, swap, network and uptime. Made for Budgie Desktop.
 net-wireless/gnome-bluetooth 3.34.5: Bluetooth graphical utilities integrated with GNOME
 x11-misc/xprintidle 2.1: Prints user's X server idle time in milliseconds
-x11-wm/magpie 0.9.3 0.9.3-r1 0.9.4: Budgie Desktop compositing window manager softforked from Mutter 43
+x11-wm/magpie 0.9.4: Budgie Desktop compositing window manager softforked from Mutter 43
