@@ -8,7 +8,7 @@ HOMEPAGE="https://blog.buddiesofbudgie.org/"
 
 LICENSE="metapackage"
 SLOT="0"
-KEYWORDS="~amd64 ~x86 ~arm ~arm64"
+KEYWORDS="amd64 x86 ~arm ~arm64"
 IUSE="minimal all-packages"
 REQUIRED_USE="?? ( minimal all-packages )"
 

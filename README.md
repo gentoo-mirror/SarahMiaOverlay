@@ -1,6 +1,4 @@
-**UPDATE December 6th '24: 10.8.2 is back and working fully stable (yay!!). My apolagies for the very long delay/wait.**
-
-**UPDATE Secember 14th '24: Budgie-Desktop 10.9.2 ebuilds are now live out of private testing for portage and trackers after final adjustments, enjoy!**
+**UPDATE January 19th '25: Budgie-Desktop 10.9.2 ebuilds are now stable, if you run into any issue after the update from 10.8.2, first try relog, if it doesn't work then restart your system, due to change of the login session change.**
 
 # SarahMiaOverlay
 
@@ -152,15 +150,15 @@ If you do not use blue-tooth please disable the `bluetooth` useflag:
 
 ### 9) Budgie-Desktop acts weird after upgrading from 1.8.2 to 1.9.2
 
-Due to budgie-session being new and replaces gnome-session, a simple relog may not properly do session tracking. A system reboot should clear any and all issues that may be present (not sure if just restarting X/wayland server will work..)
+Due to budgie-session being new and replaces gnome-session, a simple relog may not properly do session tracking. A system reboot should clear any and all issues that may be present (not sure if just restarting your Xorg/X11 server will work..)
 
 ## Notes:
 
 1) Latest releases are being added with unstable keywords for a while to allow testing from other users in case something crops up. I will maintain 1 stable and 1 unstable budgie-meta in general unless to much time passes. Which is unlikely with their current release timeframes. Security updates are an exception to this and will be added directly as stable.
 
-2) ~arm and ~arm64 keywords are unlikely to be made stable unless I hear from people that they work good as I am unable to test them myself atm sadly.
+2) ~arm and ~arm64 keywords are unlikely to be made stable unless I hear from people that they work good as I am unable to test them myself sadly.
 
-3) If anything comes up feel free to contact me by making an issue. I will handle it as soon as I can.
+3) If anything comes up feel free to contact me by making an issue, through email or discord ( asterfflur ). I will handle it as soon as I can.
 
 4) If there is an applet/application/theme you want let me know with a link and I will see if I can add it in the overlay for you. Please do note that for themes any gtk theme should work fine out of the box and can be set through budgie control center.
 
