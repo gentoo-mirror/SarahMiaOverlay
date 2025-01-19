@@ -21,7 +21,7 @@ REQUIRED_USE="
 #	test? ( wayland )
 #RESTRICT="!test? ( test )"
 
-KEYWORDS="~amd64 ~x86 ~arm ~arm64 ~ppc64 ~riscv"
+KEYWORDS="amd64 x86 ~arm ~arm64 ~ppc64 ~riscv"
 
 # gnome-settings-daemon is build checked, but used at runtime only for org.gnome.settings-daemon.peripherals.keyboard gschema
 # xorg-server is needed at build and runtime with USE=wayland for Xwayland
