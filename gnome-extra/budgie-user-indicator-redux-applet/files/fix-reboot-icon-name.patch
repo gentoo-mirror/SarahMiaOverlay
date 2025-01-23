@@ -1,0 +1,39 @@
+From 386a132da775eaefea1a43400e30ab3467fb4a54 Mon Sep 17 00:00:00 2001
+From: Evan Maddock <maddock.evan@vivaldi.net>
+Date: Mon, 3 Jun 2024 13:04:21 -0400
+Subject: [PATCH] icons: Use the correct name for the reboot icon
+
+Signed-off-by: Evan Maddock <maddock.evan@vivaldi.net>
+---
+ CHANGELOG.md     | 4 ++++
+ src/popover.vala | 2 +-
+ 2 files changed, 5 insertions(+), 1 deletion(-)
+
+diff --git a/CHANGELOG.md b/CHANGELOG.md
+index 706feea..1f02956 100644
+--- a/CHANGELOG.md
++++ b/CHANGELOG.md
+@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
+ 
+ ## [Unreleased]
+ 
++### Changed
++
++- Use the correct Freedesktop name for the reboot icon
++
+ ## [1.0.1] - 2023-03-30
+ 
+ ### Added
+diff --git a/src/popover.vala b/src/popover.vala
+index b51de96..cdd36e3 100644
+--- a/src/popover.vala
++++ b/src/popover.vala
+@@ -97,7 +97,7 @@ namespace UserIndicatorRedux {
+ #endif
+ 
+             restart_button = new Button.with_mnemonic (_("_Restart…")) {
+-                image = new Image.from_icon_name ("system-restart-symbolic", IconSize.BUTTON)
++                image = new Image.from_icon_name ("system-reboot-symbolic", IconSize.BUTTON)
+             };
+             restart_button.get_child ().halign = Align.START;
+             restart_button.get_style_context ().add_class ("flat");
