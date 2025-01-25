@@ -68,17 +68,17 @@ index 49bddb3..f6de636 100644
                  item.button_release_event.connect ( () => {
                      try {
                          int child_index = this.children.index (item);
-@@ -343,9 +340,7 @@ public class LightPadWindow : Widgets.CompositedWindow {
-             widget.get_allocation (out size);
- 
-             var linear_gradient = new Cairo.Pattern.linear (size.x, size.y, size.x, size.y + size.height);
--            linear_gradient.add_color_stop_rgba (0.0, 0.0, 0.0, 0.0, 1);
--            linear_gradient.add_color_stop_rgba (0.50, 0.0, 0.0, 0.0, 0.90);
--            linear_gradient.add_color_stop_rgba (0.99, 0.0, 0.0, 0.0, 0.80);
-+            linear_gradient.add_color_stop_rgba (0.0, 0.30, 0.30, 0.30, 1);
- 
-             context.set_source (linear_gradient);
-             context.paint ();
+# @@ -343,9 +340,7 @@ public class LightPadWindow : Widgets.CompositedWindow {
+#             widget.get_allocation (out size);
+# 
+#             var linear_gradient = new Cairo.Pattern.linear (size.x, size.y, size.x, size.y + size.height);
+#-            linear_gradient.add_color_stop_rgba (0.0, 0.0, 0.0, 0.0, 1);
+#-            linear_gradient.add_color_stop_rgba (0.50, 0.0, 0.0, 0.0, 0.90);
+#-            linear_gradient.add_color_stop_rgba (0.99, 0.0, 0.0, 0.0, 0.80);
+#+            linear_gradient.add_color_stop_rgba (0.0, 0.30, 0.30, 0.30, 1);
+# 
+#             context.set_source (linear_gradient);
+#             context.paint ();
 
 From 1fedf75deead7f6c8159683aada90d4ddb5538fd Mon Sep 17 00:00:00 2001
 From: m <m@metaquanta.com>
