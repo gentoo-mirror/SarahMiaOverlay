@@ -1,3 +1,5 @@
+**UPDATE january 30th' 25: This repository will under go big changes when 10.10 comes out, hopefully feb-mar somewhere. Read below for more information. This will also make budgie-desktop wayland only!, stepping away from X11/xorg!**
+
 **UPDATE January 19th '25: Budgie-Desktop 10.9.2 ebuilds are now stable, if you run into any issue after the update from 10.8.2, first try relog, if it doesn't work then restart your system, due to change of the login session change.**
 
 # SarahMiaOverlay
@@ -81,6 +83,31 @@ All applets follow the naming of budgie-xyz-applet so you can simply look throug
 	- (Part of budgie-extras) WallStreet Control (rotating wallpapers)
 	- (Part of budgie-extras) Previews Control (display applications preview while alt-tabbing)
 	- The config for the new window preview from budgie-extras (for alt-tab) is in the Previews Control in your applications list/menu. You can set additional options there as well.
+
+## Future of Budgie Desktop and this repository:
+
+### Regarding Version 10.10:
+Hopefully somewhere during february~march or maybe later Budgie-Desktop 10.10 will be released. This will also be the final release till Budgie-Desktop 11 comes out. Despite what was earlier known 10.10 will already switch out from Xorg/X11 to Wayland only! Due to this I also decided to make some major changes to the ebuilds inside the repository.
+
+Please note that when it is released the ebuilds may take a while to arrive since I have to rewrite a bunch of stuff, check install and dependencies and test things out.
+
+For more information please check the bottom section that talks about 2025: https://buddiesofbudgie.org/blog/state-of-the-budgie-2024 
+
+### Regarding Version 10.9.2:
+
+So what about those that do not want wayland or for some odd reason can't run it? Well once 10.10 is release it will enter as unstable with ~arch keywords. When 10.10 is deemed stable and no issues have been reported it will be made stable. 10.9.2 will NOT be removed but will stay as a legacy option for those who want to keep using Budgie-Desktop on Xorg/X11.
+
+I will keep 10.9.2 ebuilds and their related packages up at least till Budgie-Desktop 11 is released. Which will come after 10.10. (No more 10.11 according to their blog post).
+
+### To sumarize changes for both:
+
+For now the changes for both are as following:
+- Change of installation regarding the meta ebuild. A new ebuild pure for applets will come, while the meta ebuild for budgie-desktop itself will be smaller.
+- Change of category directories. No longer will everything be placed under gnome-extra, but under budgie-base and budgie-extra repsectively.
+- Multiple applets will be added as well to streamline the available content with other distributions. Some applets will go away! Most noteworthy those that won't work with either wayland or xorg to make sure there won't be any issues going forward while keeping legacy ebuilds for xorg and supporting wayland for the newer ebuilds.
+- A Wiki will be added to this repo with more information rather than all placed here in the readme file.
+
+The list of changes that will happen and their discussions: https://gitlab.com/SarahMia/sarahmiaoverlay/-/issues
 	
 ## F.A.Q. / Troubleshoot
 
