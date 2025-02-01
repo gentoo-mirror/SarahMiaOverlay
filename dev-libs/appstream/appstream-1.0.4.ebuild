@@ -51,7 +51,7 @@ BDEPEND="
 	>=sys-devel/gettext-0.19.8
 	doc? ( app-text/docbook-xml-dtd:4.5 )
 	test? ( dev-qt/qttools:6[linguist] )
-	vala? ( dev-lang/vala )
+	vala? ( $(vala_depend) )
 "
 
 PATCHES=( "${FILESDIR}"/${PN}-1.0.0-disable-Werror-flags.patch ) # bug 733774
@@ -63,7 +63,7 @@ src_prepare() {
 		sed -e "/^subdir.*tests/s/^/#DONT /" -i {,qt/}meson.build || die # bug 675944
 	fi
 
-	use vala &&	vala_setup
+	use vala && vala_setup
 }
 
 src_configure() {
