@@ -44,7 +44,7 @@ BDEPEND="
 	>=sys-devel/gettext-0.19.8
 	doc? ( app-text/docbook-xml-dtd:4.5 )
 	test? ( dev-qt/qttools:6[linguist] )
-	vala? ( dev-lang/vala )
+	vala? ( $(vala_depend) )
 "
 
 PATCHES=( "${FILESDIR}"/${PN}-1.0.0-disable-Werror-flags.patch ) # bug 733774
