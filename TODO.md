@@ -2,6 +2,16 @@
 
 Below are notes I have planned/may consider to do as well with their status. Things that have been checked will be added to the overlay public when it is tested for potetial problems on my end. Once public they will  be removed from this file.
 
+### 10.10 preperation and release
+- [X] Make new applets
+- [ ] Prepare new applets meta
+- [ ] Prepare new packaging
+- [ ] Make new ebuilds (new slot for wayland?)
+- [ ] Install wayland
+- [ ] Private testing
+- [ ] Make new Documentation
+- [ ] Make release package and media notification
+
 
 ### High
 - [ ] Rename base directory 'gnome-extra' to 'budgie-base'/'budgie-extra' to reflect proper status as it is slowly phasing/moving away from the gnome app dependencies with the porting.
