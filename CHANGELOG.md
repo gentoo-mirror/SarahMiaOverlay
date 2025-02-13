@@ -2,6 +2,15 @@
 
 I will keep all updates here listed and up to date;
 
+## 2025/2/13 - Gentoo accepted my pull request! No longer need to maintain Appstream
+
+I made a pull request for mainline gentoo to support vala useflag for dev-libs/appstream. This got accepted just a few hours ago. This eliminates a major headache for me where I have to keep track of any changes made to appstream and copy/mirror it with added vala support.
+
+The pull request only accepted it for 1.0.4 and not 1.0.3. Meaning that till 1.0.4 is stable in mainline 1.0.3 will remain on the repository as a stable offering with vala support. After 1.0.4 is stable the entire appstream package will be removed from the overlay.
+
+### Removed
+- appstream-1.0.4 - now obsolete due to mainline gentoo accepted my pull request
+
 ## 2025/1/19 - In with the new, out with the old! 10.9.2 Stabilization
 
 10.9.2 is now stable, all older version are removed.
