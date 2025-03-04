@@ -2,6 +2,17 @@
 
 I will keep all updates here listed and up to date;
 
+## 2025/3/4 - Intermission..
+
+Nothing major. Removal of appstream and added old version of libxfce4windowing to support budgie-desktop-10.9.2 build. Added latest version of budgie-extras that half support wayland, while awaiting budgie-desktop 10.10 release. Decided to release this standalone without any new changes..
+
+### Added
+- libxfce4windowing - old version to support budgie-desktop 10.9.2
+- budgie-extras-1.9.0 - new version
+
+### Removed
+- appstream - no longer needed as the vala useflag is now supported and old version that was missing it has been removed.
+
 ## 2025/2/13 - Gentoo accepted my pull request! No longer need to maintain Appstream
 
 I made a pull request for mainline gentoo to support vala useflag for dev-libs/appstream. This got accepted just a few hours ago. This eliminates a major headache for me where I have to keep track of any changes made to appstream and copy/mirror it with added vala support.
