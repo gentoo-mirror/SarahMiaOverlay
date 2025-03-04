@@ -1,4 +1,3 @@
-dev-libs/appstream 1.0.3: Cross-distro effort for providing metadata for software in the Linux ecosystem
 dev-python/svgwrite 1.4.3: Python Package to write SVG files
 gnome-extra/budgie-analogue-clock-applet 2.1: Add an analogue clock to the Budgie Panel. Made for Budgie Desktop.
 gnome-extra/budgie-backgrounds 3.0: Budgie Desktop default backgrounds
@@ -8,7 +7,7 @@ gnome-extra/budgie-clipboard-applet 1.1.0 9999: A clipboard manager applet that 
 gnome-extra/budgie-control-center 1.4.0: Budgie Control Center for Budgie Desktop
 gnome-extra/budgie-desktop 10.9.2 9999: Desktop Environment based on GNOME 3
 gnome-extra/budgie-desktop-view 1.3 9999: Basic desktop icons/managemlent for Budgie Desktop.
-gnome-extra/budgie-extras 1.8.0 1.8.0-r1 9999: Additional enhancements for the user experience. Contains many applets. Made for Budgie Desktop.
+gnome-extra/budgie-extras 1.8.0 1.8.0-r1 1.9.0 9999: Additional enhancements for the user experience. Contains many applets. Made for Budgie Desktop.
 gnome-extra/budgie-haste-applet 0.3.0 9999: Post any text, be it code or prose, to various services directly from your desktop. Made for Budgie Desktop.
 gnome-extra/budgie-meta 10.9.2: Meta ebuild for Budgie Desktop with all official releases of needed packages
 gnome-extra/budgie-pixel-saver-applet 4.0.0 9999: This applet hides the title bar from maximized windows and creates a new one inside the panel. Inspired from gnome extension pixel-saver.
@@ -19,3 +18,4 @@ gnome-extra/budgie-systemmonitor-applet 0.2.1 9999: System Monitor that can help
 net-wireless/gnome-bluetooth 3.34.5: Bluetooth graphical utilities integrated with GNOME
 x11-misc/xprintidle 2.1: Prints user's X server idle time in milliseconds
 x11-wm/magpie 0.9.4: Budgie Desktop compositing window manager softforked from Mutter 43
+xfce-base/libxfce4windowing 4.19.3: Unified widget and session management libs for Xfce
