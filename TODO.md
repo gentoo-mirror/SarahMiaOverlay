@@ -4,7 +4,7 @@ Below are notes I have planned/may consider to do as well with their status. Thi
 
 ### 10.10 preperation and release
 - [X] Make new applets
-- [ ] Prepare new applets meta
+- [X] Prepare new applets meta
 - [ ] Prepare new packaging
 - [ ] Make new ebuilds (new slot for wayland?)
 - [ ] Install wayland
