@@ -1,4 +1,4 @@
-**UPDATE april 17th '25: Still awaiting release 1.10, so yeah been keeping an eye on it but so far no news. No idea when it will be coming. May stat work early on the wiki for the 1.10 release.
+**UPDATE april 17th '25: Still awaiting release 1.10, so yeah been keeping an eye on it but so far no news. No idea when it will be coming. May stat work early on the wiki for the 1.10 release.**
 
 **UPDATE january 30th '25: This repository will under go big changes when 10.10 comes out, hopefully feb-mar somewhere. Read below for more information. This will also make budgie-desktop wayland only!, stepping away from X11/xorg!**
 
