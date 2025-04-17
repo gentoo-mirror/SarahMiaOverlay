@@ -1,4 +1,6 @@
-**UPDATE january 30th' 25: This repository will under go big changes when 10.10 comes out, hopefully feb-mar somewhere. Read below for more information. This will also make budgie-desktop wayland only!, stepping away from X11/xorg!**
+**UPDATE april 17th '25: Still awaiting release 1.10, so yeah been keeping an eye on it but so far no news. No idea when it will be coming. May stat work early on the wiki for the 1.10 release.
+
+**UPDATE january 30th '25: This repository will under go big changes when 10.10 comes out, hopefully feb-mar somewhere. Read below for more information. This will also make budgie-desktop wayland only!, stepping away from X11/xorg!**
 
 **UPDATE January 19th '25: Budgie-Desktop 10.9.2 ebuilds are now stable, if you run into any issue after the update from 10.8.2, first try relog, if it doesn't work then restart your system, due to change of the login session change.**
 
@@ -87,7 +89,7 @@ All applets follow the naming of budgie-xyz-applet so you can simply look throug
 ## Future of Budgie Desktop and this repository:
 
 ### Regarding Version 10.10:
-Hopefully somewhere during february~march or maybe later Budgie-Desktop 10.10 will be released. This will also be the final release till Budgie-Desktop 11 comes out. Despite what was earlier known 10.10 will already switch out from Xorg/X11 to Wayland only! Due to this I also decided to make some major changes to the ebuilds inside the repository.
+Hopefully ~~somewhere during february~march or maybe~~ later Budgie-Desktop 10.10 will be released. This will also be the final release till Budgie-Desktop 11 comes out. Despite what was earlier known 10.10 will already switch out from Xorg/X11 to Wayland only! Due to this I also decided to make some major changes to the ebuilds inside the repository.
 
 Please note that when it is released the ebuilds may take a while to arrive since I have to rewrite a bunch of stuff, check install and dependencies and test things out.
 
