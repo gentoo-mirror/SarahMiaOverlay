@@ -1,9 +1,3 @@
-**UPDATE april 17th '25: Still awaiting release 1.10, so yeah been keeping an eye on it but so far no news. No idea when it will be coming. May stat work early on the wiki for the 1.10 release.**
-
-**UPDATE january 30th '25: This repository will under go big changes when 10.10 comes out, hopefully feb-mar somewhere. Read below for more information. This will also make budgie-desktop wayland only!, stepping away from X11/xorg!**
-
-**UPDATE January 19th '25: Budgie-Desktop 10.9.2 ebuilds are now stable, if you run into any issue after the update from 10.8.2, first try relog, if it doesn't work then restart your system, due to change of the login session change.**
-
 # SarahMiaOverlay
 
 *Despite the name this overlay has, it only supplies ebuilds meant for Budgie Desktop. Due to historic reasons this started out as a personal overlay with adjusted ebuilds with budgie-desktop being among them as well. Over time all those adjusted ebuilds are gone and there is only ebuilds for Budgie Desktop and it's support left now. This overlay will keep on fully supporting Budgie Desktop.*
@@ -42,13 +36,13 @@ The latest release can be installed with ~amd64/~x86 keywords. To automatically 
 
 #### Adjusting contents of Budgie-Extras package (if not running minimal)
 
-*Skip this section if you are running the `minimal` useflag of budgie-meta!*
+*Skip this section if you are running the `minimal` useflag of budgie-meta and not installed budgie-extras separately!*
 
 When installing budgie-extras you can now specify which applets you want to install from that package. When doing this you can see all applets through the following command:
 
 	emerge --pretend --verbose budgie-extras
 
-You will see BUDGIE_EXTRAS_APPLETS="..." appearing, this means those applets will be installed. By default it will install all of them (with the 'all' being set). If you set specific  applets, `-all` must be added to prevent all of them from being installed. (From 1.8.0-r1 this is even required or you will get an error when trying to merge.) To specify which ones you want you can add the following in your e.g. /etc/portage/package.useflag/budgie-extras file:
+You will see BUDGIE_EXTRAS_APPLETS="..." appearing, this means those applets will be installed. By default it will install all of them (with the 'all' being set). If you set specific  applets, `-all` must be added to prevent all of them from being installed. To specify which ones you want you can add the following in your e.g. /etc/portage/package.useflag/budgie-extras file:
 
 	gnome-extra/budgie-extras BUDGIE_EXTRAS_APPLETS: -all app-launcher wallstreet show-weather
 
@@ -65,7 +59,7 @@ You will need to remerge budgie-extras for this! Please run the following comman
 
 #### Other Applets
 
-While budgie-extras does contain a lot of applets, it is not all. There are some applets made by other people are not part of extras. You can either install these separately or have them all installed with the useflag `all-packages` from budgie-meta. Do not confuse this with the `all` option from budgie-extras please. These are named in the form of 'budgie-xyz-applet'. You can search through by searching for budgie packages. The following command will do that:
+While budgie-extras does contain a lot of applets, it is not all. There are some applets made by other people are not part of extras. You can either install these separately and/or have them installed with the useflag `all-packages` from budgie-meta. Do not confuse this with the `all` option from budgie-extras please. These are named in the form of 'budgie-xyz-applet'. You can search through by searching for budgie packages. The following command will do that:
 
 	emerge -s budgie
 
@@ -89,7 +83,8 @@ All applets follow the naming of budgie-xyz-applet so you can simply look throug
 ## Future of Budgie Desktop and this repository:
 
 ### Regarding Version 10.10:
-Hopefully ~~somewhere during february~march or maybe~~ later Budgie-Desktop 10.10 will be released. This will also be the final release till Budgie-Desktop 11 comes out. Despite what was earlier known 10.10 will already switch out from Xorg/X11 to Wayland only! Due to this I also decided to make some major changes to the ebuilds inside the repository.
+
+Later this year Budgie-Desktop 10.10 will be released. This will also be the final release till Budgie-Desktop 11 comes out. Despite what was earlier known 10.10 will already switch out from Xorg/X11 to Wayland only! Due to this I also decided to make some major changes to the ebuilds inside the repository.
 
 Please note that when it is released the ebuilds may take a while to arrive since I have to rewrite a bunch of stuff, check install and dependencies and test things out.
 
@@ -99,14 +94,14 @@ For more information please check the bottom section that talks about 2025: http
 
 So what about those that do not want wayland or for some odd reason can't run it? Well once 10.10 is release it will enter as unstable with ~arch keywords. When 10.10 is deemed stable and no issues have been reported it will be made stable. 10.9.2 will NOT be removed but will stay as a legacy option for those who want to keep using Budgie-Desktop on Xorg/X11.
 
-I will keep 10.9.2 ebuilds and their related packages up at least till Budgie-Desktop 11 is released. Which will come after 10.10. (No more 10.11 according to their blog post).
+I will keep 10.9.2 ebuilds and their related packages up at least till Budgie-Desktop 11 is released. Which will come after 10.10. (There will be no 10.11 according to their blog post).
 
 ### To sumarize changes for both:
 
 For now the changes for both are as following:
 - Change of installation regarding the meta ebuild. A new ebuild pure for applets will come, while the meta ebuild for budgie-desktop itself will be smaller.
 - Change of category directories. No longer will everything be placed under gnome-extra, but under budgie-base and budgie-extra repsectively.
-- Multiple applets will be added as well to streamline the available content with other distributions. Some applets will go away! Most noteworthy those that won't work with either wayland or xorg to make sure there won't be any issues going forward while keeping legacy ebuilds for xorg and supporting wayland for the newer ebuilds.
+- Streamline the available applets with other distributions. Some applets will go away! Most noteworthy those that won't work with either wayland or xorg to make sure there won't be any issues going forward while keeping legacy ebuilds for xorg and supporting wayland for the newer ebuilds.
 - A Wiki will be added to this repo with more information rather than all placed here in the readme file.
 
 The list of changes that will happen and their discussions: https://gitlab.com/SarahMia/sarahmiaoverlay/-/issues
@@ -152,7 +147,7 @@ In addition to this also note that I can't guarantee that everything will work p
 
 ### 6) How to low new/updated or remove uninstalled applets?
 
-You can run the following command from any terminal and then close it;
+You can run the following command from any terminal:
 
 	nohup budgie-panel --replace > /dev/null 2>&1 &
 
@@ -177,10 +172,6 @@ If you do not use blue-tooth please disable the `bluetooth` useflag:
 
 	echo 'gnome-extra/budgie-desktop -bluetooth' > /etc/portage/package.use/budgie-desktop-no-bt
 
-### 9) Budgie-Desktop acts weird after upgrading from 1.8.2 to 1.9.2
-
-Due to budgie-session being new and replaces gnome-session, a simple relog may not properly do session tracking. A system reboot should clear any and all issues that may be present (not sure if just restarting your Xorg/X11 server will work..)
-
 ## Notes:
 
 1) Latest releases are being added with unstable keywords for a while to allow testing from other users in case something crops up. I will maintain 1 stable and 1 unstable budgie-meta in general unless to much time passes. Which is unlikely with their current release timeframes. Security updates are an exception to this and will be added directly as stable.
@@ -191,4 +182,4 @@ Due to budgie-session being new and replaces gnome-session, a simple relog may n
 
 4) If there is an applet/application/theme you want let me know with a link and I will see if I can add it in the overlay for you. Please do note that for themes any gtk theme should work fine out of the box and can be set through budgie control center.
 
-5) The overlay changes and todo's are each in their own files, refer to CHANGELOG.md or TODO.md for those.
+5) The overlay changes and todo's are each in their own files, refer to NEWS.md, CHANGELOG.md or TODO.md for those.

@@ -1,0 +1,22 @@
+--- a/meson.build	2025-05-14 22:16:39.000000000 +0000
++++ b/meson.build	2025-05-26 00:01:47.022278807 +0000
+@@ -24,8 +24,17 @@
+ 
+ dep_gtk3 = dependency('gtk+-3.0', version: '>=3.18')
+ dep_glib = dependency('glib-2.0', version: '>= 2.46.0')
+-dep_peas = dependency('libpeas-2', version: '>= 2.0.0')
+-dep_budgie = dependency('budgie-2.0', version: '>= 2')
++
++for_wayland = get_option('for-wayland')
++
++if for_wayland == false
++	dep_budgie = dependency('budgie-1.0')
++	dep_peas = dependency('libpeas-1.0', version: '>= 1.8.0')
++else
++	dep_budgie = dependency('budgie-2.0', version: '>= 2')
++	dep_peas = dependency('libpeas-2', version: '>= 2.0.0')
++endif
++
+ dep_gobject = dependency('gobject-2.0')
+ dep_polkit = dependency('polkit-gobject-1')
+ 
