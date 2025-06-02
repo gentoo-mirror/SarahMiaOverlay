@@ -2,6 +2,26 @@
 
 I will keep all updates here listed and up to date;
 
+## 2025/6/2 - New Applets, let there be a light(pad)!
+
+New applets added!
+
+### Added
+- NEWS.md - new file to keep track of news
+- budgie-browser-profile-launcher - new package
+- budgie-cpufreq-applet - new package
+- budgie-cputemp-applet - new package
+- budgie-lightpad-applet - new package
+- budgie-media-player-applet - new package
+- budgie-performance-gauge-applet - new package
+- budgie-user-indicator-redux-applet - new package
+- budgie-hostname-applet - new package
+- lightpad - new package
+
+### Changed
+- md5-cache - meta updated
+- README.md - updated
+
 ## 2025/3/4 - Intermission..
 
 Nothing major. Removal of appstream and added old version of libxfce4windowing to support budgie-desktop-10.9.2 build. Added latest version of budgie-extras that half support wayland, while awaiting budgie-desktop 10.10 release. Decided to release this standalone without any new changes..
