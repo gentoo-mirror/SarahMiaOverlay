@@ -1,6 +1,6 @@
 --- a/src/Application.vala	2025-05-05 04:28:29.000000000 +0000
-+++ b/src/Application.vala	2025-05-07 01:05:00.972731662 +0000
-@@ -402,7 +402,11 @@
++++ b/src/Application.vala	2025-05-25 01:05:00.972731662 +0000
+@@ -412,7 +412,11 @@
              widget.get_allocation (out size);
  
              var linear_gradient = new Cairo.Pattern.linear (size.x, size.y, size.x, size.y + size.height);

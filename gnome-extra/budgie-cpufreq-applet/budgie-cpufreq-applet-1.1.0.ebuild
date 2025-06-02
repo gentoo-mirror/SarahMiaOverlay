@@ -8,8 +8,8 @@ VALA_MIN_API_VERSION="0.48"
 inherit meson vala gnome2-utils xdg
 
 DESCRIPTION="This applet controls the frequency of the processor (Sandy Bridge and newer). Made for Budgie Desktop."
-HOMEPAGE="https://github.com/Dirli/${PN}"
-SRC_URI="https://github.com/Dirli/${PN}/archive/refs/tags/v${PV}.tar.gz -> ${P}.tar.gz"
+HOMEPAGE="https://github.com/UbuntuBudgie/${PN}"
+SRC_URI="https://github.com/UbuntuBudgie/${PN}/archive/refs/tags/v${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -19,11 +19,19 @@ DEPEND="
 	>=gnome-extra/budgie-desktop-10
 	>=sys-auth/polkit-0.105[introspection]
 "
+#Disabled libpeas:2 for now since wayland is disabled till 10.10 comes out.. could cause trouble otherwise..
+#dev-libs/libpeas:2=[vala]
+
 RDEPEND="${DEPEND}"
 BDEPEND="$(vala_depend)"
 
+PATCHES=(
+	"${FILESDIR}/wayland_optional.patch"
+)
+
 src_unpack() {
 	unpack ${P}.tar.gz
+	cp ${FILESDIR}/meson_options.txt ${WORKDIR}/${P}/
 }
 
 src_prepare() {
