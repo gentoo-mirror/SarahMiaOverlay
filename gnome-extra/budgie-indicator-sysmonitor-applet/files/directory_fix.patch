@@ -1,0 +1,10 @@
+--- a/Makefile	2025-06-10 22:15:15.239043483 +0000
++++ b/Makefile	2025-06-10 23:03:06.026623524 +0000
+@@ -1,5 +1,5 @@
+-PREFIX=/usr
+-BUDGIELIB=lib/budgie-desktop/plugins/budgiesysmonitor
++PREFIX?=/usr
++BUDGIELIB?=lib/budgie-desktop/plugins/budgiesysmonitor
+ 
+ all:
+ 

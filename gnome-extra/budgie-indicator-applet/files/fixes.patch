@@ -1,0 +1,55 @@
+From 6ff6208c28ebf97c80b2534511e48e95fef3d5b8 Mon Sep 17 00:00:00 2001
+From: David Mohammed <fossfreedom@ubuntu.com>
+Date: Mon, 12 Jun 2023 07:31:04 +0100
+Subject: [PATCH 1/2] Revert hiding of chrome icons now that they have resolved
+ status tray icons vs knotifier icons
+
+---
+ src/applet-main.c | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+diff --git a/src/applet-main.c b/src/applet-main.c
+index 097129d..802fe5d 100644
+--- a/src/applet-main.c
++++ b/src/applet-main.c
+@@ -72,7 +72,7 @@ static gchar *indicator_order[] = { "libayatana-application.so", "libayatana-mes
+                                     "libayatana-datetime.so",    "libayatana-session.so",   NULL };
+ #endif
+ 
+-static gchar *blacklist_applets[] = { "nm-applet", "chrome_status_icon_1", "chrome_status_icon_2",  0 };
++static gchar *blacklist_applets[] = { "nm-applet",  0 };
+ 
+ void calc_default_icon_size(void);
+ 
+@@ -383,6 +383,7 @@ static void entry_added(IndicatorObject *io, IndicatorObjectEntry *entry, GtkWid
+                 int loop = 0;
+                 while (blacklist_applets[loop]) {
+                         if (strstr(entry->name_hint, blacklist_applets[loop]) != NULL) {
++                                g_debug("exit here %s", entry->name_hint);
+                                 return;
+                         }
+                         loop++;
+
+From 15fac7ed13a2481583c26b541d1bb9456b996764 Mon Sep 17 00:00:00 2001
+From: David Mohammed <fossfreedom@ubuntu.com>
+Date: Thu, 4 Jul 2024 10:42:56 +0100
+Subject: [PATCH 2/2] GCC-14 requires pointer types to be explicitly defined or
+ cast - closes #31
+
+---
+ src/applet.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/src/applet.c b/src/applet.c
+index 5e7a7e3..17f5b59 100644
+--- a/src/applet.c
++++ b/src/applet.c
+@@ -263,7 +263,7 @@ static void appindicator_applet_init(AppIndicatorApplet *self)
+         /* Show all of our things. */
+         gtk_widget_show_all(GTK_WIDGET(self));
+ 
+-        g_timeout_add_seconds(1, delay_load_indicators, self);
++        g_timeout_add_seconds(1, (GSourceFunc)delay_load_indicators, self);
+ }
+ 
+ void appindicator_applet_init_gtype(GTypeModule *module)
