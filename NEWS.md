@@ -2,6 +2,18 @@
 
 All of the news in regards to changes will be posted here. Difference from Changelog is that this will contain compressed news and somewhat expanded explenations when needed. Will also list news outside of direct changes from changed packages/versions. (What was previously done with 'NOTE:..' in the README).
 
+## 2025/6/10 Indicators arrived!
+
+2 New applets are added. Unless I see more are used elsewhere this should it for a long while.
+
+The added applets are:
+- budgie-indicator-applet
+- budgie-indicator-sysmonitor-applet
+
+Budgie-indicator-applet is used to have applications place an icon with any indicator for quick actions (similar in a way to a system tray) and the budgie-indicator-sysmonitor-applet is used to monitor system information such a temperatures/load etc.
+
+*Note: While budgie-indicator-applet is appearing for me I was unable to actually see any app in there. Basically missing the apps and accounts for proper testing. If you see it not working properly please do let me know.*
+
 ## 2025/6/2 New applets added, semi preparation for 10.10 eventual release
 
 8 New applets were added to the repository. For now all them are made to work with mainly with Budgie-Desktop 10.9.2. They are not added to the meta ebuild to preserve those changes for when 10.10 releases and i split everything up in 2 meta ebuilds.

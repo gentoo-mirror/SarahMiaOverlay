@@ -2,6 +2,17 @@
 
 I will keep all updates here listed and up to date;
 
+## 2025/6/10 - New Applet indicators have arrived!
+
+New applets relating to well, any application that makes use of AppIndicator and the other for system information.
+
+### Added
+- budgie-indicator-applet - new package
+- budgie-indicator-sysmonitor - new package
+
+### Changed
+- md5-cache - meta updated
+
 ## 2025/6/2 - New Applets, let there be a light(pad)!
 
 New applets added!
