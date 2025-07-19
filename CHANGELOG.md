@@ -9,6 +9,9 @@ New version release and fix for broken vala api change compilation of budgie-des
 ### Added
 - budgie-media-player-applet-1.2.0 - new release
 
+### Changed
+- md5-cache - meta updated
+
 ### Fixed
 - budgie-desktop-10.9.2 - added patch to fix compile issues from vala API break on compact classes
 
