@@ -16,7 +16,7 @@ gnome-extra/budgie-hostname-applet 1.0: This applet shows your hostname (or any 
 gnome-extra/budgie-indicator-applet 0.7.2: AppIndicator applet for budgie-desktop.
 gnome-extra/budgie-indicator-sysmonitor-applet 0.10.2: AppIndicator applet for budgie-desktop.
 gnome-extra/budgie-lightpad-applet 0.0.3: Lightweight and stylish fullscreen application launcher. Made for Budgie Desktop.
-gnome-extra/budgie-media-player-applet 1.1.1: Highly customizable applet for controlling all of your playing media. Made for Budgie Desktop.
+gnome-extra/budgie-media-player-applet 1.1.1 1.2.0: Highly customizable applet for controlling all of your playing media. Made for Budgie Desktop.
 gnome-extra/budgie-meta 10.9.2: Meta ebuild for Budgie Desktop with all official releases of needed packages
 gnome-extra/budgie-performance-gauge-applet 1.2: This applet shows a CPU, Memory or Storage gauge on your Budgie panel. Made for Budgie Desktop.
 gnome-extra/budgie-pixel-saver-applet 4.0.0 9999: This applet hides the title bar from maximized windows and creates a new one inside the panel. Inspired from gnome extension pixel-saver.
