@@ -65,6 +65,10 @@ DEPEND="
 	>=dev-libs/gobject-introspection-1.44.0
 "
 
+PATCHES=(
+	"${FILESDIR}/vala_compact_class_error_fix.patch"
+)
+
 src_unpack() {
 	unpack ${P}.tar.xz
 }
