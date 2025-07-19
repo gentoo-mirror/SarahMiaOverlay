@@ -2,6 +2,16 @@
 
 All of the news in regards to changes will be posted here. Difference from Changelog is that this will contain compressed news and somewhat expanded explenations when needed. Will also list news outside of direct changes from changed packages/versions. (What was previously done with 'NOTE:..' in the README).
 
+## 2025/7/18 Clickydy Click Music!
+
+Compile fix and media-player-applet got a version bump.
+
+budgie-media-player-applet: This applet got a version bump. Biggest features are that now you can control mouse click actions on what to do with the applet. (open popup, play/pause, forward and backwards respectively). As well wayland compatible now for future budgie-desktop release.
+
+budgie-desktop: So late august vala 0.56.18 was made stable, this version actually contained an API change that broke compilation. So yeah lovely. This caused it unable to be compiled. Patch added with the fix to allow compilation again.
+
+Regarding budgie desktop 10.10 release, still no news. I am keeping an eye on it but no idea when it will be released.
+
 ## 2025/6/10 Indicators arrived!
 
 2 New applets are added. Unless I see more are used elsewhere this should it for a long while.

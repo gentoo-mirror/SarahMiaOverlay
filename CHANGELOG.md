@@ -2,6 +2,19 @@
 
 I will keep all updates here listed and up to date;
 
+## 2025/7/18 - Clickydy Click Music!
+
+New version release and fix for broken vala api change compilation of budgie-desktop.
+
+### Added
+- budgie-media-player-applet-1.2.0 - new release
+
+### Changed
+- md5-cache - meta updated
+
+### Fixed
+- budgie-desktop-10.9.2 - added patch to fix compile issues from vala API break on compact classes
+
 ## 2025/6/10 - New Applet indicators have arrived!
 
 New applets relating to well, any application that makes use of AppIndicator and the other for system information.
