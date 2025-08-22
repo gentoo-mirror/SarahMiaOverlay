@@ -86,7 +86,7 @@ REQUIRED_USE="
 COMMON_DEPEND="
 	>=gnome-extra/budgie-desktop-10.7
 	dev-libs/appstream[vala]
-	dev-libs/granite
+	dev-libs/granite:0/6.2.0
 	gui-libs/libhandy:1[vala]
 	>=dev-libs/json-glib-1.0
 	dev-libs/keybinder
