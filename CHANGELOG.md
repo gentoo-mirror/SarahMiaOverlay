@@ -5,6 +5,10 @@ I will keep all updates here listed and up to date;
 ## 2025/8/22 - Oldskool Granite
 
 Nothing much really, just a small bug fix on requiring the stable version of granite since the unstable version has a different unusable library naming. And trying that one gave me errors so yeah..
+Also new version of Lightpad.
+
+### Added
+- lightpad-0.1.0 - new release
 
 ### Changed
 - md5-cache - meta updated
