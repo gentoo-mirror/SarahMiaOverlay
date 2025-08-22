@@ -2,6 +2,16 @@
 
 I will keep all updates here listed and up to date;
 
+## 2025/8/22 - Oldskool Granite
+
+Nothing much really, just a small bug fix on requiring the stable version of granite since the unstable version has a different unusable library naming. And trying that one gave me errors so yeah..
+
+### Changed
+- md5-cache - meta updated
+
+### Fixed
+- budgie-extra - Now requires 0.6.2 of granite instead of all possible version
+
 ## 2025/7/18 - Clickydy Click Music!
 
 New version release and fix for broken vala api change compilation of budgie-desktop.
