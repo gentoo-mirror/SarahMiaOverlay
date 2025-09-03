@@ -30,7 +30,7 @@ COMMON_DEPEND="
 	media-libs/gstreamer:1.0
 	media-libs/libcanberra-gtk3:=
 	>=media-libs/graphene-1.10:=[introspection]
-	media-sound/pulseaudio
+	>=media-libs/libpulse-2.0[glib]
 	bluetooth? ( net-wireless/bluez )
 	>=sys-apps/accountsservice-0.6.55
 	sys-apps/util-linux
