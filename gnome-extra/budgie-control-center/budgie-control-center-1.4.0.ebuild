@@ -29,7 +29,7 @@ BDEPEND="${PYTHON_DEPS}"
 
 DEPEND="
 	>=gnome-extra/budgie-desktop-10.6
-	>=media-sound/pulseaudio-2.0[glib]
+	>=media-libs/libpulse-2.0[glib]
 	>=sys-apps/accountsservice-0.6.39
 	>=x11-misc/colord-0.1.34:0=
 	>=x11-libs/gdk-pixbuf-2.23.0:2
