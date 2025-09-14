@@ -2,6 +2,24 @@
 
 All of the news in regards to changes will be posted here. Difference from Changelog is that this will contain compressed news and somewhat expanded explenations when needed. Will also list news outside of direct changes from changed packages/versions. (What was previously done with 'NOTE:..' in the README).
 
+## 2025/9/?? With hope we have arrived at our new destination! New Budgie Desktop minor release
+
+New version of budgie-desktop 10.9.3 has been released. With that a slew of issues I had in regards to deps have also been fixed. So I am happy. Along with the new versions, all packages have been moved to a new category, either budgie-base or budgie-extra, no more gnome-extra.
+
+New versions:
+- budgie-desktop-10.9.3
+- budgie-meta-10.9.3
+- budgie-control-center-1.4.1
+
+Repository changes:
+- All core packages of budgie have been moved from gnome-extra to budgie-base
+- All applets have been moved from gnome-extra to budgie-extra
+- The category gnome-extra has been deleted.
+
+Budgie 10.10 is still being worked on. I have no idea when it will come but I do not expect anything before the next year. It wouldn't surprise me if takes upwards of a year before it arrives. Hence this minor release they made instead.
+
+**Important:** For some reason (I think preparation for 10.10) the actual gnome-settings-daemon requirement of budgie-control-center is actually 49.beta or higher. In the source i could find no reason for this specific requirement. They did state it was due to chaintools. So something on a higher level is going on, but should for us mere mortals not be relevant. Seeing as this is a) a beta version and b) not available in gentoo at all I have modified it to require and look if version 47.2 or higher is installed. For me this worked. **Should you get issues do let me know, I will then pull down the these versions till 49 is in the gentoo repository!** As can be expected these ebuilds are added as unstable keywords. I will leave this up for unstable for a longer period of time of 2 months at least.
+
 ## 2025/7/18 Clickydy Click Music!
 
 Compile fix and media-player-applet got a version bump.

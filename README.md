@@ -2,6 +2,8 @@
 
 *Despite the name this overlay has, it only supplies ebuilds meant for Budgie Desktop. Due to historic reasons this started out as a personal overlay with adjusted ebuilds with budgie-desktop being among them as well. Over time all those adjusted ebuilds are gone and there is only ebuilds for Budgie Desktop and it's support left now. This overlay will keep on fully supporting Budgie Desktop.*
 
+*In order not to break people their repository and installation this name for now will stay, I don't think there is an easy way to rename this overlay without causing issues for other people. In addition I am in no way related or affiliated with BuddiesofBudgie or UbuntuBudgie therefore I think a name change to something official may or may not be appreciated.*
+
 ## Budgie Desktop:
 
 The Budgie Desktop is a feature-rich, modern desktop designed to keep out of the way of the user.
@@ -44,7 +46,7 @@ When installing budgie-extras you can now specify which applets you want to inst
 
 You will see BUDGIE_EXTRAS_APPLETS="..." appearing, this means those applets will be installed. By default it will install all of them (with the 'all' being set). If you set specific  applets, `-all` must be added to prevent all of them from being installed. To specify which ones you want you can add the following in your e.g. /etc/portage/package.useflag/budgie-extras file:
 
-	gnome-extra/budgie-extras BUDGIE_EXTRAS_APPLETS: -all app-launcher wallstreet show-weather
+	budgie-extra/budgie-extras BUDGIE_EXTRAS_APPLETS: -all app-launcher wallstreet show-weather
 
 This will tell the package which applets to install. At least one applet (or the `all` option, *not to be confused with the `all-packages` option from budgie-meta!*) must be selected. To see what each applet is you can run the following command(s) (or use any other tool if wanted):
 
@@ -100,7 +102,6 @@ I will keep 10.9.2 ebuilds and their related packages up at least till Budgie-De
 
 For now the changes for both are as following:
 - Change of installation regarding the meta ebuild. A new ebuild pure for applets will come, while the meta ebuild for budgie-desktop itself will be smaller.
-- Change of category directories. No longer will everything be placed under gnome-extra, but under budgie-base and budgie-extra repsectively.
 - Streamline the available applets with other distributions. Some applets will go away! Most noteworthy those that won't work with either wayland or xorg to make sure there won't be any issues going forward while keeping legacy ebuilds for xorg and supporting wayland for the newer ebuilds.
 - A Wiki will be added to this repo with more information rather than all placed here in the readme file.
 
@@ -170,7 +171,7 @@ You should not get this message but if it does happen, please do the following d
 
 If you do not use blue-tooth please disable the `bluetooth` useflag:
 
-	echo 'gnome-extra/budgie-desktop -bluetooth' > /etc/portage/package.use/budgie-desktop-no-bt
+	echo 'budgie-base/budgie-desktop -bluetooth' > /etc/portage/package.use/budgie-desktop-no-bt
 
 ## Notes:
 
