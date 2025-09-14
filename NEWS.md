@@ -2,7 +2,7 @@
 
 All of the news in regards to changes will be posted here. Difference from Changelog is that this will contain compressed news and somewhat expanded explenations when needed. Will also list news outside of direct changes from changed packages/versions. (What was previously done with 'NOTE:..' in the README).
 
-## 2025/9/?? With hope we have arrived at our new destination! New Budgie Desktop minor release
+## 2025/9/14 With hope we have arrived at our new destination! New Budgie Desktop minor release
 
 New version of budgie-desktop 10.9.3 has been released. With that a slew of issues I had in regards to deps have also been fixed. So I am happy. Along with the new versions, all packages have been moved to a new category, either budgie-base or budgie-extra, no more gnome-extra.
 

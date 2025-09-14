@@ -2,7 +2,7 @@
 
 I will keep all updates here listed and up to date;
 
-## 2025/9/?? - We have arrived at our new destination! New Budgie minor release
+## 2025/9/14 - We have arrived at our new destination! New Budgie minor release
 
 Moving away from gnome-extra category as it no longer really applies, it has strayed to much from it and is pretty much its own thing.
 
