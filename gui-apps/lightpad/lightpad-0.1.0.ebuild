@@ -21,7 +21,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86 ~arm ~arm64"
 
 DEPEND="
-	>=gnome-extra/budgie-desktop-10.9.2
+	>=budgie-base/budgie-desktop-10.9.2
 	x11-terms/xterm
 "
 RDEPEND="
