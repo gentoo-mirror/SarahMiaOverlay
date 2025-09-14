@@ -2,6 +2,24 @@
 
 I will keep all updates here listed and up to date;
 
+## 2025/9/?? - We have arrived at our new destination! New Budgie minor release
+
+Moving away from gnome-extra category as it no longer really applies, it has strayed to much from it and is pretty much its own thing.
+
+### Added
+- budgie-meta-10.9.3 - new release
+- budgie-desktop-10.9.3 - new release
+- budgie-control-center-1.4.1 - new release
+- profile category and profiles update
+
+### Changed
+- Moved all budgie core packages from gnome-extra to budgie-base
+- Moved all budgie applet packages from gnome-extra to budgie-extra
+- md5-cache - meta updated
+
+### Removed
+- The category gnome-extra is now removed
+
 ## 2025/8/22 - Oldskool Granite
 
 Nothing much really, just a small bug fix on requiring the stable version of granite since the unstable version has a different unusable library naming. And trying that one gave me errors so yeah..

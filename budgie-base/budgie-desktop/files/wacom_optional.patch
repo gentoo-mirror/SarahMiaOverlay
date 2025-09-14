@@ -1,0 +1,21 @@
+--- a/meson_options.txt	2025-09-07 12:35:19.000000000 +0000
++++ b/meson_options.txt	2025-09-14 16:04:23.950375190 +0000
+@@ -7,6 +7,7 @@
+ option('with-gnome-screensaver', type: 'boolean', value: false, description: 'Build using gnome-screensaver as a dependency')
+ option('with-gtk-doc', type: 'boolean', value: true, description: 'Build gtk-doc documentation')
+ option('with-hibernate', type: 'boolean', value: true, description: 'Include support for system hibernation')
++option('with-wacom', type: 'boolean', value: true, description: 'build with Wacom support')
+ option('with-libuuid-time-safe', type: 'boolean', value: true, description: 'Enable use of LIBUUID.generate_time_safe (Vala option)')
+ option('with-polkit', type: 'boolean', value: true, description: 'Enable PolKit support')
+ option('with-stateless', type: 'boolean', value: false, description: 'Enable stateless XDG paths')
+--- a/src/daemon/bsd/meson.build	2025-09-07 12:35:19.000000000 +0000
++++ b/src/daemon/bsd/meson.build	2025-09-14 16:08:35.560371984 +0000
+@@ -160,7 +160,7 @@
+ config_h.set10('HAVE_WAYLAND', enable_wayland)
+ 
+ # wacom (disabled for s390/s390x and non Linux platforms)
+-enable_wacom = host_is_linux_not_s390
++enable_wacom = get_option('with-wacom')
+ if enable_wacom
+   assert(enable_gudev, 'GUDev support is required for wacom support.')
+   libwacom_dep = dependency('libwacom', version: '>= 0.7')
