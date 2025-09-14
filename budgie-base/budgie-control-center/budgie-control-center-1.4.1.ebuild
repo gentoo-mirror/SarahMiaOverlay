@@ -1,4 +1,4 @@
-# Copyright 1999-2024 Gentoo Authors
+# Copyright 1999-2025 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 # Copied and Adjusted by Sarah Mia Leibbrand from gnome-control-center to refit purpose of budgie-control-center.
