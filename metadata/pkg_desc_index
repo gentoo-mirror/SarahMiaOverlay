@@ -1,30 +1,30 @@
+budgie-base/budgie-backgrounds 3.0: Budgie Desktop default backgrounds
+budgie-base/budgie-control-center 1.4.0 1.4.1: Budgie Control Center for Budgie Desktop
+budgie-base/budgie-desktop 10.9.2 10.9.3 9999: Desktop Environment based on GNOME 3
+budgie-base/budgie-desktop-view 1.3 9999: Basic desktop icons/managemlent for Budgie Desktop.
+budgie-base/budgie-meta 10.9.2 10.9.3: Meta ebuild for Budgie Desktop with all official releases of needed packages
+budgie-base/budgie-screensaver 5.1.0 9999: Budgie Screensaver is a fork of gnome-screensaver intended for use with Budgie Desktop and is similar in purpose to other screensavers such as MATE Screensaver.
+budgie-base/budgie-session 0.9.1: Budgie session manager
+budgie-extra/budgie-analogue-clock-applet 2.1 2.2: Add an analogue clock to the Budgie Panel. Made for Budgie Desktop.
+budgie-extra/budgie-brightness-control-applet 0.3: This applet allows you to controll screen brightness. Made for Budgie Desktop.
+budgie-extra/budgie-browser-profile-launcher-applet 2.1.2: This applet lists and launches Chromium Browser and Google Chrome user profiles. Made for Budgie Desktop.
+budgie-extra/budgie-calendar-applet 5.3 9999: A budgie-desktop applet to show hours with custom formats and a calendar in a popover. Made for Budgie Desktop.
+budgie-extra/budgie-clipboard-applet 1.1.0 9999: A clipboard manager applet that can help you to store and manage clipboard content. Made for Budgie Desktop.
+budgie-extra/budgie-cpufreq-applet 1.1.0: This applet controls the frequency of the processor (Sandy Bridge and newer). Made for Budgie Desktop.
+budgie-extra/budgie-cputemp-applet 1.2.0: This applet shows a system temperature. Made for Budgie Desktop.
+budgie-extra/budgie-extras 1.8.0 1.8.0-r1 1.9.0 9999: Additional enhancements for the user experience. Contains many applets. Made for Budgie Desktop.
+budgie-extra/budgie-haste-applet 0.3.0 9999: Post any text, be it code or prose, to various services directly from your desktop. Made for Budgie Desktop.
+budgie-extra/budgie-hostname-applet 1.0: This applet shows your hostname (or any string of your choice) on your budgie panel. Made for Budgie Desktop.
+budgie-extra/budgie-indicator-applet 0.7.2: AppIndicator applet for budgie-desktop.
+budgie-extra/budgie-indicator-sysmonitor-applet 0.10.2: AppIndicator applet for budgie-desktop.
+budgie-extra/budgie-lightpad-applet 0.0.3: Lightweight and stylish fullscreen application launcher. Made for Budgie Desktop.
+budgie-extra/budgie-media-player-applet 1.1.1 1.2.0: Highly customizable applet for controlling all of your playing media. Made for Budgie Desktop.
+budgie-extra/budgie-performance-gauge-applet 1.2: This applet shows a CPU, Memory or Storage gauge on your Budgie panel. Made for Budgie Desktop.
+budgie-extra/budgie-pixel-saver-applet 4.0.0 9999: This applet hides the title bar from maximized windows and creates a new one inside the panel. Inspired from gnome extension pixel-saver.
+budgie-extra/budgie-screenshot-applet 0.4.3 9999: Take a screenshot of your desktop, a window or region; save to disk and upload. Made for Budgie Desktop.
+budgie-extra/budgie-systemmonitor-applet 0.2.1 9999: System Monitor that can help you track your cpu, ram, swap, network and uptime. Made for Budgie Desktop.
+budgie-extra/budgie-user-indicator-redux-applet 1.0.2: Applet to manage your user session from the Budgie panel. Made for Budgie Desktop.
 dev-python/svgwrite 1.4.3: Python Package to write SVG files
-gnome-extra/budgie-analogue-clock-applet 2.1 2.2: Add an analogue clock to the Budgie Panel. Made for Budgie Desktop.
-gnome-extra/budgie-backgrounds 3.0: Budgie Desktop default backgrounds
-gnome-extra/budgie-brightness-control-applet 0.3: This applet allows you to controll screen brightness. Made for Budgie Desktop.
-gnome-extra/budgie-browser-profile-launcher-applet 2.1.2: This applet lists and launches Chromium Browser and Google Chrome user profiles. Made for Budgie Desktop.
-gnome-extra/budgie-calendar-applet 5.3 9999: A budgie-desktop applet to show hours with custom formats and a calendar in a popover. Made for Budgie Desktop.
-gnome-extra/budgie-clipboard-applet 1.1.0 9999: A clipboard manager applet that can help you to store and manage clipboard content. Made for Budgie Desktop.
-gnome-extra/budgie-control-center 1.4.0: Budgie Control Center for Budgie Desktop
-gnome-extra/budgie-cpufreq-applet 1.1.0: This applet controls the frequency of the processor (Sandy Bridge and newer). Made for Budgie Desktop.
-gnome-extra/budgie-cputemp-applet 1.2.0: This applet shows a system temperature. Made for Budgie Desktop.
-gnome-extra/budgie-desktop 10.9.2 9999: Desktop Environment based on GNOME 3
-gnome-extra/budgie-desktop-view 1.3 9999: Basic desktop icons/managemlent for Budgie Desktop.
-gnome-extra/budgie-extras 1.8.0 1.8.0-r1 1.9.0 9999: Additional enhancements for the user experience. Contains many applets. Made for Budgie Desktop.
-gnome-extra/budgie-haste-applet 0.3.0 9999: Post any text, be it code or prose, to various services directly from your desktop. Made for Budgie Desktop.
-gnome-extra/budgie-hostname-applet 1.0: This applet shows your hostname (or any string of your choice) on your budgie panel. Made for Budgie Desktop.
-gnome-extra/budgie-indicator-applet 0.7.2: AppIndicator applet for budgie-desktop.
-gnome-extra/budgie-indicator-sysmonitor-applet 0.10.2: AppIndicator applet for budgie-desktop.
-gnome-extra/budgie-lightpad-applet 0.0.3: Lightweight and stylish fullscreen application launcher. Made for Budgie Desktop.
-gnome-extra/budgie-media-player-applet 1.1.1 1.2.0: Highly customizable applet for controlling all of your playing media. Made for Budgie Desktop.
-gnome-extra/budgie-meta 10.9.2: Meta ebuild for Budgie Desktop with all official releases of needed packages
-gnome-extra/budgie-performance-gauge-applet 1.2: This applet shows a CPU, Memory or Storage gauge on your Budgie panel. Made for Budgie Desktop.
-gnome-extra/budgie-pixel-saver-applet 4.0.0 9999: This applet hides the title bar from maximized windows and creates a new one inside the panel. Inspired from gnome extension pixel-saver.
-gnome-extra/budgie-screensaver 5.1.0 9999: Budgie Screensaver is a fork of gnome-screensaver intended for use with Budgie Desktop and is similar in purpose to other screensavers such as MATE Screensaver.
-gnome-extra/budgie-screenshot-applet 0.4.3 9999: Take a screenshot of your desktop, a window or region; save to disk and upload. Made for Budgie Desktop.
-gnome-extra/budgie-session 0.9.1: Budgie session manager
-gnome-extra/budgie-systemmonitor-applet 0.2.1 9999: System Monitor that can help you track your cpu, ram, swap, network and uptime. Made for Budgie Desktop.
-gnome-extra/budgie-user-indicator-redux-applet 1.0.2: Applet to manage your user session from the Budgie panel. Made for Budgie Desktop.
 gui-apps/lightpad 0.1.0: LightPad is a lightweight, simple and powerful application launcher.
 net-wireless/gnome-bluetooth 3.34.5: Bluetooth graphical utilities integrated with GNOME
 x11-misc/xprintidle 2.1: Prints user's X server idle time in milliseconds
